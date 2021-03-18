@@ -1,0 +1,22 @@
+Topics Of DataType In JS
+
+Valuas > 
+        - primitive
+        - o bject > everything else primitive = objects
+
+
+    
+Topic:
+    we have 7 primitive DataTypes >
+                                    > string | +
+                                    > number = float or double | +
+                                    > boolean | +
+                                    > undefind | +
+                                    > null | -
+                                    > symbol | -
+                                    > big int | -
+
+
+Topic:
+    Dynamic DataType
+
