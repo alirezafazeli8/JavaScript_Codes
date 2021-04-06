@@ -1,0 +1,15 @@
+Topic: Whats I Learned
+
+season two(Basics Variables, Data Types, Operators & Functions):
+    1- Use Alert.
+    2- use clg and chrome developer tools.
+    2- Adding JS in my Project.
+    3- Variable(let) and Constants(const).
+    4- declaring a Variable.
+    5- naming variable (camelCase ...).
+    6- assigenment Operators.
+    7- strings (Escape Notaition, string interpolation).
+    8- datatypes(Number And String).
+    9- using Constants(data Never Changes)
+
+
