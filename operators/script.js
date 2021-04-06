@@ -55,3 +55,18 @@ console.log(showExponentiation);
 
 //decrement
 
+// datatypes number and string
+
+//number => 20, -39, 324.980
+// string => (text)
+
+let phoneNumber =  9348392849248.478329;
+console.log(typeof(phoneNumber));
+
+// string 
+let message = "hello my dear friend im alireza and i hope enjoy with your time";
+
+// we can mix variable and string in variable
+message = "hey buddy , you can store my number in your phone, my number : " + phoneNumber;
+console.log(message);
+
