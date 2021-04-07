@@ -11,5 +11,8 @@ season two(Basics Variables, Data Types, Operators & Functions):
     7- strings (Escape Notaition, string interpolation).
     8- datatypes(Number And String).
     9- using Constants(data Never Changes)
+    10- Functions
+    11- return in JS Function
+    12- The (Un)Importance of Code Order
 
 
