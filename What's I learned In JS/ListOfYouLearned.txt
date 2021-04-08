@@ -14,5 +14,6 @@ season two(Basics Variables, Data Types, Operators & Functions):
     10- Functions
     11- return in JS Function
     12- The (Un)Importance of Code Order
+    13- local scope & global scope & variable shadowing in  function.
 
 
