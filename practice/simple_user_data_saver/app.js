@@ -36,7 +36,7 @@ let showData = `
     Country: ${userData.country}.
     city: ${userData.city}.
 
-    Warning: This data is very 
+    Warning: This data is very
     important , pleas carefully.
 
 `;
