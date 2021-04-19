@@ -21,5 +21,6 @@ season two(Basics Variables, Data Types, Operators & Functions):
     17- array.
     18- Objects
     19- boolean
+    20- if statement 
 
 
