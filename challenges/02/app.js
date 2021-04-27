@@ -23,3 +23,9 @@ if (markBmi > johnBmi) {
     `;
     console.log(output);
 }
+
+// like python i made new function name it print , can print something in console
+print("Hello World")
+
+ 
+
