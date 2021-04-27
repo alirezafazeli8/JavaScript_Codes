@@ -1,26 +1,23 @@
 Topic: Whats I Learned
 
-season two(Basics Variables, Data Types, Operators & Functions):
+fundamental 1 ()
     1- Use Alert.
     2- use clg and chrome developer tools.
-    2- Adding JS in my Project.
-    3- Variable(let) and Constants(const).
-    4- declaring a Variable.
-    5- naming variable (camelCase ...).
-    6- assigenment Operators.
-    7- strings (Escape Notaition, string interpolation).
-    8- datatypes(Number And String).
-    9- using Constants(data Never Changes)
-    10- Functions
-    11- return in JS Function
-    12- The (Un)Importance of Code Order
-    13- local scope & global scope & variable shadowing in  function.
-    14- converting datatypes.
-    15- mixin string & Number
-    16- more on Operators (+=, -= .... | ++ , --)
-    17- array.
-    18- Objects
-    19- boolean
-    20- if statement 
+    3- values and variable.
+    4- data types (
+        Objects : Objects, Array : every thing else primitive.
+        Primitive : Number, String, Boolean, Undefined, Null, Symbol, Bigint.
+    )
+    5- let const and var.
+    6- operators (+, -, *, /, %, 
+        =+, -=, *=, /=, %=
+        => , <=, > , < , =
+    ).
+    7- template literals.
+    8- if else statement.
+    9- type conversion and coercion.
+    10- truthy and falsy.
+    11- equality operators : == , ===.
+
 
 
