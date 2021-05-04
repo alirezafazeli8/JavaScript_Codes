@@ -1,0 +1,35 @@
+Topic: Whats I Learned
+
+fundamental 1.
+    1- Use Alert.
+    2- use clg and chrome developer tools.
+    3- values and variable.
+    4- data types (
+        Objects : Objects, Array : every thing else primitive.
+        Primitive : Number, String, Boolean, Undefined, Null, Symbol, Bigint.
+    )
+    5- let const and var.
+    6- operators (+, -, *, /, %, 
+        =+, -=, *=, /=, %=
+        => , <=, > , < , =
+    ).
+    7- template literals.
+    8- if else statement.
+    9- type conversion and coercion.
+    10- truthy and falsy.
+    11- equality operators : == , === (prompt).
+    12- logical operators , and logic boolean and use logical operators in if statement (AND: &&, OR: ||, NOT: !)
+    13- switch.
+    14- statement vs expression.
+    15- conditional(ternary) operators.
+
+______________________________________________________________
+
+fundamental 2.
+    1- strict mode.
+    2- functions (
+        1- function declaration 
+        2- function expression
+        3- arrow function expression
+    ).
+    3- Array
