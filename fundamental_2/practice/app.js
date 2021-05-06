@@ -59,3 +59,44 @@ sayHello();
 console.log(nameMixer("jack", "nelson"));
 console.log(calculate(2, 2));
 */
+/*
+const names = new Array ("alireza", "ghasem", "salar", "Sara");
+console.log(names);
+*/
+
+const friendNames = ["alireza", "korosh", "sohrab", "dariush"];
+
+console.log(friendNames);
+console.log(friendNames[1]);
+console.log(friendNames[3]);
+friendNames[2] = "Rostam";
+console.log(friendNames);
+
+// length
+console.log(friendNames.length);
+
+// method
+// Add Value
+// push
+friendNames.push("Sorena");
+console.log(friendNames);
+
+// unshift
+friendNames.unshift("Soren");
+console.log(friendNames);
+
+//delete value
+//pop
+friendNames.pop();
+console.log(friendNames);
+
+//shift
+friendNames.shift();
+console.log(friendNames);
+
+
+// include
+console.log(friendNames.includes("alireza")); //if we want to know the specific value is exist or no
+
+// indexOf 
+console.log(friendNames.indexOf("korosh"));
