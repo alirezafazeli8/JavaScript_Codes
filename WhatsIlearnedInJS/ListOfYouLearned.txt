@@ -33,3 +33,16 @@ fundamental 2.
         3- arrow function expression
     ).
     3- Array
+    4- arrays method (
+        1- Push , unShift
+        2- pop, Shift
+        3- index of
+        4- include
+        5- length
+    )
+    5- Objects (
+        1- dots vs bracket notation.
+        2- Object methods (declare Function Expression in Object).
+        3- This Keyword
+        4- make method into function (and call it);
+    )
