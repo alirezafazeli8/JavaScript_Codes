@@ -17,7 +17,7 @@ fundamental 1.
     8- if else statement.
     9- type conversion and coercion.
     10- truthy and falsy.
-    11- equality operators : == , === (prompt).
+    11- equality operators : == , ===, (prompt).
     12- logical operators , and logic boolean and use logical operators in if statement (AND: &&, OR: ||, NOT: !)
     13- switch.
     14- statement vs expression.
@@ -28,9 +28,11 @@ ______________________________________________________________
 fundamental 2.
     1- strict mode.
     2- functions (
-        1- function declaration 
+        1- function declaration
+        - return in function 
         2- function expression
         3- arrow function expression
+        
     ).
     3- Array
     4- arrays method (
@@ -46,3 +48,10 @@ fundamental 2.
         3- This Keyword
         4- make method into function (and call it);
     )
+    6- for loop {
+        1- break
+        2- continue
+        3- loop in loop
+        4- looping_backward
+    }
+    7- while loop 

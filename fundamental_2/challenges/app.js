@@ -78,3 +78,43 @@ if (mark.bmi  >  john.bmi) {
     console.log(`${john.fullName} BMI (${john.bmi}) is higher than ${mark.fullName} (${mark.bmi})!`);
 }
 */
+/*
+
+const billValue = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+let tip = [];
+let total = [];
+
+function calcTip(billValue) {
+    if (billValue > 50 && billValue < 300) {
+        return  (15 * billValue) / 100;
+    } else if (billValue < 50 ) {
+        
+        return (10 * billValue) / 100;
+    } else {
+        return (20 * billValue) / 100;
+    }
+}   
+
+for (let x = 0; x < billValue.length; x++) {
+    tip.push(calcTip(billValue[x]));
+}
+
+for (let x= 0; x < tip.length ; x ++) {
+    total.push(tip[x] + billValue[x]);
+}
+
+console.log("tip: ",tip);
+console.log("total: ", total);
+
+function calcAverage(arr) {
+    let sum = 0;
+    for (let x = 0; x < arr.length; x ++) {
+        sum += arr[x];
+    }
+    return sum / arr.length;
+}
+
+console.log(calcAverage(tip));
+console.log(calcAverage([2, 3, 4, 5]));
+console.log(calcAverage(total));
+*/

@@ -63,7 +63,7 @@ console.log(calculate(2, 2));
 const names = new Array ("alireza", "ghasem", "salar", "Sara");
 console.log(names);
 */
-
+/*
 const friendNames = ["alireza", "korosh", "sohrab", "dariush"];
 
 console.log(friendNames);
@@ -100,3 +100,147 @@ console.log(friendNames.includes("alireza")); //if we want to know the specific 
 
 // indexOf 
 console.log(friendNames.indexOf("korosh"));
+*/
+/*
+const age = 75;
+
+if (age >= 18 && age < 75) {
+    console.log("hey dear you can get a license 💳");
+} else if (age >= 75) {
+    console.log("sorry you very old 😁");
+} else {
+    console.log("shit you cant get a license ❌");
+}
+
+
+// type conversion
+let newYear = "45345";
+let oldYear = 2021;
+
+console.log(typeof newYear);
+console.log(typeof oldYear);
+
+newYear = Number(newYear);
+console.log(typeof newYear);
+oldYear = String(oldYear);
+console.log(typeof oldYear);
+
+// type coercion
+const sum = 2 % "2";
+console.log(sum);
+
+
+// falsy : "", undefined, null, 0, NaN, false, -0
+
+//falsy
+console.log(Boolean(""));
+console.log(Boolean(undefined));
+console.log(Boolean(null));
+console.log(Boolean(0));
+console.log(Boolean(NaN));
+console.log(Boolean(false));
+console.log(Boolean(-0));
+
+// truthy: everything else falsy is truthy.
+const sayHello = function () {
+    console.log("hello");
+}
+console.log(Boolean("dasdad"));
+console.log(Boolean(3242));
+console.log(Boolean({}));
+console.log(Boolean([]));
+console.log(Boolean(sayHello));
+//.......................
+
+*/
+
+/*
+let age = 18;
+const needAge = age > 21;
+
+switch (true) {
+    case age == 18:
+        console.log("you are 18");
+        break
+    case age == 16:
+        console.log("you are 16");
+        break
+    case age == 21:
+    case age > 21:
+        console.log("you are 21");
+        console.log("you can drink wine 🍷");
+        break
+}
+
+
+const age = 17;
+// age >= 18 ? console.log("you can drink wine") : console.log("you cant drink wine");
+
+const needAge = age >= 18 ? "you can drink wine" : "you cant drink wine";
+
+console.log(needAge);
+
+
+
+function sayHello() {
+  console.log("Hello World !");  
+}
+
+sayHello();
+
+function calc(numberOne, numberTwo) {
+    console.log(numberOne + numberTwo);
+    console.log(numberOne - numberTwo);
+    console.log(numberOne * numberTwo);
+    console.log(numberOne / numberTwo);
+}
+
+calc(10, 10);
+
+function myData() {
+    const data  = {
+        name: "alireza",
+        lastName: "fazeli",
+        age: 16
+    }
+    return data
+}
+
+console.log(myData());
+let dataTwo = 15;
+console.log(dataTwo);
+
+
+let sayHello = function () {
+    console.log("Hello World !...");
+};
+sayHello();
+
+sayHello = 15;
+console.log(sayHello);
+
+let arrowFunction = () => console.log("hello");
+arrowFunction();
+
+let sayHelloToMe = (sayHello) => {
+    if (sayHello === undefined) {
+        console.log("You Should Say Hello 😡😒");
+    } else {
+        console.log("Hello Tooooo...😁");
+    }
+};
+
+sayHelloToMe("hello");
+sayHelloToMe();
+*/
+
+let myFriendOne = "alireza";
+let myFriendTwo = "Salar";
+let myFriendThree = "ghasem";
+// then friend.....
+
+const myFriends = ["ghasem", "salar", "alireza", "korosh", "mohammad", "Ros", "Rika"];
+
+console.log(myFriends);
+console.log(`my best Friend is : ${myFriends[2]}`);
+console.log(myFriends.length);
