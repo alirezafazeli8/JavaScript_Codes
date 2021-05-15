@@ -55,3 +55,6 @@ fundamental 2.
         4- looping_backward
     }
     7- while loop 
+    developer_skill (
+        1- chrome Debugger
+    )
