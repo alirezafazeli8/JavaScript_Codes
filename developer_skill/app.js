@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 /*
 const systemLog = [
 	3,
@@ -38,7 +38,7 @@ function calcTemp(temp) {
 }
 
 calcTemp(systemLog);
-*/
+
 
 const userInfo = {
 	firstName: 'alireza',
@@ -67,3 +67,4 @@ function checkAlirezaHere(arr) {
 }
 
 checkAlirezaHere(friendsName);
+*/
