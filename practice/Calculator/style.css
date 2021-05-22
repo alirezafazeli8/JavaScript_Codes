@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Bahiana&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  font-family: "Bahiana", cursive;
+}
+
+body {
+  background-color: #121218;
+}
+body .main-calc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  padding: 5rem;
+  border: white 4px solid;
+}
+body .main-calc .resault input {
+  width: 50rem;
+  height: 5rem;
+  background-color: #fef9bc;
+  border-radius: 20px;
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: 4px #f9cc89 solid;
+}
+body .main-calc #enterValue {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.2rem;
+  width: 50rem;
+}
+body .main-calc #enterValue input {
+  width: 40rem;
+  height: 5rem;
+  border-radius: 20px;
+  padding: 1.2rem;
+  font-size: 5rem;
+  text-align: center;
+  background-color: #fef9bc;
+  border: 4px #f9cc89 solid;
+}
+body .main-calc #enterValue .enterValue button {
+  height: 5rem;
+  border-radius: 20px;
+  width: 9.5rem;
+  font-size: 40px;
+  border: 4px #083e55 solid;
+}
+body .main-calc #enterValue input[type=number]::-webkit-inner-spin-button,
+body .main-calc #enterValue input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+body .main-calc #buttons-calc {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.2rem;
+  width: 50rem;
+}
+body .main-calc #buttons-calc .calcButton {
+  display: block;
+  width: 9.8rem;
+  height: 5rem;
+  border-radius: 20px;
+  font-size: 40px;
+  text-align: center;
+  border: #0a5583 4px solid;
+  background-color: #bbbbbb;
+}
+body .main-calc #buttons {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 10rem 10rem 10rem;
+  padding-top: 1.2rem;
+}
+body .main-calc #buttons .buttons {
+  border-radius: 90px;
+  height: 5rem;
+  font-size: 40px;
+  border: 4px #0a5583 solid;
+  background-color: #bbbbbb;
+}

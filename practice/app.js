@@ -305,3 +305,4 @@ const sayHello = () => console.log("hello World");
 
 sayHello();
 */
+document.querySelector(".result").textContent = "Hello World";

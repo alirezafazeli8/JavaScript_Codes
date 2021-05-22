@@ -58,3 +58,24 @@ fundamental 2.
     developer_skill (
         1- chrome Debugger
     )
+
+
+____________________________________________
+DOM and Events Fundamentals.
+
+    projects (
+        1- guess Number.
+    ).
+    1- what is DOM.
+    2- selection and manipulated theme  (
+        1- document.querySelector(".message").textContent;
+        2- document.querySelector(".message").value;
+     ).
+    3- eventListener (
+        1- click And Function in Event.
+    ).
+    4- Math (
+        -random
+        -trunc
+    ).
+    5- Manipulating Css Style.
