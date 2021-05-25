@@ -321,4 +321,169 @@ console.log(y === 2);
 let x = 41;
 
 x == 18 ? console.log("you are 18") : console.log("you are not 18");
+
+
+// function declaration
+function sayHello() {
+    console.log("hello worlds");
+}
+
+sayHello();
+
+// function expression
+const sayMyName = function (myName) {
+    console.log(`my Name Is : ${myName}`);
+};
+
+sayMyName("Alireza");
+
+const sayHi = () => console.log('hi world');
+sayHi();
+
+const countryName = (country) => {
+    console.log(`your country Name Is : ${country}`);
+};
+countryName("USA");
+
+
+const friend1 = "alireza";
+const friend2 = "mohammad";
+const friend3 = "korosh";
+const friend4 = "dariush";
+const friend5 = "sohrab";
+
+const friends = ["alireza", "mohammad", "sara", "ali", "ghasem", "korosh", "dariush", "sohrab", "roxena"];
+
+console.log(friends);
+console.log(`your best friend is ${friends[0]}`)
+
+const friends = ["alireza", "korosh", "sara", "ali"];
+
+console.log(friends);
+
+// push method
+friends.push("last friend");
+console.log(friends);
+
+// unshift method
+friends.unshift("first friends");
+console.log(friends);
+
+// pop method
+friends.pop();
+console.log(friends);
+
+// shift method
+friends.shift();
+console.log(friends);
+
+// indexOf
+console.log(friends.indexOf("alireza"));
+console.log(friends.indexOf("sara"));
+console.log(friends[2]);
+
+// length
+console.log(friends.length);
+
+// include
+console.log(friends.includes("mohammad")); // false
+console.log(friends.includes("korosh")); // true
+
+
+const userInfo = {
+    firstName : "alireza",
+    lastName : "fazeli",
+    age : 16,
+    country : "USA",
+
+    // object method
+    fullName : function() {
+        const fullName = `
+            // your name : ${userInfo.firstName},
+            // your lastName : ${userInfo.lastName},
+        `;
+        return fullName
+    },
+};
+
+console.log(userInfo); 
+
+console.log(`
+    hey ${userInfo.firstName} ${userInfo["lastName"]}
+`);
+
+const first = "first";
+const Name = "Name";
+
+console.log(userInfo[first + Name]);
+console.log(userInfo.fullName());
+
+const data = {
+    userID : 345435,
+    showUserId : function () {
+
+        // this keyword
+        return this.userID
+    },
+};
+
+console.log(data.showUserId());
+
+
+
+// console.log("friend : alireza");
+// console.log("friend : mohammad");
+// console.log("friend : korosh");
+// console.log("friend : dariush");
+// console.log("friend : ghasem");
+// console.log("friend : sohrab");
+// console.log("friend : rostam");
+// console.log("friend : armin");
+// its bullshit
+
+const friend  = ["alireza", 'mohammad', 'korosh', 'dariush', 'ghasem', 'sohrab'];
+
+for(let x = 0; x < friend.length; x++) {
+    console.log("friend :", friend[x]);
+}
+
+
+const number = [1, 2, 3, 4, 9, 5, 6];
+
+// for(let x = 0; x < number.length; x++) {
+//     if (number[x] == 9)  {
+//         number.pop();
+//         console.log("Wtf, really nine ?");
+//         break;
+//     }
+//     console.log(number[x]);    
+// }
+
+for(let x = 0; x < number.length; x++) {
+    if (number[x] == 9)  {
+        continue; // nine isn't here
+    }
+    console.log(number[x]);    
+}
+
+for(let x = number.length; x > -1; x--) {
+    console.log(number[x]);
+}
+
+
+
+let age = 15;
+
+while (age < 18) {
+    console.log("wrong");
+    age++;
+    if (age == 18) {
+        console.log("oh your are right");
+    }
+} 
+
+
+//dom 
+
+document.querySelector("#header-title").textContent = "Hey I Edited You :)";
 */
