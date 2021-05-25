@@ -304,5 +304,21 @@ x == "y" ? console.log("this is y") : console.log("this is x");
 const sayHello = () => console.log("hello World");
 
 sayHello();
-*/
+
 document.querySelector(".result").textContent = "Hello World";
+
+console.log(3 * "3");
+console.log(3 + "3");
+
+
+let x = 2;
+let y = "2";
+
+console.log(x == "2");
+console.log(y === 2);
+
+
+let x = 41;
+
+x == 18 ? console.log("you are 18") : console.log("you are not 18");
+*/

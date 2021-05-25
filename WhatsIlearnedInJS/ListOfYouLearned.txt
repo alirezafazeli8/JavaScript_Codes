@@ -16,7 +16,10 @@ fundamental 1.
     7- template literals.
     8- if else statement.
     9- type conversion and coercion.
-    10- truthy and falsy.
+    10- truthy and falsy. (
+        falsy: 0, "", Undefined, Null, NaN.
+        truthy: everything else falsy.
+    )
     11- equality operators : == , ===, (prompt).
     12- logical operators , and logic boolean and use logical operators in if statement (AND: &&, OR: ||, NOT: !)
     13- switch.
