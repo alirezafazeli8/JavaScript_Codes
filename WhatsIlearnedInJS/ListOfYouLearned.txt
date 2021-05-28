@@ -70,9 +70,20 @@ DOM and Events Fundamentals.
         1- guess Number.
     ).
     1- what is DOM.
-    2- selection and manipulated theme  (
+    2- (DOM Method)selection and manipulated theme  (
         1- document.querySelector(".message").textContent;
         2- document.querySelector(".message").value;
+        3-document.querySelectorAll().
+        4-classList method (
+            remove,
+            add,
+            length,
+            contains,
+            toggle,
+
+        ).
+        5-getElementById();
+        6- document.getElementById().src 
      ).
     3- eventListener (
         1- click And Function in Event.
@@ -82,3 +93,12 @@ DOM and Events Fundamentals.
         -trunc
     ).
     5- Manipulating Css Style.
+    6- refactoring code
+    7- Modal Window Project 
+    8- 
+    9-  
+    10- key eventlistener (
+        keyup.
+        keydown.
+        keypress.
+    ).
