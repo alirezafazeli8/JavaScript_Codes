@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #107dac;
+	font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.windowPopUp {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.windowPopUp {
+	height: 100%;
+}
+
+.window {
+	width: 30em;
+	background-color: #71c7ec;
+	padding: 2em;
+	border-radius: 2em;
+	line-height: 1.5em;
+	z-index: 10;
+	text-align: center;
+}
+.window h1 {
+	line-height: 1.2em;
+}
+
+.buttonContainer {
+	padding: 2em;
+}
+
+.buttons {
+	padding: 0.8em;
+	border-radius: 2em;
+	outline: none;
+	border: #2c3f85 4px solid;
+	cursor: pointer;
+	font-family: "Yanone Kaffeesatz", sans-serif;
+	font-size: 1.2em;
+}
+
+.close {
+	width: 6em;
+	height: 3em;
+	border: #53afdd 4px solid;
+	border-radius: 2em;
+	font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.6);
+	backdrop-filter: blur(3px);
+	z-index: 5;
+}
+
+/* default hidden */
+.hidden {
+	display: none;
+}
