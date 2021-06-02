@@ -22,6 +22,11 @@ body {
   justify-content: center;
 }
 
+.hidden {
+  display: none;
+}
+
+
 /* LAYOUT */
 main {
   position: relative;
@@ -165,3 +170,8 @@ main {
   font-weight: 700;
   color: #c7365f;
 }
+
+
+
+
+
