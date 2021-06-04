@@ -42,10 +42,16 @@ const changePlayerActive = () => {
 };
 
 
+
+
+// show current user score
+const showCurrentScore = () => {
+	currentActivePlayer.textContent = playerScore[activePlayer];
+};
+
 // change player
 const changePlayer = () => {
 	//last player
-
 	document.querySelector(`.player--${activePlayer}`).classList.remove("player--active");	
 
 	changePlayerActive();
@@ -53,11 +59,6 @@ const changePlayer = () => {
 	// next player
 	document.querySelector(`.player--${activePlayer}`).classList.add("player--active");	
 
-};
-
-// show current user score
-const showCurrentScore = () => {
-	currentActivePlayer.textContent = playerScore[activePlayer];
 };
 
 // user roll dice button event
