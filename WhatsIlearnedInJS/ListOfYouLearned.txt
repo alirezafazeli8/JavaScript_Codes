@@ -102,4 +102,21 @@ DOM and Events Fundamentals.
         keydown.
         keypress.
     ).
-    11- pigGame Project.
+    11- pigGame Project. 
+    12 - src
+
+
+_____________________________________________________________________
+
+Topic : How JavaScript Works Behind the Scenes 
+    overview of JavaScript (
+        1- high-level programming language
+        2- Garbage-collected
+        3- interpreted - just int time compiled
+        4- multi-paradigm
+        5- prototype-based _ objected oriented
+        6- first-class functions
+        7- Dynamic
+        8- Single-Threaded
+        9- Non-blocking event loop
+    ).
