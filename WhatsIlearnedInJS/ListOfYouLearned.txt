@@ -120,3 +120,4 @@ Topic : How JavaScript Works Behind the Scenes
         8- Single-Threaded
         9- Non-blocking event loop
     ).
+    

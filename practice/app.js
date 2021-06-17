@@ -486,4 +486,168 @@ while (age < 18) {
 //dom 
 
 document.querySelector("#header-title").textContent = "Hey I Edited You :)";
+
+
+let x = 3;
+
+x += 3;
+
+console.log(x);
+
+let y = 7;
+
+console.log(x >= y);
+
+
+
+let x = 3;
+let y = "3";
+
+console.log(x == y);
+console.log(x === y);
+
+let license = "jdasdas";
+
+switch (license) {
+    case true:
+        console.log("you have license");
+        break;
+    case false:
+        console.log("you dont have license");
+        break;
+
+
+    default:
+        console.log("pleas enter valid answer");
+}
+
+
+
+
+
+let age = 52;
+
+age >= 18?console.log("you can drive"):console.log("you cant drive");
+
+
+function helloOne() {
+    console.log("im one hello");
+}
+
+const helloTwo = function () {
+    console.log("im two hello");
+};
+
+const helloThree = () => {
+    console.log("im three hello");
+};
+
+helloOne();
+helloTwo();
+helloThree();
+
+
+let friends = ["korosh", "dariush", "atoosa", "sohrab", "rostam", "ahoora"];
+
+console.log(friends);
+
+console.log(friends[2 + 2]);
+friends.push("hootan");
+friends.unshift("alireza");
+
+console.log(friends);
+
+friends.pop();
+friends.shift();
+
+console.log(friends);
+
+console.log(friends.indexOf("rostam"));
+console.log(friends.includes("alireza"));
+console.log(friends.includes("rostam"));
+console.log(friends.length);
+
+
+
+const userInfo = {
+    firstName : "alireza",
+    userName : "@devfazeli",
+    age : 23,
+    city : "neka",
+    showComplete : function () {
+        return `hey ${this.userName}, i love you man and i want see ${this.city} ❤`
+    },
+};
+
+console.log(userInfo);
+console.log(userInfo.firstName);
+console.log(userInfo["userName"]);
+console.log(userInfo["a"+"g"+"e"]);
+console.log(userInfo.showComplete());
+
+
+let friends = ["korosh", "dariush", "atoosa", "sohrab", "rostam", "ahoora"];
+
+
+// for(let x = 1; x <= 10; x++) {
+//     console.log(`hello for ${x}`);
+// }
+
+for(let x = 0; x < friends.length; x++) {
+    console.log(friends[x]);
+
+    if (friends[x] === "korosh") {
+        // break;
+        continue;
+    }
+}
+
+
+
+let license = true;
+
+while(license){
+    for(let x = 1; x <= 1000; x++){
+        result.textContent = `You Hacked 🎃 ${x}`;
+        if (x == 10) {
+            license = false;
+            break;
+        }
+    }
+}
+
+const result = document.querySelector(".result");
+const showImage = document.getElementById('showImage');
+const showImageButton = document.getElementById("showImageButton");
+
+showImageButton.addEventListener("click", function () {
+    showImageButton.classList.add("hidden");
+    showImage.classList.remove("hidden");
+});
+
+document.querySelector("body").addEventListener("keyup", function (bodyObject) {
+    if (bodyObject.key === "Escape") {
+        showImage.classList.add("hidden");
+        showImageButton.classList.remove("hidden");
+    }
+});
+
+showImage.addEventListener("click", function() {
+    showImage.classList.add("hidden");
+    showImageButton.classList.remove("hidden");
+});
 */
+
+
+
+sayHello();
+
+function sayHello () {
+    return "hello"
+};
+
+if(sayHello() == "hello"){
+    console.log("oh hi there");
+} else {
+    console.log("is that fun?");
+}
