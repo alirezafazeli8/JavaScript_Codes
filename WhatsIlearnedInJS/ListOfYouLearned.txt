@@ -120,4 +120,21 @@ Topic : How JavaScript Works Behind the Scenes
         8- Single-Threaded
         9- Non-blocking event loop
     ).
+    1- jit compilation
+    2- execution context
+    3- call stack- heap
+    4- scoping (
+        1-global scope
+        2- function scope
+        3-block scope
+        4- lexical scope
+        5- variable lookup
+        6- scope chain
+    )
+    5- hoisting 
+    7- TDZ
+    8- this Keyword
+    9- method borrowing
+    10- reference type VS primitive type
+    11- Object.assign
     
