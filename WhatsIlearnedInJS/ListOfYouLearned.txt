@@ -94,9 +94,7 @@ DOM and Events Fundamentals.
     ).
     5- Manipulating Css Style.
     6- refactoring code
-    7- Modal Window Project 
-    8- 
-    9-  
+    7- Project(Modal Window Project) 
     10- key eventlistener (
         keyup.
         keydown.
@@ -112,8 +110,13 @@ Topic : How JavaScript Works Behind the Scenes
     overview of JavaScript (
         1- high-level programming language
         2- Garbage-collected
-        3- interpreted - just int time compiled
-        4- multi-paradigm
+        3- interpreted - just in time compiled
+        4- multi-paradigm (
+            1- procedural programming.
+            2- imperative programming.
+            3- functional programming.
+            4- object oriented programming.
+        ).
         5- prototype-based _ objected oriented
         6- first-class functions
         7- Dynamic
@@ -137,4 +140,15 @@ Topic : How JavaScript Works Behind the Scenes
     9- method borrowing
     10- reference type VS primitive type
     11- Object.assign
-    
+_____________________________________________________________________
+
+Topic : Data Structures, Modern Operators and Strings.
+
+1- destructuring assignment Array : (
+    1- set value array for variable , like : (let [a, b, c] = arr;)
+    2- select specific value and put in variable, like : (let [a, ,b, ,c] = arr;).
+    3- change destructuring, like : ([a, b] = [b, a]).
+    4- make method and use destructuring.
+    5- set default value for arr.
+    6- nested destructuring, like : (let [ mf = ds] = [this.mainFood[mainFoods]]).
+)

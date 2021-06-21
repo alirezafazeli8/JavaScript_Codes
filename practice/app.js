@@ -636,7 +636,7 @@ showImage.addEventListener("click", function() {
     showImage.classList.add("hidden");
     showImageButton.classList.remove("hidden");
 });
-*/
+
 
 
 
@@ -651,3 +651,38 @@ if(sayHello() == "hello"){
 } else {
     console.log("is that fun?");
 }
+
+
+console.log(document.querySelector("button").classList.contains("asdk"));
+
+document
+  .getElementById("showImageButton")
+  .addEventListener("click", function () {
+    console.log("hey you clicked me");
+  });
+
+document.getElementById("showImageButton").style.color = "red";
+document.getElementById("showImageButton").style.backgroundColor = "black";
+*/
+
+const personOne = {
+  age: 15,
+  showAge: function () {
+    console.log(this.age);
+  },
+};
+
+personOne.showAge();
+
+let personTwo = {
+  age: 16,
+};
+
+// personTwo = personOne;
+// console.log(personTwo.showAge());
+
+Object.assign(personTwo, {
+  name: "alireza",
+});
+
+console.log(personTwo);
