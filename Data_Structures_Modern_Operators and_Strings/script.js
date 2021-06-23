@@ -235,7 +235,7 @@ console.log(null && undefined); // if both data is falsy , it show first falsy d
 const ageLicense = false;
 
 console.log(ageLicense || false);
-*/
+
 // SECTION The Nullish Coalescing  Operators (Made In  ES2020)
 // we no have a few falsy value but in Nullish Operators undefined and null is (True). its so funny 😂.
 
@@ -244,3 +244,31 @@ const moreMoney = null;
 
 money ?? console.log("where is my money 😡");
 moreMoney ?? console.log("Oh You Shouldn't be a null 😎");
+*/
+
+// SECTION looping Arrays The For  - Of Loop
+
+const names = ["sara", "ghasem", "korosh", "dariush", "sohrab", "Arya"];
+// manual or with counter
+for (let x = 0; x < names.length; x++) {
+  console.log(names[x]);
+}
+
+console.log("------after use (for of) ---------");
+
+// with (for of)
+for (let item of names.entries()) {
+  // console.log(item[0], item[1]);
+  console.log(`${item[0]} | ${item[1]}`);
+}
+
+// very easy we can manipulate numbers
+function tellNumbers(...numbers) {
+  let sum = 0;
+  for (let item of numbers) {
+    sum += item;
+  }
+  console.log(sum);
+}
+
+tellNumbers(1, 2, 3);

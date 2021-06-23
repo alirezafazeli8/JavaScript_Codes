@@ -167,4 +167,6 @@ Topic : Data Structures, Modern Operators and Strings.
     1- || OR
     2- && AND
 ).
-6-The Nullish Coalescing  Operators (Made In  ES2020)
+6-The Nullish Coalescing  Operators (Made In  ES2020).
+7- Looping arrays The For Of Loop (for of).
+8- entries method.
