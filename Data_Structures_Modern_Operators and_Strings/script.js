@@ -213,7 +213,7 @@ function showMeTheNumber(...numbers) {
 }
 
 showMeTheNumber(1, 4, 5, 9, 9, 2, 1, 5);
-*/
+
 
 // SECTION short circuiting (&& , ||)
 
@@ -235,3 +235,12 @@ console.log(null && undefined); // if both data is falsy , it show first falsy d
 const ageLicense = false;
 
 console.log(ageLicense || false);
+*/
+// SECTION The Nullish Coalescing  Operators (Made In  ES2020)
+// we no have a few falsy value but in Nullish Operators undefined and null is (True). its so funny 😂.
+
+const money = undefined;
+const moreMoney = null;
+
+money ?? console.log("where is my money 😡");
+moreMoney ?? console.log("Oh You Shouldn't be a null 😎");
