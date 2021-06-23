@@ -152,3 +152,10 @@ Topic : Data Structures, Modern Operators and Strings.
     5- set default value for arr.
     6- nested destructuring, like : (let [ mf = ds] = [this.mainFood[mainFoods]]).
 )
+2- object destructuring : (
+    1- declare variable for Objects.
+    2- default value.
+    3- mutating variable. ({ a, b } = obj); 
+    4- nested object.
+).
+3-spread operator
