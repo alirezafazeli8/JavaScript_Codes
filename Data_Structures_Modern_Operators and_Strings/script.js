@@ -65,9 +65,97 @@ console.log(j, h);
 let [shirazi, sezar] = [restaurant.salad[1], restaurant.salad[0]];
 
 console.log(shirazi, sezar);
-*/
+
 
 let arr = [1,0];
 let [a, b ] = arr;
 
 console.log(a, b);
+
+
+//
+const restaurant = {
+  name: "akbar_Jooje",
+  address: "gloogah, samt chap, khoone akbar agh",
+  menu: {
+    mainFood: ["akbar jooje", "koobide", "ash"],
+    desert: ["salad", "salad shirazi", "salad fasl"],
+    drink: ["doogh", "noshabe", "angoor", "water"],
+  },
+  closeDate: {
+    sunday: {
+      closeTime: "12pm",
+    },
+    saturDay: {
+      closeTime: "6am",
+    },
+    monday: {
+      closeTime: "5pm",
+    },
+  },
+  goosht: true,
+  //   findValue: function (first, value) {
+  //     // return { key: { value } };
+  //     return { first: value };
+  //   },
+  myObj: function (obj) {
+    return obj;
+  },
+};
+
+const newArr = [...restaurant.menu.mainFood, ...restaurant.menu.desert];
+
+console.log(newArr);
+*/
+// SECTION spread operator.
+
+const names = ["alireza", "korosh", "ghasem", "dariush", "sohrab"];
+const age = [3, 4, 6, 6, 66, 3, 21, 566];
+
+const nameAndAge = [...names, ...age];
+
+console.log(...names);
+
+// let newNames =  (...names);
+
+function showNameAge(name, age) {
+  return `${name} ${age}`;
+}
+
+console.log(showNameAge(...names, ...age));
+
+const restaurant = {
+  name: "akbar_Jooje",
+  address: "gloogah, samt chap, khoone akbar agh",
+  menu: {
+    mainFood: ["akbar jooje", "koobide", "ash"],
+    desert: ["salad", "salad shirazi", "salad fasl"],
+    drink: ["doogh", "noshabe", "angoor", "water"],
+  },
+  closeDate: {
+    sunday: {
+      closeTime: "12pm",
+    },
+    saturDay: {
+      closeTime: "6am",
+    },
+    monday: {
+      closeTime: "5pm",
+    },
+  },
+  goosht: true,
+  //   findValue: function (first, value) {
+  //     // return { key: { value } };
+  //     return { first: value };
+  //   },
+  myObj: function (obj) {
+    return obj;
+  },
+};
+
+let obj2 = [];
+
+// obj2 = ...restaurant.menu.mainFood;
+obj2 = restaurant.menu.mainFood;
+
+console.log(obj2);
