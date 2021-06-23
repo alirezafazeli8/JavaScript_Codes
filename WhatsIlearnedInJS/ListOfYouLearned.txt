@@ -163,3 +163,7 @@ Topic : Data Structures, Modern Operators and Strings.
     1- use rest in destructuring.
     2- use rest in function (parameters).
 ).
+5- short circuiting (
+    1- || OR
+    2- && AND
+).

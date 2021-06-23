@@ -215,4 +215,23 @@ function showMeTheNumber(...numbers) {
 showMeTheNumber(1, 4, 5, 9, 9, 2, 1, 5);
 */
 
-// SECTION
+// SECTION short circuiting (&& , ||)
+
+// STUB || OR
+const truthy = true;
+const falsy = false;
+
+// console.log(truthy || falsy); // true
+// console.log(falsy || truthy); // true
+// console.log(falsy || 0); // 0
+
+// STUB && AND
+
+console.log(1 && "one"); // one
+console.log("hey" && 0); // 0
+console.log(0 && "hey"); // 0
+console.log(null && undefined); // if both data is falsy , it show first falsy data
+
+const ageLicense = false;
+
+console.log(ageLicense || false);
