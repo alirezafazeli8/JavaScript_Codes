@@ -106,7 +106,7 @@ const restaurant = {
 const newArr = [...restaurant.menu.mainFood, ...restaurant.menu.desert];
 
 console.log(newArr);
-*/
+
 // SECTION spread operator.
 
 const names = ["alireza", "korosh", "ghasem", "dariush", "sohrab"];
@@ -159,3 +159,60 @@ let obj2 = [];
 obj2 = restaurant.menu.mainFood;
 
 console.log(obj2);
+
+// SECTION rest pattern And paramter
+//                   =   spread - right hand side
+// rest - left hand  =
+
+const restaurant = {
+  name: "akbar_Jooje",
+  address: "gloogah, samt chap, khoone akbar agh",
+  menu: {
+    mainFood: ["akbar jooje", "koobide", "ash"],
+    desert: ["salad", "salad shirazi", "salad fasl"],
+    drink: ["doogh", "noshabe", "angoor", "water"],
+  },
+  closeDate: {
+    sunday: {
+      closeTime: "12pm",
+    },
+    saturDay: {
+      closeTime: "6am",
+    },
+    monday: {
+      closeTime: "5pm",
+    },
+  },
+  myObj: function (obj) {
+    return obj;
+  },
+};
+
+const arrOne = [1, 2, 3, 4, 5];
+console.log(arrOne);
+
+// STUB spread
+console.log(...arrOne);
+
+// STUB rest pattern
+const [numOne, numTwo, ...orderArr] = arrOne;
+console.log(numOne, numTwo, orderArr);
+
+// STUB rest pattern in object
+const { name, ...orderRestaurant } = restaurant;
+console.log(name);
+console.log(orderRestaurant);
+
+// STUB rest in function
+function showMeTheNumber(...numbers) {
+  let sum = 0;
+  for (let x = 0; x < numbers.length; x++) {
+    sum += numbers[x];
+  }
+  console.log(sum);
+}
+
+showMeTheNumber(1, 4, 5, 9, 9, 2, 1, 5);
+*/
+
+// SECTION

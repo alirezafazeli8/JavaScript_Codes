@@ -159,3 +159,7 @@ Topic : Data Structures, Modern Operators and Strings.
     4- nested object.
 ).
 3-spread operator
+4- rest pattern and parameters (
+    1- use rest in destructuring.
+    2- use rest in function (parameters).
+).
