@@ -272,4 +272,113 @@ function tellNumbers(...numbers) {
 }
 
 tellNumbers(1, 2, 3);
+
+
+// NOTE practice
+let names = ["korosh", "dariush", "sohrab", "aryan", "roxena", "armitis"];
+
+let [bestFriend, , , badFriend] = names;
+names = [bestFriend, badFriend];
+
+console.log(names);
+console.log(bestFriend, badFriend);
+
+let arrOne = [1, 3, 5];
+// STUB set default value
+let [one, two, three, four = "where is my value?", five = "hey im empty"] =
+  arrOne;
+
+console.log(one, two, three, four, five);
+
+let carModel = [
+  ["benz", ["s300"]],
+  ["bmw", ["g750"]],
+];
+console.log(carModel);
+
+let [[, benz], [, bmw]] = carModel;
+
+console.log(benz, bmw);
+
+
+const userInfo = {
+  name: "alireza",
+  lastName: "fazeli",
+  age: 16,
+  bestFriends: ["mohammad", "dariush", "korosh", "sara"],
+  knowledge: {
+    programming: ["html", "css", "sass", "javascript"],
+  },
+};
+
+let cars = {
+  car1: "benz",
+};
+
+// let {
+//   name,
+//   age,
+//   bestFriends: yourBestFriends,
+//   knowledge = "doest notexist",
+// } = userInfo;
+
+// console.log(name, age, yourBestFriends, knowledge);
+
+cars = { car1: "bmw" };
+
+let {
+  knowledge: { programming: myPr },
+} = userInfo;
+
+// console.log(cars);
+
+// console.log(myPr);
+
+console.log(...(userInfo.bestFriends + "bahala"));
+
+const deathGuys = [...userInfo.bestFriends];
+console.log(deathGuys);
+
+console.log(`
+  ☠ DEATH GUYS IS HERE MY FRIEND ☠
+    ${deathGuys}
+  💀💀💀💀💀💀💀💀💀💀💀💀💀💀
+`);
+
+let { name, ...hasBeenTaked } = userInfo;
+
+console.log(hasBeenTaked);
+
+const lolo = "lolo where are you";
+
+function numbers(...nums) {
+  console.log(...nums);
+}
+
+numbers(1, 5, 5, 5, 4544, 4, 452, 5, 54641, 4, 454, 4, 354, 4, 6, 4, 4, 4);
+
+let undefinedValue = undefined;
+let myValue = undefinedValue;
+
+console.log(myValue ?? "this is undefined");
 */
+
+let names = ["arash", "sohrab", "ghasem", "sara"];
+
+// normal solution
+for (let x = 0; x < names.length; x++) {
+  // thats boring 🥱
+  // console.log(names[x]);
+}
+
+// advance solution (for of loop)
+for (let item of names) {
+  // thats nice 🎯
+  console.log(item);
+}
+
+// entries method
+for (let item of names.entries()) {
+  // thats nice 🎯
+  console.log(`${item[0]} | ${item[1]}`);
+}
