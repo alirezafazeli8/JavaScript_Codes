@@ -1,3 +1,5 @@
+"use strict";
+
 // SECTION web service
 const game = {
   team1: "Bayern Munich",
@@ -41,45 +43,56 @@ const game = {
 };
 
 // all players
-let players1 = game.players[0];
-let players2 = game.players[1];
+// let players1 = game.players[0];
+// let players2 = game.players[1];
+let [players1, players2] = game.players;
+
+let allPlayers = [...players1, ...players2];
 
 // set value gor goal keeper and field players
 let [gkPlayerOne, ...fieldPlayerOne] = players1;
 let [gkPlayerTwo, ...fieldPlayerTwo] = players2;
 
 // team object
-const team1 = {
-  gk: gkPlayerOne,
-  fieldPlayer: fieldPlayerOne,
-  allPlayers: 22,
-  playersOneFinal: ["Thiago", "Coutinho", "Perisic"],
-  odds: game.odds.team1,
-  draw: game.odds.x,
-};
+// const team1 = {
+//   gk: gkPlayerOne,
+//   fieldPlayer: fieldPlayerOne,
+//   playersOneFinal: ["Thiago", "Coutinho", "Perisic"],
+//   odds: game.odds.team1,
+//   draw: game.odds.x,
+// };
 
-const team2 = {
-  gk: gkPlayerTwo,
-  fieldPlayer: fieldPlayerTwo,
-  allPlayers: 22,
-  odds: game.odds.team2,
-  draw: game.odds.x,
-};
+// const team2 = {
+//   gk: gkPlayerTwo,
+//   fieldPlayer: fieldPlayerTwo,
+//   odds: game.odds.team2,
+//   draw: game.odds.x,
+// };
 
-function printGoals(teamNumber, numbers) {
-  let playerName = game.players[teamNumber][numbers];
-  console.log(
-    `Name : ${playerName} | Goals : ${game.players[teamNumber].indexOf(
-      playerName
-    )}`
-  );
+// 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'
+
+const allPlayerFinal = [...players1, "Thiago", "Coutinho", "Perisic"];
+
+const {
+  odds: { team1, x: draw, team2 },
+} = game;
+
+// function printGoals(names) {
+//   console.log(`
+//     name : ${names} | Goal : ${allPlayers.indexOf(names)}
+//   `);
+// }
+
+function printGoals(...names) {
+  console.log(`name: ${names} | goals: ${names.length}`);
 }
 
-printGoals(0, 5);
+printGoals("Davies", "Muller", "Lewandowski", "Kimmich");
+printGoals(...game.scored);
 
 // -----------------------------------------------
-const teamOneWin = team1.odds < team2.odds;
-const teamTwoWin = team2.odds < team1;
+// const teamOneWin = team1.odds < team2.odds;
+// const teamTwoWin = team2.odds < team1;
 
-console.log(`team one win? ${teamOneWin}`);
-console.log(`team two win? ${teamTwoWin}`);
+// console.log(`team one win? ${teamOneWin}`);
+// console.log(`team two win? ${teamTwoWin}`);
