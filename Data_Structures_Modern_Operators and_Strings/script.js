@@ -361,7 +361,7 @@ let undefinedValue = undefined;
 let myValue = undefinedValue;
 
 console.log(myValue ?? "this is undefined");
-*/
+
 
 let names = ["arash", "sohrab", "ghasem", "sara"];
 
@@ -381,4 +381,23 @@ for (let item of names) {
 for (let item of names.entries()) {
   // thats nice 🎯
   console.log(`${item[0]} | ${item[1]}`);
+}
+*/
+
+const shop = {
+  openDay: [
+    ["00/4/4", "friday"],
+    ["00/4/5", "satherday"],
+    {
+      newDay: "hello",
+    },
+  ],
+};
+
+for (let item of shop.openDay) {
+  console.log(`we are open at ${item[0]} | ${item[1]}`);
+}
+
+for (let [, , { newDay }] of [shop.openDay]) {
+  console.log(newDay);
 }
