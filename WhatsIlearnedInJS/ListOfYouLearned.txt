@@ -155,7 +155,7 @@ Topic : Data Structures, Modern Operators and Strings.
 2- object destructuring : (
     1- declare variable for Objects.
     2- default value.
-    3- mutating variable. ({ a, b } = obj); 
+    3- mutating variable.
     4- nested object.
 ).
 3-spread operator
@@ -167,6 +167,30 @@ Topic : Data Structures, Modern Operators and Strings.
     1- || OR
     2- && AND
 ).
-6-The Nullish Coalescing  Operators (Made In  ES2020).
+6-The Nullish Coalescing  Operators (Made In  ES2020)(
+    let undefinedValue = undefined;
+    let myValue = undefinedValue;
+    console.log(myValue ?? "this is undefined");
+).
 7- Looping arrays The For Of Loop (for of).
 8- entries method.
+9- enhanced object literals (
+    1- define object in to object.
+    2- define function in to object.
+    3- compute key name.
+).
+10 - Optional chaining( ?. ).
+11 - looping Objects, keys, value, entries (
+    1- Object.keys()
+    2- Objects.value()
+    3- Object.entries()
+).
+12- set (
+    1- set method (
+        1- size
+        3- has
+        4- add
+        5- delete
+        6- clear
+    )
+).
