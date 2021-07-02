@@ -183,7 +183,7 @@ console.log(needAge);
 
 
 function sayHello() {
-  console.log("Hello World !");  
+  console.log("Hello World !");
 }
 
 sayHello();
@@ -276,25 +276,25 @@ console.log(x);
 let y = "j";
 
 switch (y) {
-	case "a":
-		console.log("this is a");
-		break;
+    case "a":
+        console.log("this is a");
+        break;
 
-	case "b":
-		console.log("this is b");
-		break;
+    case "b":
+        console.log("this is b");
+        break;
 
-	case "c":
-		console.log("this is c");
-		break;
+    case "c":
+        console.log("this is c");
+        break;
 
-	case "d":
-	case "h":
-		console.log("d and h is brother");
-		break;
+    case "d":
+    case "h":
+        console.log("d and h is brother");
+        break;
 
-	default:
-		console.log("OO Sorry Pleas Enter Correct Value");
+    default:
+        console.log("OO Sorry Pleas Enter Correct Value");
 }
 
 let x = "x";
@@ -406,7 +406,7 @@ const userInfo = {
     },
 };
 
-console.log(userInfo); 
+console.log(userInfo);
 
 console.log(`
     hey ${userInfo.firstName} ${userInfo["lastName"]}
@@ -456,14 +456,14 @@ const number = [1, 2, 3, 4, 9, 5, 6];
 //         console.log("Wtf, really nine ?");
 //         break;
 //     }
-//     console.log(number[x]);    
+//     console.log(number[x]);
 // }
 
 for(let x = 0; x < number.length; x++) {
     if (number[x] == 9)  {
         continue; // nine isn't here
     }
-    console.log(number[x]);    
+    console.log(number[x]);
 }
 
 for(let x = number.length; x > -1; x--) {
@@ -480,10 +480,10 @@ while (age < 18) {
     if (age == 18) {
         console.log("oh your are right");
     }
-} 
+}
 
 
-//dom 
+//dom
 
 document.querySelector("#header-title").textContent = "Hey I Edited You :)";
 
@@ -663,7 +663,7 @@ document
 
 document.getElementById("showImageButton").style.color = "red";
 document.getElementById("showImageButton").style.backgroundColor = "black";
-*/
+
 
 const personOne = {
   age: 15,
@@ -686,3 +686,323 @@ Object.assign(personTwo, {
 });
 
 console.log(personTwo);
+
+let me  = "alireza";
+
+
+let names = [
+  "alireza",
+  "korosh",
+  "dariush",
+  "sohrab",
+  "ghasem",
+  ["lucky", ["rex", "pex", "max"]],
+];
+
+// const [, , , , , [, [l1, l2, l3]]] = names;
+const [l1, l2, l3] = names[5][1];
+console.log(l1, l2, l3);
+
+// NOTE bullshit
+// const bestFriend = names[0];
+
+// console.log(bestFriend);
+
+const [f1, , f2, , f3, f4 = "your friend does not exist"] = names; // alireza, dariush , ghasem
+// let a = 1;
+// let b = 2;
+
+console.log(f4);
+
+const myFruit = {
+  myBestFruit: ["orange", "apple", "kiwi", "blueberry"],
+  tellMeTheColor(orangeColor, appleColor, kiwiColor, blueberryColor) {
+    const [orange, apple, kiwi, blueberry] = this.myBestFruit;
+    console.log(`
+            ${orange} : ${orangeColor}
+            ${apple} : ${appleColor}
+            ${kiwi} : ${kiwiColor}
+            ${blueberry} : ${blueberryColor}
+        `);
+  },
+};
+
+myFruit.tellMeTheColor("orange", "red", "brown", "darkblue");
+
+
+const userDB = {
+  firstName: "alireza",
+  lastName: "fazeli",
+  age: 16,
+  address: ["th, on the fly", "LA, On The Roof"],
+  bestFriends: ["Jey", "jeff", "rey", "key"],
+  howManyFriends() {
+    console.log(this.bestFriends.length);
+  },
+  moreInformation: {
+    moreFriend: {
+      friends: ["lisa", "kia", "jia"],
+    },
+  },
+};
+
+const { firstName } = userDB;
+const { lastName: myLastName, age2 = "shit" } = userDB;
+
+const {
+    moreInformation: {
+        moreFriend: { friends: moreFriends },
+    },
+} = userDB;
+
+console.log(moreFriends);
+
+console.log(firstName, myLastName, age2);
+
+
+const userDB = {
+  firstName: "alireza",
+  lastName: "fazeli",
+  age: 16,
+  address: ["th, on the fly", "LA, On The Roof"],
+  bestFriends: ["Jey", "jeff", "rey", "key"],
+  howManyFriends() {
+    console.log(this.bestFriends.length);
+  },
+  moreInformation: {
+    moreFriend: {
+      friends: ["lisa", "kia", "jia"],
+    },
+  },
+};
+
+
+// STUB spread
+let bestFriends = ["Jey", "jeff", "rey", "key"];
+
+for (let x = 0; x < bestFriends.length; x++) {
+    console.log(bestFriends[x]);
+}
+
+
+const newFriend = [...bestFriends];
+
+console.log(newFriend);
+
+// STUB rest pattern and parameters
+
+const [bf1, bf2, ...orderfriend] = bestFriends;
+
+console.log(bf1, bf2, ...orderfriend);
+
+
+function pluser(...numbers) {
+    let num = 0;
+    for (let item of numbers) {
+        num += item;
+    }
+    console.log(num);
+}
+
+
+pluser(234, 4, 4, 1, 6, 6, 71, 3, 5, 44, 54, 4435, 4, 42, 4421, 53, 7);
+
+
+
+// || OR
+console.log("true" || true); // "true"
+console.log("" || true); // true
+console.log("" || false); // false
+
+
+// && AND
+console.log("true" && true); // true
+console.log(true && false); // false
+console.log(false && true); // false
+console.log(0 && false); // 0
+
+
+// SECTION NULLISH OPERATOR
+let myName;
+let yourName = null;
+console.log(myName);
+
+// its bullshit for handle undefined and null
+// if (typeof myName === "undefined") {
+//     console.log("does Not Exist");
+// }
+
+// STUB Nullish operator
+console.log(myName ?? "doesNot exist 🤦‍♂️🤦‍♂"); // its very easy 😊😊
+console.log(yourName ?? "why tahts null? ⚛⚛");
+
+
+
+// SECTION FOR OF LOOP
+let bestFriends = ["Jey", "jeff", "rey", "key"];
+
+// its bullshit
+// for (let item = 0; item < bestFriends.length; item++) {
+//     console.log(bestFriends[item]);
+// }
+console.log("---------------------------");
+for (let item of bestFriends.entries()) { // [0, "value"]
+    console.log(item[0], item[1]);
+}
+
+
+
+
+let newdb = [...userDB];
+
+for (let item of newdb) { // [0, "value"]
+    console.log(item);
+}
+
+
+
+const userDB = {
+    firstName: "alireza",
+    lastName: "fazeli",
+    age: 16,
+    address: ["th, on the fly", "LA, On The Roof"],
+    bestFriends: ["Jey", "jeff", "rey", "key"],
+    howManyFriends() {
+        console.log(this.bestFriends.length);
+    },
+    moreInformation: {
+        moreFriend: {
+            friends: ["lisa", "kia", "jia"],
+        },
+    },
+};
+
+const {firstName, lastName, ...orderObj} = userDB;
+
+console.log(firstName, lastName, orderObj);
+console.log(orderObj);
+'
+
+const userInfo1 = {
+    firstName: "alireza",
+    lastName: "fazeli",
+    age: 16,
+    country: "USA",
+
+    // object method
+    fullName: function () {
+        const fullName = `
+            // your name : ${userInfo.firstName},
+            // your lastName : ${userInfo.lastName},
+        `;
+        return fullName
+    },
+};
+
+const firstName = "alireza";
+const lastName = "fazeli";
+
+const userInfo2 = {
+    firstName: "alireza",
+    userName: "@devfazeli",
+    age: 23,
+    // normal solution
+    // userDb : userInfo1,
+    [4 + 2]: "alireza",
+    userInfo1,
+    myFirstMethod: function () {
+        console.log("hello world");
+    },
+    mylastMethod() {
+        console.log("helloWorld");
+    },
+    city: "neka",
+    showComplete: function () {
+        return `hey ${this.userName}, i love you man and i want see ${this.city} ❤`
+    },
+};
+
+console.log(userInfo2[4 + 2]);
+
+
+userInfo2.myFirstMethod();
+userInfo2.mylastMethod();
+
+
+console.log(userInfo2.userDb);
+console.log(userInfo2.userInfo1);
+
+
+
+
+const userInfo2 = {
+    firstName: "alireza",
+    userName: "@devfazeli",
+    age: 23,
+    // normal solution
+    // userDb : userInfo1,
+    [4 + 2]: "alireza",
+    myFirstMethod: function () {
+        console.log("hello world");
+    },
+    mylastMethod() {
+        console.log("helloWorld");
+    },
+    city: "neka",
+    showComplete: function () {
+        return `hey ${this.userName}, i love you man and i want see ${this.city} ❤`
+    },
+};
+
+console.log(userInfo2.address?.add2 ?? "doesNot exist");
+console.log(userInfo2.address?? "doesNot exist");
+
+
+const userInfo2 = {
+    firstName: "alireza",
+    userName: "@devfazeli",
+    age: 23,
+    // normal solution
+    // userDb : userInfo1,
+    [4 + 2]: "alireza",
+    myFirstMethod: function () {
+        console.log("hello world");
+    },
+    mylastMethod() {
+        console.log("helloWorld");
+    },
+    city: "neka",
+    showComplete: function () {
+        return `hey ${this.userName}, i love you man and i want see ${this.city} ❤`
+    },
+};
+
+// for (let item of Object.keys(userInfo2)) {
+//     console.log("thats my key", item);
+// }
+//
+// for (let item of Object.values(userInfo2)) {
+//     console.log("thats my key", item);
+// }
+
+for (let item of Object.entries(userInfo2)) {
+    console.log(item);
+}
+
+
+
+const bestFriends = ["jeff", "jeff", "jey", "key", "key"];
+console.log(bestFriends);
+
+const newFriends = new Set(bestFriends); // now are unique
+console.log(newFriends);
+console.log(newFriends.size); // 3
+console.log(newFriends.has("jeff")); // true
+console.log(newFriends.has("alberto")); // false
+newFriends.add("Maxi");
+newFriends.add("jeff"); // we cant add same value , set does delete value
+newFriends.delete("key");
+newFriends.clear();
+console.log(newFriends);
+
+*/
