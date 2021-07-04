@@ -168,7 +168,7 @@ Topic : Data Structures, Modern Operators and Strings.
     2- && AND
 ).
 6-The Nullish Coalescing  Operators (Made In  ES2020)(
-    let undefinedValue = undefined;
+    let undefinedValue = undefined; // Or Null
     let myValue = undefinedValue;
     console.log(myValue ?? "this is undefined");
 ).
@@ -180,10 +180,12 @@ Topic : Data Structures, Modern Operators and Strings.
     3- compute key name.
 ).
 10 - Optional chaining( ?. ).
-11 - looping Objects, keys, value, entries (
+11 - looping Objects keys and value, entries (
     1- Object.keys()
     2- Objects.value()
-    3- Object.entries()
+    3- Object.entries() (
+        Output of entries : ["firstName", "alireza"]
+    )
 ).
 12- set (
     1- set method (
@@ -193,4 +195,33 @@ Topic : Data Structures, Modern Operators and Strings.
         5- delete
         6- clear
     )
+).
+13- Maps fundamentals (
+    1-map methodes (
+        1- set
+        2- get
+        3- has
+        4- delete
+        5- size
+        6- clear
+    )
+    2- make property with entries solution : (
+        const myMap = new map([
+            ["name", "alireza"],
+            ["age", 16],
+        ]);
+    )
+    3- convert object to map (
+        const a = {a: 1, b: 2};
+        const myMap = new Map(Objects.entries(a));
+    ).
+    4- Map iteration.
+    5- convert Map to Array : (
+        const myMap = new Map();
+        const newArray = [...myMap];
+    );
+)
+14- Which Datastructure We should use? (
+    Array Or set?
+    Object Or Maps?
 ).
