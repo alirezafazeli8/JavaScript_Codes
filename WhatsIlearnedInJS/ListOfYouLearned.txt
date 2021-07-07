@@ -155,7 +155,7 @@ Topic : Data Structures, Modern Operators and Strings.
 2- object destructuring : (
     1- declare variable for Objects.
     2- default value.
-    3- mutating variable.
+    3- mutating variable (objTwo.name = { nameOne: "ghasem", nameTwo: "akbar" }).
     4- nested object.
 ).
 3-spread operator
@@ -197,7 +197,11 @@ Topic : Data Structures, Modern Operators and Strings.
     )
 ).
 13- Maps fundamentals (
-    1-map methodes (
+    
+    const myMap = new Map();
+    myMap.set("name", "alireza");
+
+    1-map method's (
         1- set
         2- get
         3- has
@@ -221,7 +225,41 @@ Topic : Data Structures, Modern Operators and Strings.
         const newArray = [...myMap];
     );
 )
-14- Which Datastructure We should use? (
+14- Which DataStructure We should use? (
     Array Or set?
     Object Or Maps?
 ).
+15- .values() method in map.
+16- Working with strings : (
+    1- length.
+    2- indexOf.
+    3- lastIndexOF.
+    4- -1 in indexOF.
+    5- slice (
+        1- name.slice(5);
+        2- name.slice(1, 6);
+        3- name.slice(0, indexOf("r));
+        4- name.slice(-3);
+    )
+    6- BOXING : (
+        1- new String;
+    ).
+    7- toLowerCase();
+    8- toUpperCase();
+    9- trim.
+    10- replace.
+    11- replaceAll.
+    12- simple regex (
+        1- name.replace(/i/g, "L");
+    )
+    13- includes();
+    14- startWith();
+    15- endWith();
+    16- split();
+    17- join();
+    18- padding : (
+        1- padStart();
+        2- padEnd();
+    ).
+    19- repeat();
+). 
