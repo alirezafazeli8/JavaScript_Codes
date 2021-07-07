@@ -382,7 +382,7 @@ for (let item of names.entries()) {
   // thats nice 🎯
   console.log(`${item[0]} | ${item[1]}`);
 }
-*/
+
 
 const shop = {
   openDay: [
@@ -401,3 +401,518 @@ for (let item of shop.openDay) {
 for (let [, , { newDay }] of [shop.openDay]) {
   console.log(newDay);
 }
+
+
+const arrayOne = ["hello", "im", "alireza", "from"];
+const arrayTwo = [1, 2, 3, 4, 5, 6, 7, 8];
+
+const objOne = {
+  name: "alireza",
+  lastName: "fazeli",
+  age: 16,
+  bestFriends: ["ali", "korosh", "sara", "dariush", "sohrab"],
+  tellWhatYouWant(variable) {
+    console.log(...variable);
+    [...variable] = arrayOne;
+    console.log(variable);
+  },
+};
+
+const objeTwo = {
+  name: "keyvan",
+  lastName: "radman",
+  age: 25,
+  bestFriends: ["niayesh", "kazem", "adib", "rostam", "armits"],
+};
+
+const [hello, , you] = arrayOne;
+console.log(hello, you);
+
+// objOne.tellWhatYouWant(["one", "two", "three"]);
+
+const [
+  one,
+  two,
+  three,
+  ,
+  ,
+  five,
+  six,
+  ,
+  eight = "doesNotExist",
+  nine = "nine",
+  then = "then",
+] = arrayTwo;
+// console.log(one, two, three, five, six, eight, nine, then);
+
+const nestedArray = [
+  ["userName", ["alireza"]],
+  ["lastName", ["fazeli"]],
+];
+
+const [[, [userName]], [, [lastName]]] = nestedArray;
+
+console.log(userName, lastName);
+
+const arrayOne = ["hello", "im", "alireza", "from"];
+const arrayTwo = [1, 2, 3, 4, 5, 6, 7, 8];
+
+const objOne = {
+  name: "alireza",
+  lastName: "fazeli",
+  age: 16,
+  bestFriends: ["ali", "korosh", "sara", "dariush", "sohrab"],
+  tellWhatYouWant(variable) {
+    console.log(...variable);
+    [...variable] = arrayOne;
+    console.log(variable);
+  },
+  address: "ir, t, street, 124",
+};
+
+const objTwo = {
+  name: "keyvan",
+  lastName: "radman",
+  age: 25,
+  bestFriends: ["niayesh", "kazem", "adib", "rostam", "armits"],
+  moreInfo: {
+    fatherName: {
+      grandpapa: "salar",
+      father: "hamid",
+    },
+  },
+};
+
+const {
+  moreInfo: {
+    fatherName: { grandpapa, father },
+  },
+} = objTwo;
+console.log(grandpapa, father);
+
+// solution one
+const { name, lastName } = objTwo;
+// console.log(name, lastName);
+
+// solution two
+const { name: keyName, lastName: radName } = objTwo;
+// console.log(keyName, radName);
+
+//default value
+const { address = "maybe empty" } = objOne;
+
+// console.log(address);
+
+// mutating
+objTwo.name = { nameOne: "ghasem", nameTwo: "akbar" };
+
+console.log(objTwo.name);
+
+
+const arrayOne = ["hello", "im", "alireza", "from"];
+const arrayTwo = [1, 2, 3, 4, 5, 6, 7, 8];
+
+const objOne = {
+  name: "alireza",
+  lastName: "fazeli",
+  age: 16,
+  bestFriends: ["ali", "korosh", "sara", "dariush", "sohrab"],
+  tellWhatYouWant(variable) {
+    console.log(...variable);
+    [...variable] = arrayOne;
+    console.log(variable);
+  },
+  address: "ir, t, street, 124",
+};
+
+const objTwo = {
+  name: "keyvan",
+  lastName: "radman",
+  age: 25,
+  bestFriends: ["niayesh", "kazem", "adib", "rostam", "armits"],
+  moreInfo: {
+    fatherName: {
+      grandpapa: "salar",
+      father: "hamid",
+    },
+  },
+};
+
+console.log("hey", ...arrayTwo);
+
+const copyArr = [...arrayTwo];
+console.log(copyArr);
+
+const copyArrTwo = [];
+for (let item of arrayTwo) {
+  copyArrTwo.push(item);
+}
+
+console.log(copyArrTwo);
+
+const [a, c, ...b] = [1, 2, 3, 4];
+
+console.log(a, b, c);
+
+
+function showMeTheNumbers(...numbers) {
+  let num = 0;
+  for (let item of numbers) {
+    num += item;
+  }
+  console.log(num);
+}
+
+showMeTheNumbers(100, 100, 100, 100); // thats working
+
+// OR ||
+console.log(true || false);
+console.log(false || "true");
+console.log("im true" || "true"); // just it need one aswer, is thast true
+console.log(0 || null);
+
+// ANd &&
+console.log(true && "im true"); // show last
+console.log(0 && "im true"); // show first
+console.log(0 && undefined); // show first
+console.log(true && undefined); // show last
+
+
+let name = undefined;
+// name = "ahamad";
+
+// if (name === undefined) {
+//   console.log("oh you are undefined");
+// } else {
+//   console.log(name);
+// }
+console.log(name ?? "fuck you if you undefined or null");
+
+
+const names = ["niayesh", "kazem", "adib", "rostam", "armits"];
+const myNum = 16;
+
+console.log(names[0]);
+console.log(names);
+
+for (let [key, value] of names.entries()) {
+  console.log(`
+    ${key} | ${value}
+  `);
+}
+
+const objOne = {
+  name: "alireza",
+  lastName: "fazeli",
+  age: 16,
+  bestFriends: ["ali", "korosh", "sara", "dariush", "sohrab"],
+  tellWhatYouWant(variable) {
+    console.log(...variable);
+    [...variable] = arrayOne;
+    console.log(variable);
+  },
+  address: "ir, t, street, 124",
+};
+
+const objTwo = {
+  name: "keyvan",
+  lastName: "radman",
+  age: 25,
+  bestFriends: ["niayesh", "kazem", "adib", "rostam", "armits"],
+  moreInfo: {
+    fatherName: {
+      grandpapa: "salar",
+      father: "hamid",
+    },
+  },
+  thisIsObjOne: objOne,
+  // enhanceDefine - define object to object
+  objOne,
+  names,
+  myNum,
+  sayHello() {
+    return "hello world";
+  },
+  // compute keyName
+  ["sa" + "lam"]: 1,
+};
+
+// console.log(objTwo["keyvanradman"]);
+// console.log(objTwo.keyvanradman);
+// console.log(objTwo);
+
+// console.log(objTwo["salam"]);
+
+// console.log(objTwo.thisIsObjOne);
+// console.log(objTwo.objOne);
+// console.log(objTwo.names);
+// console.log(objTwo.myNum);
+// console.log(objTwo.sayHello());
+
+const objTwo = {
+  name: "keyvan",
+  lastName: "radman",
+  age: 25,
+  bestFriends: ["niayesh", "kazem", "adib", "rostam", "armits"],
+  moreInfo: {
+    fatherName: {
+      grandpapa: "salar",
+      father: "hamid",
+    },
+  },
+  sayHello() {
+    return "hello world";
+  },
+  // compute keyName
+  ["sa" + "lam"]: 1,
+};
+
+// console.log(objTwo.age.ageOne?.ageTwo ?? "DoesNotExist");
+
+// for (let keys of Object.keys(objTwo)) {
+//   console.log(keys);
+// }
+
+// for (let keys of Object.values(objTwo)) {
+//   console.log(keys);
+// }
+
+for (let [keys, values] of Object.entries(objTwo)) {
+  console.log(`
+    Keys: ${keys} || values: ${values}   
+  `);
+}
+
+
+const arrayOne = [1, 2, 4, "benz", "bmw", "car"];
+const arrayTwo = ["dodge", "ferarri", "dodge", "sls", "sls"];
+
+const setOne = new Set();
+const settwo = new Set(["ali", "ghasem", "mohesn"]);
+setOne.add("alireza");
+console.log(setOne);
+
+const mySet = new Set(arrayTwo);
+
+console.log(mySet);
+
+console.log(mySet.size); // size = length
+console.log(mySet.has("a")); // has = include - false
+console.log(mySet.has("dodge")); // true
+
+mySet.add("fuck you");
+console.log(mySet);
+
+mySet.delete("dodge"); // delete = pop - shift
+console.log(mySet);
+
+mySet.clear();
+console.log(mySet);
+
+
+// SECTION Map
+const myMap = new Map();
+myMap.set("name", "alireza").set("age", 16).set("color", "red").set(1, 2);
+
+console.log(myMap);
+console.log(myMap.get("name"), myMap.get(1));
+
+console.log(myMap.has("color")); //true
+console.log(myMap.has("address")); //fasle
+
+myMap.delete(1);
+console.log(myMap);
+
+console.log(myMap.size); // 3
+myMap.clear();
+console.log(myMap);
+
+const mapOne = new Map([
+  ["key", "value"],
+  ["age", 16],
+  [true, false],
+  [myMap, "heyMap"],
+]);
+
+console.log(mapOne);
+console.log(mapOne.get(myMap));
+
+const objTwo = {
+  name: "keyvan",
+  lastName: "radman",
+  age: 25,
+  bestFriends: ["niayesh", "kazem", "adib", "rostam", "armits"],
+  moreInfo: {
+    fatherName: {
+      grandpapa: "salar",
+      father: "hamid",
+    },
+  },
+  sayHello() {
+    return "hello world";
+  },
+  // compute keyName
+  ["sa" + "lam"]: 1,
+};
+
+const newMap = new Map(Object.entries(objTwo));
+console.log(newMap);
+
+const mapOne = new Map([
+  ["key", "value"],
+  ["age", 16],
+  [true, false],
+  [
+    "myMethod",
+    function () {
+      console.log("hello world");
+    },
+  ],
+]);
+
+for (let [key, value] of mapOne) {
+  console.log(key, value);
+}
+
+const myArr = [...mapOne];
+console.log(myArr);
+
+console.log(mapOne.get("myMethod"));
+
+
+// SECTION working with strings
+
+const mySentence = "hello im alireza";
+const myName = "alireza";
+
+// console.log(mySentence[0]);
+// console.log(mySentence[1]);
+// console.log(mySentence[2]);
+
+// STUB length
+console.log(myName.length);
+
+// STUB indexof
+console.log(myName.indexOf("a"));
+
+// const whereA = [];
+// for (let item of myName) {
+//   whereA.push(item.indexOf("a"));
+//   if (whereA[item.length] == "a") {
+//     continue;
+//   } else {
+//     whereA.shift();
+//   }
+// }
+
+// console.log(whereA);
+
+// for (let x = 0; x < myName.length; x++) {
+//   const newName = myName;
+//   const counter = [];
+//   counter.push(newName.indexOf("a"));
+//   newName.unshift();
+//   console.log(counter);
+// }
+
+
+const mySentence = "hello im alireza";
+const myName = "alireza";
+
+console.log(myName.indexOf("a"));
+console.log(myName.lastIndexOf("a"));
+
+// STUB slice
+console.log(mySentence.slice(4));
+console.log(mySentence.slice(0, 5));
+console.log(mySentence.slice(0, mySentence.indexOf("a")));
+console.log(mySentence.slice(-7));
+
+const boxing = new String("hello world");
+console.log(boxing);
+
+
+const low = "hello world hows it going im alireza";
+const upper = "HELLO WOLD IM ALIREZA";
+const lowUpper = "HEllo WjdIs Up PlliCeE";
+
+console.log(low);
+console.log(upper);
+console.log(lowUpper);
+
+console.log("----------After------------");
+
+console.log(low.toUpperCase());
+console.log(upper.toLowerCase());
+console.log(lowUpper.toLowerCase());
+
+console.log(low.slice(0, 5).toUpperCase());
+
+
+const low = "        hello world hows it going im alireza      ";
+console.log(low);
+console.log(low.trim());
+
+
+let mySentence = "hey bitch how are you?";
+let msTwo = "benz its cool car , but this car is not good car";
+
+msTwo = msTwo.replaceAll("car", "Truc");
+msTwo = msTwo.replaceAll("T", "H");
+console.log(msTwo);
+
+console.log(mySentence);
+
+mySentence = mySentence.replace("how", "-----");
+
+console.log(mySentence);
+
+
+let msTwo = "benz its cool car , but this car is not good car";
+
+// console.log(msTwo.replace(/car/g, "truc"));
+
+// console.log(msTwo.includes("car")); // true
+// console.log(msTwo.includes("bmw")); // false
+
+console.log(msTwo.startsWith("benz")); // true
+console.log(msTwo.startsWith("b")); // true
+console.log(msTwo.startsWith("ben")); // true
+console.log(msTwo.startsWith("benz")); // true
+console.log(msTwo.startsWith("bmw")); // false
+
+console.log(msTwo.endsWith("car")); // true
+console.log(msTwo.endsWith("truc")); // false
+
+
+let plusChar = "hello+alireza+fazeli+hal+shoma+chetore";
+let spaceChar = "hello alireza fazeli hal shoma chetore";
+let underScoreChar = "hello_alireza_hal_shoma_chetore";
+
+plusChar = plusChar.split("+");
+spaceChar = spaceChar.split(" ");
+underScoreChar = underScoreChar.split("_");
+
+console.log(plusChar);
+console.log(spaceChar);
+console.log(underScoreChar);
+
+plusChar = plusChar.join(" ");
+console.log(plusChar);
+
+let name = ["gooz", "mikhori", "ya", "bagbag"];
+
+console.log(name);
+
+name = name.join(" ");
+
+console.log(name);
+
+
+const mySentence = "Test";
+console.log(mySentence.padStart(10, "+"));
+console.log(mySentence.padStart(10, "+"));
+console.log(mySentence.padEnd(10, "+"));
+
+console.log(mySentence.repeat(10));
+*/
