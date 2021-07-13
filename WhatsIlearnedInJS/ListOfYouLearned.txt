@@ -262,4 +262,28 @@ Topic : Data Structures, Modern Operators and Strings.
         2- padEnd();
     ).
     19- repeat();
-). 
+).
+
+_______________________________________________________________________________
+Topic : closer look at functions
+
+1- set default value for functions.
+2- passing argument : (
+    ------------------------------------
+    const testTrue = function (value1, value2) {
+    value1 = "Its Changed";
+    valueTwo = "---its changed---";
+    value2.name = "reza";
+    };
+    ------------------------------------
+    1- by value.
+    2- by reference.  NOTE read document
+).
+3- first-class & higher-Order functions (  NOTE read document
+    1- callback functions.
+    2- functions returning functions. (
+        1- store in variable after use argument two.
+        2- call with ()().
+        2- return with arrow function.
+    ) 
+).
