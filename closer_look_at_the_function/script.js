@@ -141,7 +141,7 @@ console.log(yourInfo("alireza", "fazeli", 18, "neka"));
 console.log(yourInfo("ahmad"));
 console.log(yourInfo());
 console.log(yourInfo("salar", undefined, 67, undefined));
-*/
+
 
 const userInfo = {
   name: "alireza",
@@ -149,3 +149,59 @@ const userInfo = {
 };
 
 const bestFriend = "salar";
+
+function editInfo(infoOne, infoTwo) {
+  infoOne.name = "korosh";
+  infoTwo = "reza";
+}
+
+editInfo(userInfo, bestFriend);
+
+console.log(userInfo);
+console.log(bestFriend);
+
+
+// function for callback
+function convertToUpper(word) {
+  return word.toUpperCase();
+}
+
+function convertToLower(word) {
+  return word.toLowerCase();
+}
+
+// function converter for user word
+function converter(input, funcUpper) {
+  return `
+    your Word : |${funcUpper(input)}|
+  `;
+}
+
+// get word from user
+const inputWord = prompt("enter your word :");
+
+console.log(converter(inputWord, convertToUpper));
+console.log(converter(inputWord, convertToLower));
+
+
+function enterWord(word) {
+  return function (name) {
+    return `
+      ${word} |⚛| ${name}
+    `;
+  };
+}
+
+// console.log(enterWord("hello"));
+
+const enterWordTwo = enterWord("hello");
+
+console.log(enterWordTwo("alireza"));
+
+console.log(enterWord("hi")("korosh"));
+
+
+const arrowReturn = (word) => (name) => `${word} |🙌| ${name}`;
+
+console.log(arrowReturn("hello")("dariush"));
+*/
