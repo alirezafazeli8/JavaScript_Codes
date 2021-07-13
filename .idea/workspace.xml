@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0c07566-d1e1-4b46-b40d-65ab8f11171d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice/hashMaker/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice/hashMaker/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data_Structures_Modern_Operators and_Strings/maps/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Data_Structures_Modern_Operators and_Strings/maps/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatsIlearnedInJS/ListOfYouLearned.txt" beforeDir="false" afterPath="$PROJECT_DIR$/WhatsIlearnedInJS/ListOfYouLearned.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/closer_look_at_the_function/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/closer_look_at_the_function/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +48,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -86,6 +82,10 @@
       <workItem from="1625211652242" duration="1326000" />
       <workItem from="1625230330376" duration="1861000" />
       <workItem from="1625289753250" duration="3321000" />
+      <workItem from="1625896890069" duration="145000" />
+      <workItem from="1625897183134" duration="894000" />
+      <workItem from="1626075986006" duration="23000" />
+      <workItem from="1626076422389" duration="191000" />
     </task>
     <servers />
   </component>
