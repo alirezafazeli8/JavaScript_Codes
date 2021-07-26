@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PopUP</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: tomato;
+        z-index: 0;
+      }
+
+      .bk {
+        background-color: blanchedalmond;
+        height: 100vh;
+        width: 100%;
+        z-index: 10;
+      }
+
+      .buttons {
+        border: none;
+        border-radius: 20px;
+        padding: 5px;
+      }
+      .message {
+        background-color: lemonchiffon;
+        text-align: center;
+        border-radius: 15px;
+        border: 2px black solid;
+        position: relative;
+        top: 30px;
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>PopUP</h1>
+    <div id="main-buttons">
+      <button class="buttons">Click Me AHHH</button>
+      <button class="buttons">Click Me AHHH</button>
+      <button class="buttons">Click Me AHHH</button>
+      <button class="buttons">Click Me AHHH</button>
+    </div>
+
+    <div class="message hidden">
+      <h1>Read Message</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+        repellendus facere voluptatum distinctio beatae ullam at. Quas odit,
+        blanditiis libero mollitia illo dolorum, molestias officiis itaque
+        temporibus accusamus, cumque nobis!
+      </p>
+    </div>
+
+    <!-- Js link -->
+    <script src="./app.js"></script>
+  </body>
+</html>
