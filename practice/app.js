@@ -1569,4 +1569,176 @@ for (let obj of Object.entries(restaurant)) {
     Keys: ${obj[0]} =|= values ${obj[1]}
   `);
 }
+
+
+// set
+// unique in sets
+const mySets = new Set();
+
+// primitive and objects can be add in to setss
+mySets.add("hello");
+mySets.add(88);
+mySets.add(true);
+mySets.add(["alireza", "ghasem"]);
+mySets.add({ name: "alireza" });
+mySets.add(function name() {});
+
+// size
+console.log(mySets.size);
+
+// has
+console.log(mySets.has(88)); // true
+console.log(mySets.has("--hello--")); // false
+
+// delete
+mySets.delete(true);
+console.log(mySets);
+
+// clear
+// mySets.clear();
+console.log(mySets);
+
+const studentsName = ["jack", "jey", "sara", "jack", "locas", "jey"];
+console.log(studentsName);
+
+const filterStudents = new Set(studentsName);
+// filterStudents.add(...studentsName);
+
+console.log(filterStudents);
+
+
+
+// map
+
+const myMap = new Map();
+
+const arrayOne = [8423843248249];
+const setOne = { name: "Mr." };
+// declare any type in map
+myMap.set("name", "alireza");
+myMap.set(true, "premmision");
+myMap.set(7567327482, "number");
+myMap.set(arrayOne, "array");
+myMap.set(setOne, "object");
+myMap.set(new Set(), "set");
+
+console.log(myMap);
+
+// get
+console.log(myMap.get("name"));
+console.log(myMap.get(true));
+console.log(myMap.get(7567327482));
+console.log(myMap.get(arrayOne));
+console.log(myMap.get({ name: "Mr." }));
+
+const myObj = {
+  setOne: "hello",
+};
+
+console.log(myObj);
+console.log(myMap);
+
+
+
+const myMap = new Map();
+
+myMap.set("name", "alireza");
+myMap.set(true, "premmision");
+myMap.set(7567327482, "number");
+myMap.set(new Set(), "set");
+
+// has
+console.log(myMap.has(true)); // true
+console.log(myMap.has(false)); // false
+
+console.log(myMap);
+
+// delete
+myMap.delete(7567327482);
+
+console.log(myMap);
+
+// size
+console.log(myMap.size);
+
+// clear
+myMap.clear();
+console.log(myMap);
+
+
+const myMap = new Map([
+  ["name", "alireza"],
+  [85, "mohsen"],
+  [true, "hey That is true"],
+]);
+
+console.log(myMap);
+console.log(myMap.get("name"));
+console.log(myMap.get(85));
+console.log(myMap.get(true));
+
+
+// console.log(Object.keys(truthyTool));
+
+const myObj = {
+  name: "alireza",
+  lastName: "fazeli",
+};
+
+const myMap = new Map(Object.entries(myObj));
+console.log(myMap);
+
+for (let [key, value] of myMap) {
+  console.log(key, "\n", value);
+}
+
+
+const myObj = {
+  name: "alireza",
+  lastName: "fazeli",
+};
+
+const myMap = new Map(Object.entries(myObj));
+// console.log(myMap);
+
+// convert map to arr
+const myArr = [...myMap];
+
+console.log(myArr);
+
+const mySet = new Set();
+mySet.add("hello");
+console.log(mySet);
+
+mySet.get("hello");
+
+const myObj = {
+  name: "alireza",
+  lastName: "fazeli",
+};
+
+const myMap = new Map(Object.entries(myObj));
+
+// myMap.values();
+console.log(myMap.values());
+
+const [[key], [value]] = myMap;
+console.log(key, value);
+
+
+const myObj = {
+  name: "alireza",
+  lastName: "fazeli",
+};
+
+const myMap = new Map(Object.entries(myObj));
+
+const value = myMap.values();
+
+const [alireza, fazeli] = value;
+
+for (let [item] of value) {
+  console.log("hey");
+  console.log(item);
+}
 */
