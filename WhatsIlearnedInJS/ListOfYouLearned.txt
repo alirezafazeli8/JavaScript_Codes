@@ -197,7 +197,7 @@ Topic : Data Structures, Modern Operators and Strings.
     )
 ).
 
-13- Maps fundamentals ( 
+13- Map fundamentals ( 
     const myMap = new Map();
     myMap.set("name", "alireza");
 
@@ -209,17 +209,21 @@ Topic : Data Structures, Modern Operators and Strings.
         5- size
         6- clear
     )
+
     2- make property with entries solution : (
         const myMap = new map([
             ["name", "alireza"],
             ["age", 16],
         ]);
     )
+
     3- convert object to map (
         const a = {a: 1, b: 2};
         const myMap = new Map(Objects.entries(a));
     ).
+
     4- Map iteration.
+    
     5- convert Map to Array : (
         const myMap = new Map();
         const newArray = [...myMap];
