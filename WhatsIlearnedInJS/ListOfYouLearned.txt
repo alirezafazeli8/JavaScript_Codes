@@ -34,8 +34,7 @@ fundamental 2.
         1- function declaration
         - return in function 
         2- function expression
-        3- arrow function expression
-        
+        3- arrow function expression   
     ).
     3- Array
     4- arrays method (
@@ -187,6 +186,7 @@ Topic : Data Structures, Modern Operators and Strings.
         Output of entries : ["firstName", "alireza"]
     )
 ).
+
 12- set (
     1- set method (
         1- size
@@ -196,8 +196,8 @@ Topic : Data Structures, Modern Operators and Strings.
         6- clear
     )
 ).
-13- Maps fundamentals (
-    
+
+13- Maps fundamentals ( 
     const myMap = new Map();
     myMap.set("name", "alireza");
 
