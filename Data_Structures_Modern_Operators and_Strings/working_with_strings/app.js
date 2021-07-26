@@ -152,7 +152,7 @@ console.log(myInfo.endsWith("z")); // false
 console.log(myInfo.endsWith("e")); // false
 console.log(myInfo.endsWith("l")); // false
 console.log(myInfo.endsWith("i")); // i
-*/
+
 
 // ANCHOR hide card number project
 const hideCardNumber = function (numbers) {
@@ -165,3 +165,106 @@ const mySentence = "salam(haj(mamd(khobi(?";
 
 const myArray = mySentence.split("(");
 console.log(myArray.join(" "));
+
+const name = "alireza";
+
+console.log(name[0], name[1]);
+
+// length
+console.log(name.length);
+
+// indexOf
+console.log(name.indexOf("e")); // in be avalie bar bokhore miad ono be ma neshoon mide indexesho
+
+console.log(name.indexOf("a"));
+
+// last indexOf
+console.log(name.lastIndexOf("a"));
+
+// -1 in indexOf
+console.log(name.indexOf("g")); // -1
+
+
+const upper = "GUYS";
+const word = "hello";
+let sentence = "Hey my friend im alireza";
+const spaceSentence = "      hey   you       ";
+
+// console.log(sentence.slice(0, 3));
+// console.log(sentence.slice(-4));
+
+// console.log(typeof new String("hello"));
+
+// console.log(upper.toLowerCase());
+// console.log(word.toUpperCase());
+
+// trim
+// console.log(spaceSentence.trim());
+
+// replace
+
+sentence = sentence.replace("Hey", "--changed--");
+
+// replace all
+
+console.log(sentence.replaceAll("i", "🤞"));
+
+console.log(sentence);
+
+
+const upper = "GUYS";
+const word = "hello";
+let sentence = "Hey my friend im alireza";
+const spaceSentence = "      hey   you       ";
+
+sentence = sentence.replace(/i/g, "🚶");
+
+console.log(sentence);
+
+console.log(sentence.includes("i")); // false
+console.log(sentence.includes("🚶")); // true
+
+
+// "|start- -| "
+let sentence = "Hey my friend im alireza";
+
+console.log(sentence.startsWith("my")); //false
+console.log(sentence.startsWith("Hey")); // true
+
+// "|- -end|"
+
+console.log(sentence.endsWith("alireza")); // true
+console.log(sentence.endsWith("im")); // false
+
+
+// split
+
+let sentence = "Hey my friend im alireza";
+let plusSentence = "Hey+my+friend+im+alireza";
+
+console.log(sentence.split(" "));
+
+console.log(plusSentence.split("+"));
+
+// for (let word of sentence.split(" ")) {
+//   console.log(word);
+// }
+
+// join
+
+plusSentence = plusSentence.split("+");
+
+console.log(plusSentence.join(" "));
+
+const names = ["alireza", "korosh", "ghasem", "sohrab"];
+
+console.log(names.join("-"));
+
+
+const word = "hello";
+
+console.log(word.padStart(10, "+"));
+console.log(word.padEnd(10, "+").padStart(20, "-"));
+
+console.log(word.repeat(5).padStart(7, "_"));
+*/
