@@ -1005,4 +1005,568 @@ newFriends.delete("key");
 newFriends.clear();
 console.log(newFriends);
 
+
+
+
+
+// alert("Hello world");
+
+// console.log("Hello World");
+
+// const name = "alireza";
+// console.log(name);
+
+let name;
+// let name = "alireza";
+name = "ghasem";
+
+
+// const x;
+// const x = 1;
+// x = 2;
+
+const age = 2;
+
+
+if (age >= 18) {
+    console.log("you can drive with car");
+} else {
+    console.log("you cant drive with card");
+}
+
+
+let x = "2";
+let y = 2;
+
+// console.log(typeof x);
+// x = Number(x);
+
+// console.log(typeof x);
+
+
+console.log(typeof y);
+
+y = String(y);
+
+console.log(typeof y);
+
+
+console.log("3" - 2);
+
+console.log("3" + "6");
+
+
+console.log(Boolean(0));
+console.log(Boolean(""));
+console.log(Boolean(undefined));
+console.log(Boolean(null));
+console.log(Boolean(NaN));
+
+
+console.log(Boolean(1));
+console.log(Boolean("hello"));
+console.log(Boolean(3 + 3));
+
+
+
+
+const age = 16;
+
+
+switch(age) {
+    case 15:
+        console.log("You Are 15");
+        break;
+
+    case 17:
+        console.log("You Are 17");
+        break;
+    
+    case 18:
+        console.log("You Can Drive With Your Card");
+        break;
+
+    default:
+        console.log("OHHHHHH GO HOME BABY");
+}
+
+
+
+const age = 20;
+const checkYourAge = age >= 18?"you are 18":"you are not 18";
+
+console.log(checkYourAge);
+
+
+
+function sayHello() {
+    console.log("hello world");
+}
+
+sayHello();
+
+
+function plus() {
+    return 3 + 3 + 3;
+}
+
+console.log(plus());
+
+
+
+
+const sayHello = function () {
+    return "hello World"
+}
+
+console.log(sayHello());
+let two;
+
+console.log(`${two = function () {return 2}}`);
+
+
+
+const sayHello = () => "hello world";
+
+console.log(sayHello());
+
+
+
+// const name1 = "alireza"
+// const name2 = "fazek"
+
+const friendsName = ["alireza", "ghasem", "sara", "mohsen"];
+
+console.log(friendsName);
+
+console.log(friendsName[0]);
+console.log(friendsName[1]);
+console.log(friendsName[2]);
+console.log(friendsName[3]);
+
+// add value from last of array
+friendsName.push("--last--");
+
+// add value from first of array
+friendsName.unshift("--first--");
+
+console.log(friendsName);
+
+
+friendsName.pop();
+console.log(friendsName);
+
+friendsName.shift();
+console.log(friendsName);
+
+
+
+const friendsName = ["alireza","sara", "mohsen"];
+console.log(friendsName.indexOf("alireza"));
+console.log(friendsName.indexOf("ghasem"));
+console.log(Boolean(friendsName.indexOf("korosh")));
+
+if (friendsName.indexOf("korosh") == -1) {
+    console.log("shit is not exsit");
+} else {
+    console.log("is exist");
+}
+
+console.log(friendsName.includes("korosh"));
+console.log(friendsName.includes("alireza"));
+console.log(friendsName.includes("ghasem"));
+
+console.log(friendsName.length);
+
+
+const userInfo = {
+    name: "alireza",
+    lastName: "fazeli",
+    age: 16,
+    showComplete: function () {
+        return `
+            ${this.name} | ${this.lastName}
+
+                    ${this.age}
+        `
+    },
+};
+
+console.log(userInfo.showComplete());
+
+// console.log(userInfo);
+// console.log(userInfo.name);
+// console.log(userInfo.lastName);
+// console.log(userInfo.age);
+
+// console.log(userInfo["name"]);
+// console.log(userInfo["age"]);
+
+// console.log(userInfo["last" + "Name"]);
+
+
+const friendsName = ["alireza", "ghasem", "sara", "mohsen", "ricka", "lopa", "topa", "oka"];
+
+// console.log(friendsName);
+
+// console.log(`this is my Friend ${friendsName[0]}`);
+// console.log(`this is my Friend ${friendsName[1]}`);
+// console.log(`this is my Friend ${friendsName[2]}`);
+// console.log(`this is my Friend ${friendsName[3]}`);
+
+// for (let x = 0; x < friendsName.length; x++) {
+//     console.log(friendsName[x]);
+// }
+
+// for(let x = 1; x < 11; x++) {
+//     console.log(`Hello WORLD TO ${x}`);
+// }
+
+// for (let x = 0; x < friendsName.length; x++) {
+//     // console.log(friendsName[x]);
+//    for (let y = 1; y < 11; y++) {
+//        console.log(y);
+//         if (friendsName[x] == "oka") {
+//             console.log("Hey Oka is Here");
+//             break;
+//         } else {
+//             continue;
+//         }
+//    }
+// }
+
+
+// for (let x = 10; x > 0; x--) {
+//     console.log(x);
+// }
+
+let password =  prompt("pleas enter you password :");
+
+// password();
+
+while(password != "88") {
+    console.log("Pleas Enter Correct Password");
+    password =  prompt("pleas enter you password :");
+    // password();
+}
+
+
+
+// let x = 0;
+// while(x == 0) {
+//     console.log("hey five");
+
+// }s
+
+// console.log("hello");
+
+// const h1Title = document.querySelector("#header-title");
+
+const h1Title = document.getElementById("header-title");
+const inputText = document.getElementById("main_text");
+const button = document.getElementById("clickMe");
+
+// h1Title.textContent = "--New Content--";
+
+button.addEventListener("click", function () {
+  console.log(inputText.value);
+});
+
+
+const name = "alireza"; // global
+
+function sayName() {
+  // function scope
+  //   var name = "mohammad";
+  console.log(name);
+}
+
+for (let x = 1; x < 2; x++) {
+  // block scoped
+  const name = "sara";
+  console.log(name);
+}
+
+console.log(name);
+sayName();
+
+const userOneIfo = {
+  name: "alireza",
+  lastName: "fazeli",
+};
+
+const userTwoIfo = {
+  name: "ghasem",
+  lastName: "mohseni",
+};
+
+// console.log(userOneIfo);
+// console.log(userTwoIfo);
+
+userOneIfo.name = userTwoIfo.name;
+// userTwoIfo.name = userOneIfo.name;
+
+console.log(userOneIfo);
+console.log(userTwoIfo);
+
+const copy = {};
+
+Object.assign(copy, userTwoIfo);
+console.log(copy);
+
+const names = ["alireza", "fazeli", "ghasem", "sohrab", "akbar", "soghra"];
+
+
+// const alireza = names[0];
+// const fazeli = names[1];
+// const ghasem = names[2];
+
+// console.log(alireza, fazeli, ghasem);
+
+const [alireza, fazeli, ghasem, , , soghra] = names;
+
+console.log(alireza, fazeli, ghasem, soghra);
+
+
+const userInfo = {
+  allInfo: ["alireza", "fazeli", 18, "neka"],
+  setVariable() {
+    const [mName, mLastName, mAge, mCity] = this.allInfo;
+    return `
+        ${mName} | ${mLastName} | ${mAge}
+                    ${mCity}
+    `;
+  },
+};
+
+console.log(userInfo.setVariable());
+
+
+const names = ["alireza", "fazeli", "ghasem", "sohrab", "akbar", "soghra"];
+
+const [alireza, , , , , , korosh = "ANONYMOUS"] = names;
+
+console.log(alireza, korosh);
+
+
+const userInfo = [
+  ["userName", "alirezaKAKAKAK"],
+  ["address", ["Mazandaran", ["Neka"]]],
+];
+
+const [[, userName], [, [, [userCity]]]] = userInfo;
+console.log(userName, userCity);
+
+
+const restaurant = {
+  name: "pizza_chip",
+  mainMenu: ["pizza", "chosfill", "lazania", "gohash"],
+  bestFood: {
+    fireFood: {
+      list: ["gooz", "chos ash", "gooz atashin"],
+    },
+  },
+  salad: ["sazar", "shirazi", "fasl"],
+  address: "Mazandaran, Neka, Enghelab Street",
+  telephone: 42344234234,
+};
+
+const { name, mainMenu, salad: bestSalad, customer = "--Not--" } = restaurant;
+
+const {
+  bestFood: {
+    fireFood: { list: fireFood },
+  },
+} = restaurant;
+
+// console.log(name, mainMenu, bestSalad, customer);
+
+console.log(fireFood);
+
+
+const names = ["alireza", "fazeli", "ghasem", "sohrab", "akbar", "soghra"];
+
+const copy = [];
+
+for (let x = 0; x < names.length; x++) {
+  copy.push(names[x]);
+}
+
+console.log(copy);
+
+console.log(...names);
+
+const copyNames = [...names];
+console.log(copyNames);
+
+const restaurant = {
+  name: "pizza_chip",
+  mainMenu: ["pizza", "chosfill", "lazania", "gohash"],
+  bestFood: {
+    fireFood: {
+      list: ["gooz", "chos ash", "gooz atashin"],
+    },
+  },
+  salad: ["sazar", "shirazi", "fasl"],
+  address: "Mazandaran, Neka, Enghelab Street",
+  telephone: 42344234234,
+};
+
+console.log(...Object.keys(restaurant));
+console.log(...Object.values(restaurant));
+
+const restaurant = {
+  name: "pizza_chip",
+  mainMenu: ["pizza", "chosfill", "lazania", "gohash"],
+  bestFood: {
+    fireFood: {
+      list: ["gooz", "chos ash", "gooz atashin"],
+    },
+  },
+  salad: ["sazar", "shirazi", "fasl"],
+  address: "Mazandaran, Neka, Enghelab Street",
+  telephone: 42344234234,
+};
+
+console.log(Object.keys(restaurant));
+
+
+const names = ["alireza", "fazeli", "ghasem", "sohrab", "akbar", "soghra"];
+
+const [alireza, fazeli, ...order] = names;
+
+console.log(alireza, fazeli);
+console.log(order);
+
+const restaurant = {
+  name: "pizza_chip",
+  mainMenu: ["pizza", "chosfill", "lazania", "gohash"],
+  bestFood: {
+    fireFood: {
+      list: ["gooz", "chos ash", "gooz atashin"],
+    },
+  },
+  salad: ["sazar", "shirazi", "fasl"],
+  address: "Mazandaran, Neka, Enghelab Street",
+  telephone: 42344234234,
+};
+
+const { name, ...orderObj } = restaurant;
+console.log(name, orderObj);
+
+
+function saveNames(...names) {
+  console.log(names);
+}
+
+saveNames("nanay", "asgharo", "soghra", "nanay", "akbaro", "kobra");
+
+
+function plusPlus(...nums) {
+  let sum = 0;
+  for (let x = 0; x < nums.length; x++) {
+    sum += nums[x];
+  }
+
+  return sum;
+}
+
+console.log(plusPlus(3, 3, 3, 3));
+
+
+console.log(1 || 0);
+console.log(0 || 2);
+console.log(3 || 4);
+console.log(0 || undefined);
+
+console.log(1 && 0);
+console.log(0 && 1);
+console.log(1 && 2);
+console.log(undefined && null);
+
+
+const name = undefined ?? "ANONYMOUS";
+const family = null ?? "--nothing--";
+
+console.log(name, family);
+// if (name == undefined) {
+//   console.log("ANONYMOUS");
+// }
+
+// if (family == null) {
+//   console.log("THIS IS NULL");
+// }
+
+
+const names = ["alireza", "fazeli", "ghasem", "sohrab", "akbar", "soghra"];
+
+// for (let x = 0; x < names.length; x++) {
+//   console.log(names[x]);
+// }
+
+for (let item of Object.entries(names)) {
+  console.log(`${item[0]} || ${item[1]}`);
+}
+
+
+const restaurantOne = {
+  name: "pizza_chip",
+  mainMenu: ["pizza", "chosfill", "lazania", "gohash"],
+  bestFood: {
+    fireFood: {
+      list: ["gooz", "chos ash", "gooz atashin"],
+    },
+  },
+  salad: ["sazar", "shirazi", "fasl"],
+  address: "Mazandaran, Neka, Enghelab Street",
+  telephone: 42344234234,
+};
+
+const restaurantTwo = {
+  name: "pizza_chip",
+  mainMenu: ["pizza", "chosfill", "lazania", "gohash"],
+  sayHello() {
+    console.log("hello World");
+  },
+  ["nanay" + "asgharo"]: "soghra",
+  //   mainRest: restaurantOne,
+  //   restaurantOne,
+};
+
+console.log(restaurantTwo);
+restaurantTwo.sayHello();
+console.log(restaurantTwo["nanayasgharo"]);
+console.log(restaurantOne.bestFood.address?.fireFood ?? "--not exist--");
+
+
+const restaurant = {
+  name: "pizza_chip",
+  mainMenu: ["pizza", "chosfill", "lazania", "gohash"],
+  bestFood: {
+    fireFood: {
+      list: ["gooz", "chos ash", "gooz atashin"],
+    },
+  },
+  salad: ["sazar", "shirazi", "fasl"],
+  address: "Mazandaran, Neka, Enghelab Street",
+  telephone: 42344234234,
+};
+
+// // keys
+// for (let keys of Object.keys(restaurant)) {
+//   console.log(`
+//      Fucking Keys : ${keys}
+//   `);
+// }
+
+// // values
+// for (let values of Object.values(restaurant)) {
+//   console.log(values);
+// }
+
+for (let obj of Object.entries(restaurant)) {
+  console.log(`
+    Keys: ${obj[0]} =|= values ${obj[1]}
+  `);
+}
 */
