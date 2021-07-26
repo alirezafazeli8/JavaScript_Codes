@@ -204,4 +204,76 @@ console.log(enterWord("hi")("korosh"));
 const arrowReturn = (word) => (name) => `${word} |🙌| ${name}`;
 
 console.log(arrowReturn("hello")("dariush"));
+
+
+let userDB;
+
+// last solution
+function setUserInfo(
+  userName = "--user none--",
+  firstName,
+  age = "18",
+  city = "ghost city"
+) {
+  // first solution
+  firstName = firstName || "--none--";
+  userDB = {
+    userName,
+    firstName,
+    age,
+    city,
+  };
+
+  console.log(userDB);
+}
+
+setUserInfo("jackiePye");
+
+
+const valueOne = "--my value--";
+const objOne = {
+  userName: "obj One",
+};
+
+function changeValue(value1) {
+  // value1 = "--change in function--";
+  // value2.name = "--change in function--";
+  value1.userName = "--changed in function--";
+}
+
+// changeValue(valueOne); // its not changed
+
+// console.log(valueOne);
+
+changeValue(objOne);
+
+console.log(objOne);
+
+
+function toUpper(word) {
+  return word.toUpperCase();
+}
+
+function getWordMagic(word, funcToUpper) {
+  return funcToUpper(word);
+}
+
+console.log(getWordMagic("hello", toUpper));
+
+
+function getWordOne(wordOne) {
+  return function getWordTwo(wordTwo) {
+    return `${wordOne} 👾 ${wordTwo}`;
+  };
+}
+
+// const funcOne = getWordOne("alireza");
+
+// console.log(funcOne("fazeli"));
+
+console.log(getWordOne("alireza")("fazeli"));
+const surprise = (firstName) => (lastName) =>
+  `-- ${firstName} 📥 ${lastName} -- `;
+
+console.log(surprise("jackie")("lori"));
 */
