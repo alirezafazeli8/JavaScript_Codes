@@ -269,6 +269,7 @@ Topic : Data Structures, Modern Operators and Strings.
 ).
 
 _______________________________________________________________________________
+
 Topic : closer look at functions
 
 1- set default value for functions.
@@ -291,3 +292,5 @@ Topic : closer look at functions
         2- return with arrow function.
     ) 
 ).
+4- call method .
+5- apply method .
