@@ -276,4 +276,77 @@ const surprise = (firstName) => (lastName) =>
   `-- ${firstName} 📥 ${lastName} -- `;
 
 console.log(surprise("jackie")("lori"));
+
+
+const restaurant = {
+  name: "tehran food",
+  restNumber: 1,
+  bookers: [],
+  book(name, restNumber) {
+    console.log(`
+      ${this.name} from number ${restNumber} is booked for Mr/Ms. ${name}.
+    `);
+    this.bookers.push({
+      name,
+      restName: this.name,
+      restNumber,
+    });
+  },
+};
+
+// restaurant.book("alireza", 45);
+
+const amooSohrab = {
+  name: "amoo Sohrab",
+  restNumber: 8,
+  bookers: [],
+};
+
+const akbarJooje = {
+  name: "Akbar Jooje",
+  restNumber: 1,
+  bookers: [],
+};
+
+const booker = restaurant.book;
+
+// booker("alireza", 43);
+// amooSohrab.booker("alireza", 43);
+
+const restBooker = restaurant.book;
+
+restBooker.call(amooSohrab, "jey", 9);
+
+restaurant.book.apply(akbarJooje, ["jack", 1]);
+restaurant.book.apply(akbarJooje, ["jack", 1]);
 */
+
+const restaurant = {
+  name: "tehran food",
+  restNumber: 1,
+  bookers: [],
+  book(name, restNumber) {
+    console.log(`
+      ${this.name} from number ${restNumber} is booked for Mr/Ms. ${name}.
+    `);
+    this.bookers.push({
+      name,
+      restName: this.name,
+      restNumber,
+    });
+  },
+};
+
+const amooSohrab = {
+  name: "amoo Sohrab",
+  restNumber: 8,
+  bookers: [],
+};
+
+const amooBooker = restaurant.book.bind(amooSohrab);
+
+amooBooker("jeyKoob", 9);
+amooBooker("jeyKoob", 9);
+amooBooker("jeyKoob", 9);
+amooBooker("jeyKoob", 9);
+amooBooker("jeyKoob", 9);
