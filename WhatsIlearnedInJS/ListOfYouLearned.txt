@@ -294,3 +294,5 @@ Topic : closer look at functions
 ).
 4- call method .
 5- apply method .
+6- bind method.
+
