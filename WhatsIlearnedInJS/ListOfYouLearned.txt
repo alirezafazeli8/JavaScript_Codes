@@ -299,3 +299,16 @@ Topic : closer look at functions
 8- closures.
 9- console.dir().
 10- setTimeout() NOTE (callback function).
+
+
+___________________________________________________________________________________
+
+Topic : Working With Arrays (array tools)
+
+    1- slice (method).
+    2- splice (method).
+    3- reverse (method).
+    4- concat (method).
+    5- join (method).
+    6- Math.abs (method).
+    7- forEach (method).
