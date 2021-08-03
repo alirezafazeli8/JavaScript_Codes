@@ -295,4 +295,7 @@ Topic : closer look at functions
 4- call method .
 5- apply method .
 6- bind method.
-
+7- immediately invoked function expression (IIFE).
+8- closures.
+9- console.dir().
+10- setTimeout() NOTE (callback function).

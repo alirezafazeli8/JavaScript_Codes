@@ -1,6 +1,5 @@
 {
-    "cSpell.words": [
-        "korosh"
-    ],
-    "commentAnchors.tagHighlights.enabled": true
+  "cSpell.words": ["korosh"],
+  "commentAnchors.tagHighlights.enabled": true,
+  "liveServer.settings.port": 5501
 }

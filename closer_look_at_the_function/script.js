@@ -319,7 +319,7 @@ restBooker.call(amooSohrab, "jey", 9);
 
 restaurant.book.apply(akbarJooje, ["jack", 1]);
 restaurant.book.apply(akbarJooje, ["jack", 1]);
-*/
+
 
 const restaurant = {
   name: "tehran food",
@@ -350,3 +350,20 @@ amooBooker("jeyKoob", 9);
 amooBooker("jeyKoob", 9);
 amooBooker("jeyKoob", 9);
 amooBooker("jeyKoob", 9);
+
+
+// SECTION IIEF
+function sayHello() {
+  console.log("hello world");
+}
+
+// sayHello();
+
+// sayHello();
+
+(function () {
+  console.log("run for once");
+})();
+
+(() => console.log("im arrow , i run for once"))();
+*/
