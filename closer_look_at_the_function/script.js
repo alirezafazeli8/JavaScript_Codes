@@ -352,18 +352,178 @@ amooBooker("jeyKoob", 9);
 amooBooker("jeyKoob", 9);
 
 
-// SECTION IIEF
-function sayHello() {
-  console.log("hello world");
+
+function completeUserInfo (firstName, lastName = "anonymous", age = 17, city = "IDK") {
+  // solution one
+  firstName = firstName || "anonymous";
+  console.log(`
+    hello ${firstName} ${lastName} - you ${age >= 18? "can": "cant"} come to ${city}. 
+  `);
 }
 
-// sayHello();
+completeUserInfo("alireza", "fazeli", 16, "neka");
+completeUserInfo("alireza", "fazeli", 21, "neka");
+
+completeUserInfo("alireza", "fazeli");
+completeUserInfo();
+
+const userInfo = {
+  name: "alireza",
+  lastName: "fazeli",
+};
+
+const name = "ghasem";
+
+function changeValue (passvariable) {
+  return  passvariable = "changed in function";
+}
+
+changeValue(name);
+
+console.log(name);
+
+function editeByRefrence(obj) {
+  return obj.name = "changed in to function";
+}
+
+editeByRefrence(userInfo);
+
+console.log(userInfo);
+
+
+
+function convertUpper (word) {
+  return word.toUpperCase();
+}
+
+function convertLower (word) {
+  return word.toLowerCase();
+}
+
+function words(word, func) {
+  return func(word);
+}
+
+console.log(words("hello", convertUpper));
+console.log(words("ALIREZA", convertLower));
+
+function waitForMe(time) {
+  console.log(`hey ricki pleas wait for ${time} seconds for me`);
+  setTimeout(function () {
+    console.log(`hey im ricki i waited for you in ${time} seconds`);
+  }, time *1000);
+}
+
+
+waitForMe(5);
+
+
+const correctPassword = "12345";
+
+function checkPassword() {
+  const getPassword = prompt("pleas enter your password here :");
+  return function() {
+    if (getPassword == correctPassword) {
+      console.log("you are logged in");
+    } else {
+      console.log("your password is incorrect");
+    }
+  }
+}
+
+// checkPassword();
+
+// const p1 = checkPassword();
+
+// p1();
+
+
+// checkPassword()();
+
+
+const yourName = (name) => (lastName) => console.log(`name: ${name} - lastName : ${lastName}`);
+
+yourName("alireza")("fazel");
+
+
+const restaurant = {
+  name: "akabr jooje",
+  number: 2,
+  bookPerson: [],
+
+  book(name, numRest) {
+    console.log(`
+      mr ${name} you booked ${this.name} number of ${numRest}.
+    `);
+    this.bookPerson.push({
+      name,
+      numRest,
+      restName: this.name,
+    });
+  },
+};
+
+restaurant.book("alireza", 5);
+
+// const restBook = restaurant.book;
+
+// restBook("alireza", 43);
+
+const derekhashan = {
+  name: "derakhshan",
+  number: 8,
+  bookPerson: [],
+  book(name, number) {
+    return restaurant.book.call(derekhashan, name, number);
+  },
+};
+
+const derekhashanBook = restaurant.book.call(derekhashan, "loka", 88);
+
+derekhashan.book("ki", 9);
+
+const applDerakshan = restaurant.book.apply(derekhashan, ["jey", 7]);
+
+const bookDerekhashan = restaurant.book.bind(derekhashan);
+
+bookDerekhashan("ali", 3);
+bookDerekhashan("korosh", 4);
+bookDerekhashan("keyvan", 0);
+
+
+// function sayHello() {
+//   console.log("hello");
+// }
 
 // sayHello();
+// sayHello();
+// sayHello();
+// sayHello();
 
+//
 (function () {
-  console.log("run for once");
+  console.log("im run for one");
 })();
 
-(() => console.log("im arrow , i run for once"))();
+const name = "alireza";
+
+(function () {
+  console.log("hello", name);
+})();
 */
+
+function counterFunc() {
+  let counter = 0;
+
+  return function () {
+    counter += 1;
+    console.log(counter);
+  };
+}
+
+const copyCounter = counterFunc();
+
+copyCounter();
+copyCounter();
+copyCounter();
+console.dir(copyCounter);
