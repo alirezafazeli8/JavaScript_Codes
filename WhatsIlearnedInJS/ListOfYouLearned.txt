@@ -312,3 +312,5 @@ Topic : Working With Arrays (array tools)
     5- join (method).
     6- Math.abs (method).
     7- forEach (method).
+    8- insertAdjucentHtml (method).
+    9- innerHtml (method).
