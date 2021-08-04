@@ -314,3 +314,6 @@ Topic : Working With Arrays (array tools)
     7- forEach (method).
     8- insertAdjucentHtml (method).
     9- innerHtml (method).
+
+    ______data transforming_____
+    10- map (method).
