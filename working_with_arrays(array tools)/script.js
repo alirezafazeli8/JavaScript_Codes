@@ -45,7 +45,7 @@ console.log(letters);
 // STUB join
 // NOTE should store to variable
 console.log(arr.join("+"));
-*/
+
 
 // STUB forEach
 
@@ -75,3 +75,55 @@ arr.forEach(function (myValue, i) {
   console.log(i);
   //   break;
 });
+
+
+const names = ["alireza", "ghasem", "mohsen", "akbar"];
+
+// console.log(names.slice(1));
+
+// names.splice(0, 2);
+names.splice(-2);
+console.log(names);
+*/
+
+const names = [
+  "alireza",
+  "ghasem",
+  "mohsen",
+  "akbar",
+  "salar",
+  "norows",
+  "nikan",
+  "korosh",
+];
+const numbers = [1, 2, 3, 4, 5, 6];
+
+// console.log(names.reverse());
+// console.log(numbers.reverse());
+// names.reverse();
+
+// console.log(names);
+
+// const arr = [...names, ...numbers];
+// console.log(arr);
+
+// const arr = names.concat(numbers);
+
+// console.log(arr);
+
+// console.log(names.join("🎲"));
+
+// console.log(Math.abs(-432424));
+
+names.forEach(function (item, i) {
+  const html = `
+    <li class="list-group-item">${i + 1} ${item}</li>
+ `;
+  document.querySelector(".list-group").insertAdjacentHTML("afterbegin", html);
+});
+
+const newNumber = numbers.map(function (value) {
+  return value * 2;
+});
+
+console.log(newNumber);

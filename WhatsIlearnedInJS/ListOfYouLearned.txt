@@ -306,8 +306,8 @@ ________________________________________________________________________________
 Topic : Working With Arrays (array tools)
 
     1- slice (method).
-    2- splice (method).
-    3- reverse (method).
+    2- splice (method) NOTE change original.
+    3- reverse (method) NOTE change original.
     4- concat (method).
     5- join (method).
     6- Math.abs (method).
