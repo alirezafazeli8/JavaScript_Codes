@@ -1,5 +1,6 @@
 "use strict";
 
+/*
 // const numbers = [1, 2, 3, 4];
 
 // const newNumbers = numbers.map(function (num) {
@@ -30,3 +31,4 @@ console.log(newArr);
 newArr.forEach(function (item) {
   console.log("this is my item ", item);
 });
+*/
