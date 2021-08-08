@@ -93,3 +93,41 @@ function movementFunc(variable) {
 movementFunc(movements);
 
 /////////////////////////////////////////////////
+
+// NOTE write computing username for once
+// function makeUserName(userArr) {
+//   userArr.forEach(function (acc) {
+//     acc.username = acc.owner
+//       .toLowerCase()
+//       .split(" ")
+//       .map((word) => word[0])
+//       .join("");
+//   });
+// }
+
+// makeUserName(accounts);
+
+// console.log(accounts);
+
+// NOTE thats my main code about computing username
+function createUserName(arr) {
+  arr.forEach(function (acc) {
+    acc.userName = acc.owner
+      .split(" ")
+      .map((names) => names[0])
+      .join("")
+      .toLowerCase();
+  });
+}
+
+createUserName(accounts);
+// console.log(accounts);
+
+// NOTE thats show current balance money
+function showCurrentMoney(array) {
+  const sum = array.reduce(function (first, current) {
+    return first + current;
+  });
+  labelBalance.textContent = `${sum} EUR`;
+}
+showCurrentMoney(movements);
