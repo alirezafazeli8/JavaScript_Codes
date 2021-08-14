@@ -299,7 +299,7 @@ Topic : closer look at functions
 8- closures.
 9- console.dir().
 10- setTimeout() NOTE (callback function).
-
+11- isNaN(); (internal function)
 
 ___________________________________________________________________________________
 
@@ -320,3 +320,5 @@ Topic : Working With Arrays (array tools)
     11- filter (method).
     12- side effects.
     13- reduce (method).
+    14- chaining method.
+    15- find (method).
