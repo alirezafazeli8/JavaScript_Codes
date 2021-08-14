@@ -168,3 +168,47 @@ arr.forEach(function (myValue, i) {
 // });
 
 // console.log(allNumbers);
+
+// SECTION find method
+
+// const names = ["alireza", "ghasem", "mohesn", "reza", "alireza", "ghasem"];
+const userDb = [
+  {
+    userId: 124534,
+    name: "alireza",
+    lastName: "fazeli",
+  },
+  {
+    userId: 535345435,
+    name: "ghasem",
+    lastName: "mohseni",
+  },
+  {
+    userId: 2323,
+    name: "ghasem",
+    lastName: "nikan",
+  },
+  {
+    userId: 4343,
+    name: "alireza",
+    lastName: "rezaei",
+  },
+];
+
+// console.log(
+//   names.find(function (value) {
+//     return value == "alireza";
+//   })
+// );
+
+for (let item of userDb) {
+  if (item.userId == 434) {
+    console.log(item);
+  }
+}
+
+console.log(
+  userDb.find(function (value) {
+    return value.userId == 4343;
+  })
+);
