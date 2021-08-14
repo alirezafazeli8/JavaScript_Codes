@@ -322,3 +322,11 @@ Topic : Working With Arrays (array tools)
     13- reduce (method).
     14- chaining method.
     15- find (method).
+
+
+
+------------------ (New Course ) --------------
+TOPIC : DOM
+
+1- Window object
+2- $0 (chrome tool)

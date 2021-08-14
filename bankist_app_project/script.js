@@ -131,3 +131,41 @@ function showCurrentMoney(array) {
   labelBalance.textContent = `${sum} EUR`;
 }
 showCurrentMoney(movements);
+
+function displaySummary(movementsArray) {
+  // incomes money variable
+  const incomes = movementsArray
+    .filter(function (money) {
+      return money > 0;
+    })
+    .reduce(function (first, last) {
+      return first + last;
+    }, 0);
+
+  // show incomes in page
+  labelSumIn.textContent = `${incomes} EUR`;
+
+  // outSummary money variable
+  const outSummary = movementsArray
+    .filter(function (money) {
+      return money < 0;
+    })
+    .reduce(function (first, last) {
+      return first + last;
+    }, 0);
+
+  // show sum out page
+  labelSumOut.textContent = `${Math.abs(outSummary)} EUR`;
+
+  // interest monet variable
+  const interestSummary = movementsArray
+    .filter((money) => money > 0)
+    .map((deposit) => (deposit * 1.2) / 100)
+    .filter((deposit) => deposit >= 1)
+    .reduce((first, last) => first + last);
+
+  // show sumInterest page
+  labelSumInterest.textContent = `${interestSummary} EUR`;
+}
+
+displaySummary(account1.movements);
