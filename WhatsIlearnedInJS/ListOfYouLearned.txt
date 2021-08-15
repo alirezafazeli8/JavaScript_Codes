@@ -234,6 +234,7 @@ Topic : Data Structures, Modern Operators and Strings.
     Object Or Maps?
 ).
 15- .values() method in map.
+
 16- Working with strings : (
     1- length.
     2- indexOf.
@@ -330,3 +331,15 @@ TOPIC : DOM
 
 1- Window object
 2- $0 (chrome tool)
+3- select child of node element.
+4- getElementByClassName (method).
+    NOTE in querySelector we can use any css selector type.
+5- getElementsByTagName (method).
+6- document.body
+7- document.head
+8- textContent (property).
+9- className (property).
+    NOTE if you want to know which property is available for your element just use console.dir
+10- value (property).
+11- id (property).
+12-  setAttribute("value", "hello") (property).

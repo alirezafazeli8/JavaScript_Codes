@@ -1742,3 +1742,184 @@ for (let [item] of value) {
   console.log(item);
 }
 */
+
+// NOTE new practice in 00/5/24
+
+// const arr1 = ["alireza", "ghasem", "mohammad", "nikan", "sara"];
+
+// const arr2 = arr1[0];
+
+// console.log(arr2);
+
+// const [alireza, ghasem, akabar, name2] = arr1;
+
+// console.log(alireza, ghasem, akabar, name2);
+
+// const [name1, , , nikan] = arr1;
+
+// console.log(name1, nikan);
+
+// for (let [key, value] of arr1.entries()) {
+//   console.log(key, value);
+// }
+
+// const nestedArr = [["names", ["alireza", "ghasem"]]];
+
+// const [[, [alireza, ghasem]]] = nestedArr;
+
+// console.log(alireza, ghasem);
+
+// const person = {
+//   name: "alireza",
+//   lastName: "fazeli",
+//   age: 16,
+//   address: ["addressOne", ["neka, street 2, ally 3"]],
+// };
+
+// const alireza = person.name;
+// const fazeli = person.lastName;
+
+// console.log(alireza, fazeli);
+
+// const { name, lastName: fazeli, age, address } = person;
+
+// console.log(name, fazeli, age, address[1][0]);
+
+// const arr1 = ["alireza", "ghasem", "mohammad", "nikan", "sara"];
+
+// const copyArr = [...arr1];
+// console.log(copyArr);
+
+// const [alireza, ...order] = arr1;
+// console.log(order);
+
+// const person = {
+//   name: "alireza",
+//   lastName: "fazeli",
+//   age: 16,
+//   address: ["addressOne", ["neka, street 2, ally 3"]],
+// };
+
+// const { name, ...orderObj } = person;
+
+// console.log(name, orderObj);
+
+// function getAllNumber(num1, num2, num3, num4) {
+//   console.log(num1, num2, num3, num4);
+// }
+
+// getAllNumber(1, 2, 3, 4);
+
+// function getAllNumber(...numbers) {
+//   console.log(numbers);
+// }
+
+// getAllNumber(1, 2, 3, 4, 5, 6, 5, 7, 3, 23, 12, 213);
+
+// const calculateAllNumbers = function (...numbers) {
+//   let x = 0;
+//   numbers.forEach(function (value) {
+//     return (x += value);
+//   });
+//   console.log(x);
+// };
+
+// calculateAllNumbers(2, 2, 3, 5, 6, 8, 3, 2);
+
+// const myObj = {
+//   name: "alireza",
+// };
+
+// // console.log(name.firstName.firstName2);
+
+// const myUnde = undefined;
+
+// // console.log(myUnde ?? "hey this is undefined");
+
+// // console.log(myUnde || "hello");
+
+// if (myUnde == undefined) {
+//   console.log("hye this is undefined");
+// }
+
+// const name = "alireza";
+
+// const person = {
+//   // name: name,
+//   name,
+//   // showFullName: function () {
+//   //   console.log(this.name + " fazeli");
+//   // },
+//   showFullName() {
+//     console.log(this.name + " fazeli");
+//   },
+//   ["last" + "Name"]: "fazeli",
+// };
+
+// console.log(person);
+// person.showFullName();
+
+// console.log(person["lastName"]);
+// console.log(person.lastName);
+
+// console.log(Object.keys(person));
+
+// console.log(Object.values(person));
+
+// console.log(Object.entries(person));
+
+// for (let key of Object.keys(person)) {
+//   console.log(key);
+// }
+
+// for (let value of Object.values(person)) {
+//   console.log(value);
+// }
+
+// for (let [key, value] of [Object.keys(person), Object.values(person)]) {
+//   console.log(key, value);
+// }
+
+// for (let [key, value] of Object.entries(person)) {
+//   console.log(key, value);
+// }
+
+// const sentence =
+//   "hello my name is alireza im from iran today i wanna talk about me";
+
+// const wordOne = "hello";
+// const wordTwo = "AMERICA";
+// const trimWord = "     hey       you          guys    ";
+// console.log(wordOne.length);
+// console.log(wordOne.indexOf("e"));
+// console.log(wordTwo.indexOf("A"));
+// console.log(wordTwo.lastIndexOf("A"));
+// console.log(wordOne.indexOf("a"));
+
+// console.log(sentence.slice(10, 20));
+// console.log(sentence.slice(-10));
+
+// console.log(new String("hello"));
+
+// console.log(wordOne.toUpperCase());
+// console.log(wordTwo.toLocaleLowerCase());
+// console.log(trimWord.trim());
+
+// console.log(sentence.replace("name", "Fuck"));
+// console.log(sentence.replace("i", "🥏"));
+// console.log(sentence.replaceAll("i", "🥏"));
+// console.log(sentence.replace(/🥏/g, "i"));
+// console.log(sentence.includes("alireza"));
+// const sentence =
+//   "hello my name is alireza im from iran today i wanna talk about me";
+
+// console.log(sentence.startsWith("hello"));
+// console.log(sentence.startsWith("evrim rish"));
+
+// console.log(sentence.endsWith("me"));
+// console.log(sentence.endsWith("goozan mouse"));
+
+const sentence =
+  "hello my name is alireza im from iran today i wanna talk about me";
+
+console.log(sentence.split(" "));
