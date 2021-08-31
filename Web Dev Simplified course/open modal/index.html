@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+
+    <!-- my css -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- JS link -->
+    <script src="script.js" defer></script>
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <!-- open button -->
+    <div class="open-button container m-auto p-5">
+      <button class="btn btn-success" id="open-btn">Click Me Boy</button>
+    </div>
+    <!-- card -->
+    <div class="card-box container card hidden" style="z-index: 1000">
+      <strong class="title p-2 m-auto">Hello Im Modal</strong>
+      <p class="text-success m-auto p-2">pleas close me with close button</p>
+      <!-- close button -->
+      <div class="p-3 text-center">
+        <button class="btn btn-danger w-25" id="close-button">
+          Close Bitch
+        </button>
+      </div>
+    </div>
+    <!-- bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
