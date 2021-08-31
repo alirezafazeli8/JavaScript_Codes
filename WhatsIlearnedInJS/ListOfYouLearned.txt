@@ -323,23 +323,75 @@ Topic : Working With Arrays (array tools)
     13- reduce (method).
     14- chaining method.
     15- find (method).
+    16- blur (method). // NOTE Remove focus from an element:
 
 
+________________________Web Dev Simplified______________________
 
------------------- (New Course ) --------------
-TOPIC : DOM
+1- new Date(); (object)
 
-1- Window object
-2- $0 (chrome tool)
-3- select child of node element.
-4- getElementByClassName (method).
-    NOTE in querySelector we can use any css selector type.
-5- getElementsByTagName (method).
-6- document.body
-7- document.head
-8- textContent (property).
-9- className (property).
-    NOTE if you want to know which property is available for your element just use console.dir
-10- value (property).
-11- id (property).
-12-  setAttribute("value", "hello") (property).
+2- js rendering in html (
+    1- normal rendering.
+    2- async.
+    3- defer.
+)
+
+
+-----------DOM------------
+
+    3- window object.
+
+    4- document object (
+        1- documentElement
+        2- createElement
+        3- innerText
+        4- appendChild = (The appendChild() method appends a node as the last child of a node.)
+        5- getElementsByClassName
+    );
+
+    5- array.from = (The from() method returns an Array object from any object with a length property or any iterable object.).
+
+    6- HTML data-* Attributes = (The data-* attributes is used to store custom data private to the page or application.)
+
+    6- addEventListener("name of event", () => //something happen) = (
+        events = (
+            1- "click"
+            2- "change"
+            3- "input"
+            4- 'submit'
+            5- "mouseenter"
+            6- "mouseleave"
+            7- "mouseover"
+            8- "focus"
+            9- "blur"
+            10- "resize"
+        )
+    ).
+
+    7- removeEventListener = (The removeEventListener() method removes an event handler that has been attached with the addEventListener() method.)
+
+    8- eventObject = (
+        1- target
+        2- target.value
+    ).
+
+    9- preventDefault (DOM method).
+
+    10- arrow this keyword vs. function this keyword
+
+    11- data attribute = (
+        this information can give us the ability to search or filter an element by the data type using their values. From the example above, say you want to grab the data-index-number from the <article> tag. First, select the element, which comes with a dataset object. The properties in the dataset object are the attribute values that follow the data- in your HTML5 tag. Javascript will convert the dash to camel case.
+    )
+
+    12- dataset
+
+    13- dom element child (
+        1- children (property);
+        2- nextElementSibling
+        3- parentElement
+        4- closest (method)
+    );
+
+    14- node value
+
+    15- remove method

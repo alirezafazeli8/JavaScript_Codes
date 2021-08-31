@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+
+    <title>TodoList</title>
+  </head>
+  <body class="bg-danger">
+    <div class="text-center">
+      <h1 class="p-3 text-center">Work Now !</h1>
+      <h4>todo list 🔮</h4>
+    </div>
+    <main>
+      <div class="list-group w-75 m-auto p-3" id="list-container"></div>
+    </main>
+    <footer>
+      <form class="row g-3 bg-dark rounded-2 w-50 m-auto p-2" id="form">
+        <div class="col-auto col-9 m-auto">
+          <label for="inputPassword2" class="visually-hidden">Password</label>
+          <input
+            class="form-control form-control-lg"
+            type="text"
+            placeholder="Task"
+            aria-label=".form-control-lg example"
+            id="todo-input"
+          />
+        </div>
+        <div class="col-auto col-3 m-auto">
+          <button
+            type="submit"
+            class="btn btn-primary col-10"
+            id="submit-button"
+          >
+            Confirm identity
+          </button>
+        </div>
+      </form>
+    </footer>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./app.js"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
