@@ -142,21 +142,133 @@ data.addEventListener("mouseenter", function () {
 console.log(data.dataset);
 */
 
-const headerParent = Array.from(document.querySelector("#box-child").children);
+// const headerParent = Array.from(document.querySelector("#box-child").children);
 
-// console.log(document.querySelector(".header-child").children);
+// // console.log(document.querySelector(".header-child").children);
 
-console.log(headerParent);
+// console.log(headerParent);
 
-// headerParent.forEach((element) => {
-//   element.style.color = "red";
-// });
-const hp = document.querySelector("#header-parent").nextElementSibling;
+// // headerParent.forEach((element) => {
+// //   element.style.color = "red";
+// // });
+// const hp = document.querySelector("#header-parent").nextElementSibling;
 
-console.log(hp);
+// console.log(hp);
 
-// hp.style.color = "red";
+// // hp.style.color = "red";
 
-// hp.parentElement.dataset.test = "true";
+// // hp.parentElement.dataset.test = "true";
 
-document.querySelector("#header-parent").closest(".find").style.color = "green";
+// document.querySelector("#header-parent").closest(".find").style.color = "green";
+
+// const myArr = [1, 2, 5, 6, 5, 6, 1, 5, 6, 5];
+// // console.log(myArr);
+
+// if (myArr.length == 0) {
+//   console.log("empty Array");
+// } else if (myArr.length < 5) {
+//   console.log("small");
+// } else if (myArr.length < 10) {
+//   console.log("Medium");
+// } else {
+//   console.log("large");
+// }
+
+// const myAnimal = "dog";
+
+// switch (myAnimal) {
+//   case "cat":
+//     console.log("hello cat");
+//     break;
+//   case "dog":
+//     console.log("hello dog");
+//     break;
+//   case "cat":
+//     console.log("hello cat two");
+//     break;
+// }
+
+// const number = 5;
+
+// switch (number) {
+//   case 0:
+//     console.log("it is zero");
+//     break;
+//   case 1:
+//   case 2:
+//     console.log("it is small");
+//     break;
+//   case 3:
+//   case 4:
+//     console.log("medium");
+//     break;
+
+//   case 5:
+//     console.log("large");
+//     break;
+
+//   default:
+//     console.log("try again");
+// }
+
+// for (let i = 0; i < 10; i++) {
+//   if (i == 5) {
+//     break;
+//   } else {
+//     console.log(i + 1);
+//   }
+// }
+
+// const person = {
+//   name: "alireza",
+//   friend: {
+//     name: "mohsen",
+//     friend: {
+//       name: "akbar",
+//     },
+//   },
+// };
+
+// let currentPerson = person;
+
+// while (currentPerson != null) {
+//   console.log(currentPerson.name);
+//   // currentPerson
+//   currentPerson = currentPerson.friend;
+// }
+
+const myName = "ali";
+
+// if (myName == "alireza") {
+//   console.log("hey guys this is alireza");
+// } else if (myName == "mohammad") {
+//   console.log("fuck you mohammd");
+// } else {
+//   console.log("anonymous user");
+// }
+
+// myName == "alireza"
+//   ? console.log("wassap mohammad")
+//   : console.log("anonymouse user?");
+
+switch (myName) {
+  case "ali":
+    console.log("hello ali");
+    break;
+  case "naser":
+    console.log("hello naser");
+    break;
+
+  default:
+    console.log("hey anonymous user");
+}
+
+for (let i = 0; i < 10; i++) {
+  console.log(`number ${i + 1}`);
+}
+
+let i = 0;
+while (i < 10) {
+  console.log("hello guys");
+  i++;
+}
