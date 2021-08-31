@@ -392,6 +392,14 @@ ________________________Web Dev Simplified______________________
         4- closest (method)
     );
 
-    14- node value
+    14- node value = (The remove() method removes the specified element from the DOM.)
 
     15- remove method
+
+    16- control flow (
+        1- if else
+        2 -ternary
+        3- switch
+        4- for loop
+        5- while loop
+    )
