@@ -392,7 +392,7 @@ ________________________Web Dev Simplified______________________
         4- closest (method)
     );
 
-    14- node value = (The remove() method removes the specified element from the DOM.)
+    14- nodeValue = (The remove() method removes the specified element from the DOM.)
 
     15- remove method
 
