@@ -403,3 +403,13 @@ ________________________Web Dev Simplified______________________
         4- for loop
         5- while loop
     )
+
+    17- new AudioContext (
+        1- createOscillator() (method)
+        2- frequency (property)
+        3- type (property)
+        4- connect() (method)
+        5- start() (method)
+        6- createGain() (method);
+        7- frequency.value (property)
+    )
