@@ -404,6 +404,7 @@ ________________________Web Dev Simplified______________________
         5- while loop
     )
 
+    // NOTE in fact we don't need to know how these work , just need read the documents
     17- new AudioContext (
         1- createOscillator() (method)
         2- frequency (property)
@@ -413,3 +414,23 @@ ________________________Web Dev Simplified______________________
         6- createGain() (method);
         7- frequency.value (property)
     )
+
+    18- checked (property)
+    19- every (property) 
+    20- setTimeout (function)
+    21- removeChild() (method)
+
+
+Asynchronous Code :
+
+    1- callback
+
+    2- promise
+        1- new Promise
+        2- promise.then() (method)
+        3- promise.catch() (method)
+        4- Promise.all() (method)
+        5- Promise.any() (method)
+        6- Promise.race() (method)
+        7- Promise.allSettled() (method)
+        8- Promise.finally() (method)

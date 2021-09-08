@@ -262,45 +262,45 @@ const container = document.querySelector(".container");
 
 // container.appendChild(myElement);
 
-let texts = document.getElementById("text");
+// let texts = document.getElementById("text");
 
-// // for (let item of texts) {
-// //   item.style.color = "red";
+// // // for (let item of texts) {
+// // //   item.style.color = "red";
+// // // }
+
+// // texts = Array.from(texts);
+
+// // texts.forEach((element) => {
+// //   element.style.color = "red";
+// // });
+
+// const h1 = document.querySelector("h1");
+// // h1.dataset.password = "kjk";
+
+// // if (h1.dataset.password == "ali") {
+// //   console.log("correct");
+// // } else {
+// //   console.log("wrong");
 // // }
 
-// texts = Array.from(texts);
+// // h1.addEventListener("");
 
-// texts.forEach((element) => {
-//   element.style.color = "red";
+// const eventResize = (e) => {
+//   e.target.value = "kkk";
+// };
+
+// h1.addEventListener("click", eventResize);
+
+// // window.removeEventListener("resize", eventResize);
+
+// // const sub
+
+// // console.log(name);
+
+// document.querySelector("#submit").addEventListener("click", function (e) {
+//   e.preventDefault();
+//   console.log("hello");
 // });
-
-const h1 = document.querySelector("h1");
-// h1.dataset.password = "kjk";
-
-// if (h1.dataset.password == "ali") {
-//   console.log("correct");
-// } else {
-//   console.log("wrong");
-// }
-
-// h1.addEventListener("");
-
-const eventResize = (e) => {
-  e.target.value = "kkk";
-};
-
-h1.addEventListener("click", eventResize);
-
-// window.removeEventListener("resize", eventResize);
-
-// const sub
-
-// console.log(name);
-
-document.querySelector("#submit").addEventListener("click", function (e) {
-  e.preventDefault();
-  console.log("hello");
-});
 
 // console.log(container.children);
 
@@ -308,15 +308,52 @@ document.querySelector("#submit").addEventListener("click", function (e) {
 //   item.style.color = "green";
 // }
 // console.log((h1.nextElementSibling.style.backgroundColor = "blue"));
-console.log(texts.parentElement);
+// console.log(texts.parentElement);
 
-document.querySelector("#imC").closest(".texts").style.color = "red";
+// document.querySelector("#imC").closest(".texts").style.color = "red";
 
-// console.log((texts.nodeValue = ));
-texts.nodeValue = "hello";
+// // console.log((texts.nodeValue = ));
+// texts.nodeValue = "hello";
 
-console.log(texts.nodeValue);
+// console.log(texts.nodeValue);
 
-console.log(document.getElementById("name").nodeValue);
+// console.log(document.getElementById("name").nodeValue);
 
-h1.remove();
+// h1.remove();
+
+// for (let i = 0; i < 10; i++) {}
+
+// function repeatMyName(count, message) {
+//   let i = 1;
+//   if (i < count) {
+//     console.log(message);
+//   }
+//   repeatMyName(count - 1, message);
+// }
+
+// repeatMyName(10, "hello");
+// create web audio api context
+// var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+// // create Oscillator node
+// var oscillator = audioCtx.createOscillator();
+
+// oscillator.type = "square";
+// oscillator.frequency.setValueAtTime(349.228, audioCtx.currentTime); // value in hertz
+// oscillator.connect(audioCtx.destination);
+// oscillator.start();
+
+const check = document.getElementById("check");
+const submit = document
+  .querySelector("#submit")
+  .addEventListener("click", (e) => {
+    e.preventDefault();
+
+    console.log(check.checked);
+  });
+
+const names = ["a", "b", "a"];
+
+console.log(names.every((v) => v == "a"));
+
+container.removeChild(container.children[0]);
