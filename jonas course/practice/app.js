@@ -1919,7 +1919,91 @@ for (let [item] of value) {
 // console.log(sentence.endsWith("me"));
 // console.log(sentence.endsWith("goozan mouse"));
 
-const sentence =
-  "hello my name is alireza im from iran today i wanna talk about me";
+// const sentence =
+//   "hello my name is alireza im from iran today i wanna talk about me";
 
-console.log(sentence.split(" "));
+// console.log(sentence.split(" "));
+
+// const arr = ["alireza"];
+
+// const fArr = arr.findIndex((v) => {
+//   return v == "alireza";
+// });
+
+// console.log(fArr);
+
+// separate callback
+
+// const cn = (v) => v == -5421;
+// array
+// const answer = numbers.some(cn);
+
+// console.log(answer);
+
+// const everAnswer = numbers.every(cn);
+
+// console.log(everAnswer);
+
+// const newArr = numbers.forEach((v) => (newArr = v * 2));
+
+// console.log(newArr);
+
+const account1 = {
+  owner: "Jonas Schmedtmann",
+  movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
+  interestRate: 1.2, // %
+  pin: 1111,
+};
+
+const account2 = {
+  owner: "Jessica Davis",
+  movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
+  interestRate: 1.5,
+  pin: 2222,
+};
+
+const account3 = {
+  owner: "Steven Thomas Williams",
+  movements: [200, -200, 340, -300, -20, 50, 400, -460],
+  interestRate: 0.7,
+  pin: 3333,
+};
+
+const account4 = {
+  owner: "Sarah Smith",
+  movements: [430, 1000, 700, 50, 90],
+  interestRate: 1,
+  pin: 4444,
+};
+
+// const accounts = [account1, account2, account3, account4];
+
+// const nestedArr = [[[[1]]], 2, [3], 4, [[[[5]]]]];
+
+// // console.log(nestedArr.flat(4));
+
+// const accMov = accounts
+//   .map(function (v) {
+//     return v.movements;
+//   })
+//   .flat()
+//   .reduce(function (f, l) {
+//     return f + l;
+//   });
+
+// const accMov2 = accounts
+//   .flatMap(function (value) {
+//     return value.movements;
+//   })
+//   .reduce(function (f, l) {
+//     return f + l;
+//   });
+
+// console.log(accMov2);
+
+const movements = [-430, 1000, 700, -50, 90];
+
+const names = ["a", "c", "b"];
+
+console.log(names.sort());
+console.log(movements.sort((a, b) => b - a));
