@@ -74,8 +74,12 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 // function movements for show deposit and withdraw
-function movementFunc(variable) {
-  variable.forEach(function (move, i) {
+function movementFunc(variable, sort = false) {
+  const sortCondition = sort
+    ? variable.slice().sort((a, b) => a - b)
+    : variable;
+
+  sortCondition.forEach(function (move, i) {
     const withDeposit = move <= -0 ? "withdrawal" : "deposit";
     const html = `
       <div class="movements__row">
@@ -121,12 +125,23 @@ function createUserName(arr) {
 
 createUserName(accounts);
 
+const updateUi = function (ac) {
+  //display movements
+  movementFunc(ac.movements);
+
+  //display balance
+  showCurrentMoney(ac);
+
+  // display summary
+  displaySummary(ac);
+};
+
 // NOTE thats show current balance money
 function showCurrentMoney(array) {
-  const sum = array.reduce(function (first, current) {
+  array.cbMoney = array.movements.reduce(function (first, current) {
     return first + current;
   });
-  labelBalance.textContent = `${sum} EUR`;
+  labelBalance.textContent = `${array.cbMoney} EUR`;
 }
 
 function displaySummary(movementsArray) {
@@ -165,12 +180,14 @@ function displaySummary(movementsArray) {
   labelSumInterest.textContent = `${interestSummary} EUR`;
 }
 
+let correctAcc;
+
 btnLogin.addEventListener("click", function (e) {
   // reset default event in bu
   e.preventDefault();
 
   // correct Account
-  const correctAcc = accounts.find(function (value) {
+  correctAcc = accounts.find(function (value) {
     return value.userName == inputLoginUsername.value;
   });
 
@@ -181,19 +198,100 @@ btnLogin.addEventListener("click", function (e) {
     // display message
     labelWelcome.textContent = `Welcome ${correctAcc.owner.split(" ")[0]}`;
 
-    //display movements
-    movementFunc(correctAcc.movements);
-
-    //display balance 
-    showCurrentMoney(correctAcc.movements);
-
-    // display summary
-    displaySummary(correctAcc);
-
+    // update ui function
+    updateUi(correctAcc);
 
     //clear input fields
     inputLoginUsername.value = "";
     inputLoginPin.value = "";
     // onblur(inputLoginPin);
   }
+});
+
+// btn transfer event listener
+btnTransfer.addEventListener("click", function (e) {
+  // prevent default
+  e.preventDefault();
+
+  // find target user
+  const transferUserNameInput = accounts.find(
+    (value) => value.userName == inputTransferTo.value
+  );
+
+  // amount input
+  const amountUserInput = Number(inputTransferAmount.value);
+
+  // condition
+  if (
+    transferUserNameInput &&
+    amountUserInput &&
+    amountUserInput <= correctAcc.cbMoney
+  ) {
+    // minus correctAcc with target user
+    correctAcc.cbMoney - amountUserInput.value;
+    // push money transfer to correctAcc
+    correctAcc.movements.push(-amountUserInput);
+    // push money transfer to target user
+    transferUserNameInput.movements.push(amountUserInput);
+    // clear input
+    inputTransferTo.value = inputTransferAmount.value = "";
+    // remove input focus
+    inputTransferAmount.blur();
+    // update ui function
+    updateUi(correctAcc);
+  }
+});
+
+// btn close event listener
+btnClose.addEventListener("click", function (e) {
+  // prevent default
+  e.preventDefault();
+  // correct acc condition
+  const correctCloseAcc =
+    correctAcc.userName === inputCloseUsername.value &&
+    correctAcc.pin === Number(inputClosePin.value);
+
+  if (correctCloseAcc) {
+    // find index of correct account
+    const index = accounts.findIndex(function (v) {
+      return v.userName === inputCloseUsername.value;
+    });
+    // remove correct account
+    accounts.splice(index, 1);
+    // add opacity to main app
+    containerApp.style.opacity = 0;
+  }
+  // clear input
+  inputCloseUsername.value = "";
+  inputClosePin.value = "";
+});
+
+// loan eventListener
+btnLoan.addEventListener("click", function (e) {
+  // prevent default
+  e.preventDefault();
+  // check loan condition
+  const checkLoan =
+    inputLoanAmount.value > 0 &&
+    // check with some
+    correctAcc.movements.some(function (v) {
+      return v >= inputLoanAmount.value;
+    });
+
+  if (checkLoan) {
+    // push new loan money to movement
+    correctAcc.movements.push(Number(inputLoanAmount.value));
+    // update ui function
+    updateUi(correctAcc);
+  }
+  // clear input value
+  inputLoanAmount.value = "";
+});
+
+let sortMov = false;
+
+btnSort.addEventListener("click", function (e) {
+  e.preventDefault();
+  movementFunc(correctAcc.movements, !sortMov);
+  sortMov = !sortMov;
 });
