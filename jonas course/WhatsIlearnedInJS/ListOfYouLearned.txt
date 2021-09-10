@@ -1,0 +1,343 @@
+Topic: Whats I Learned
+
+fundamental 1.
+    1- Use Alert.
+    2- use clg and chrome developer tools.
+    3- values and variable.
+    4- data types (
+        Objects : Objects, Array : every thing else primitive.
+        Primitive : Number, String, Boolean, Undefined, Null, Symbol, Bigint.
+    )
+    5- let const and var.
+    6- operators (+, -, *, /, %, 
+        =+, -=, *=, /=, %=
+        => , <=, > , < , =
+    ).
+    7- template literals.
+    8- if else statement.
+    9- type conversion and coercion.
+    10- truthy and falsy. (
+        falsy: 0, "", Undefined, Null, NaN.
+        truthy: everything else falsy.
+    )
+    11- equality operators : == , ===, (prompt).
+    12- logical operators , and logic boolean and use logical operators in if statement (AND: &&, OR: ||, NOT: !)
+    13- switch.
+    14- statement vs expression.
+    15- conditional(ternary) operators.
+
+______________________________________________________________
+
+fundamental 2.
+    1- strict mode.
+    2- functions (
+        1- function declaration
+        - return in function 
+        2- function expression
+        3- arrow function expression   
+    ).
+    3- Array
+    4- arrays method (
+        1- Push , unShift
+        2- pop, Shift
+        3- index of
+        4- include
+        5- length
+    )
+    5- Objects (
+        1- dots vs bracket notation.
+        2- Object methods (declare Function Expression in Object).
+        3- This Keyword
+        4- make method into function (and call it);
+    )
+    6- for loop {
+        1- break
+        2- continue
+        3- loop in loop
+        4- looping_backward
+    }
+    7- while loop 
+    developer_skill (
+        1- chrome Debugger
+    )
+
+
+____________________________________________
+DOM and Events Fundamentals.
+
+    projects (
+        1- guess Number.
+    ).
+    1- what is DOM.
+    2- (DOM Method)selection and manipulated theme  (
+        1- document.querySelector(".message").textContent;
+        2- document.querySelector(".message").value;
+        3-document.querySelectorAll().
+        4-classList method (
+            remove,
+            add,
+            length,
+            contains,
+            toggle,
+
+        ).
+        5-getElementById();
+        6- document.getElementById().src 
+     ).
+    3- eventListener (
+        1- click And Function in Event.
+    ).
+    4- Math (
+        -random
+        -trunc
+    ).
+    5- Manipulating Css Style.
+    6- refactoring code
+    7- Project(Modal Window Project) 
+    10- key eventlistener (
+        keyup.
+        keydown.
+        keypress.
+    ).
+    11- pigGame Project. 
+    12 - src
+
+
+_____________________________________________________________________
+
+Topic : How JavaScript Works Behind the Scenes 
+    overview of JavaScript (
+        1- high-level programming language
+        2- Garbage-collected
+        3- interpreted - just in time compiled
+        4- multi-paradigm (
+            1- procedural programming.
+            2- imperative programming.
+            3- functional programming.
+            4- object oriented programming.
+        ).
+        5- prototype-based _ objected oriented
+        6- first-class functions
+        7- Dynamic
+        8- Single-Threaded
+        9- Non-blocking event loop
+    ).
+    1- jit compilation
+    2- execution context
+    3- call stack- heap
+    4- scoping (
+        1-global scope
+        2- function scope
+        3-block scope
+        4- lexical scope
+        5- variable lookup
+        6- scope chain
+    )
+    5- hoisting 
+    7- TDZ
+    8- this Keyword
+    9- method borrowing
+    10- reference type VS primitive type
+    11- Object.assign
+_____________________________________________________________________
+
+Topic : Data Structures, Modern Operators and Strings.
+
+1- destructuring assignment Array : (
+    1- set value array for variable , like : (let [a, b, c] = arr;)
+    2- select specific value and put in variable, like : (let [a, ,b, ,c] = arr;).
+    3- change destructuring, like : ([a, b] = [b, a]).
+    4- make method and use destructuring.
+    5- set default value for arr.
+    6- nested destructuring, like : (let [ mf = ds] = [this.mainFood[mainFoods]]).
+)
+2- object destructuring : (
+    1- declare variable for Objects.
+    2- default value.
+    3- mutating variable (objTwo.name = { nameOne: "ghasem", nameTwo: "akbar" }).
+    4- nested object.
+).
+3-spread operator
+4- rest pattern and parameters (
+    1- use rest in destructuring.
+    2- use rest in function (parameters).
+).
+5- short circuiting (
+    1- || OR
+    2- && AND
+).
+6-The Nullish Coalescing  Operators (Made In  ES2020)(
+    let undefinedValue = undefined; // Or Null
+    let myValue = undefinedValue;
+    console.log(myValue ?? "this is undefined");
+).
+7- Looping arrays The For Of Loop (for of).
+8- entries method.
+9- enhanced object literals (
+    1- define object in to object.
+    2- define function in to object.
+    3- compute key name.
+).
+10 - Optional chaining( ?. ).
+11 - looping Objects keys and value, entries (
+    1- Object.keys()
+    2- Objects.value()
+    3- Object.entries() (
+        Output of entries : ["firstName", "alireza"]
+    )
+).
+
+12- set (
+    1- set method (
+        1- size
+        3- has
+        4- add
+        5- delete
+        6- clear
+    )
+).
+
+13- Map fundamentals ( 
+    const myMap = new Map();
+    myMap.set("name", "alireza");
+
+    1-map method's (
+        1- set
+        2- get
+        3- has
+        4- delete
+        5- size
+        6- clear
+    )
+
+    2- make property with entries solution : (
+        const myMap = new map([
+            ["name", "alireza"],
+            ["age", 16],
+        ]);
+    )
+
+    3- convert object to map (
+        const a = {a: 1, b: 2};
+        const myMap = new Map(Objects.entries(a));
+    ).
+
+    4- Map iteration.
+    
+    5- convert Map to Array : (
+        const myMap = new Map();
+        const newArray = [...myMap];
+    );
+)
+14- Which DataStructure We should use? (
+    Array Or set?
+    Object Or Maps?
+).
+15- .values() method in map.
+
+16- Working with strings : (
+    1- length.
+    2- indexOf.
+    3- lastIndexOF.
+    4- -1 in indexOF.
+    5- slice (
+        1- name.slice(5);
+        2- name.slice(1, 6);
+        3- name.slice(0, indexOf("r));
+        4- name.slice(-3);
+    )
+    6- BOXING : (
+        1- new String;
+    ).
+    7- toLowerCase();
+    8- toUpperCase();
+    9- trim.
+    10- replace.
+    11- replaceAll.
+    12- simple regex (
+        1- name.replace(/i/g, "L");
+    )
+    13- includes();
+    14- startWith();
+    15- endWith();
+    16- split();
+    17- join();
+    18- padding : (
+        1- padStart();
+        2- padEnd();
+    ).
+    19- repeat();
+).
+
+_______________________________________________________________________________
+
+Topic : closer look at functions
+
+1- set default value for functions.
+2- passing argument : (
+    ------------------------------------
+    const testTrue = function (value1, value2) {
+    value1 = "Its Changed";
+    valueTwo = "---its changed---";
+    value2.name = "reza";
+    };
+    ------------------------------------
+    1- by value.
+    2- by reference.  NOTE read document
+).
+3- first-class & higher-Order functions (  NOTE read document
+    1- callback functions.
+    2- functions returning functions. (
+        1- store in variable after use argument two.
+        2- call with ()().
+        2- return with arrow function.
+    ) 
+).
+4- call method .
+5- apply method .
+6- bind method.
+7- immediately invoked function expression (IIFE).
+8- closures.
+9- console.dir().
+10- setTimeout() NOTE (callback function).
+11- isNaN(); (internal function)
+
+___________________________________________________________________________________
+
+Topic : Working With Arrays (array tools)
+
+    1- slice (method).
+    2- splice (method) NOTE original can change.
+    3- reverse (method) NOTE original can change.
+    4- concat (method).
+    5- join (method).
+    6- Math.abs (method).
+    7- forEach (method).
+    8- insertAdjucentHtml (method).
+    9- innerHtml (method).
+
+    ______data transforming_____
+    10- map (method).
+    11- filter (method).
+    12- side effects.
+    13- reduce (method).
+    14- chaining method.
+    15- find (method).
+    16- .blur() (method). // NOTE Remove focus from an element:
+    17- .findIndex() (method).
+    18- .some() (method).
+    19- .every() (method).
+    20- separate callback.
+    21- .flat() (method).
+    22- .flatMap (method).
+    23- .sort() (method). (
+        1- Ascending sort.
+        .sort((a, b) => {a - b})
+        2- Descending sort.
+        .sort((a, b) => {b - a})
+    )
+    24- new Array()
+    25- .fill() (method)
+    26- Array.from() 
+    27- querySelectorAll callback
+
