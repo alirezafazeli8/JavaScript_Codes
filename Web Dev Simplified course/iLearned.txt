@@ -1,0 +1,108 @@
+________________________Web Dev Simplified______________________
+
+1- new Date(); (object)
+
+2- js rendering in html (
+    1- normal rendering.
+    2- async.
+    3- defer.
+)
+
+
+-----------DOM------------
+
+    3- window object.
+
+    4- document object (
+        1- documentElement
+        2- createElement
+        3- innerText
+        4- appendChild = (The appendChild() method appends a node as the last child of a node.)
+        5- getElementsByClassName
+    );
+
+    5- array.from = (The from() method returns an Array object from any object with a length property or any iterable object.).
+
+    6- HTML data-* Attributes = (The data-* attributes is used to store custom data private to the page or application.)
+
+    6- addEventListener("name of event", () => //something happen) = (
+        events = (
+            1- "click"
+            2- "change"
+            3- "input"
+            4- 'submit'
+            5- "mouseenter"
+            6- "mouseleave"
+            7- "mouseover"
+            8- "focus"
+            9- "blur"
+            10- "resize"
+        )
+    ).
+
+    7- removeEventListener = (The removeEventListener() method removes an event handler that has been attached with the addEventListener() method.)
+
+    8- eventObject = (
+        1- target
+        2- target.value
+    ).
+
+    9- preventDefault (DOM method).
+
+    10- arrow this keyword vs. function this keyword
+
+    11- data attribute = (
+        this information can give us the ability to search or filter an element by the data type using their values. From the example above, say you want to grab the data-index-number from the <article> tag. First, select the element, which comes with a dataset object. The properties in the dataset object are the attribute values that follow the data- in your HTML5 tag. Javascript will convert the dash to camel case.
+    )
+
+    12- dataset
+
+    13- dom element child (
+        1- children (property);
+        2- nextElementSibling
+        3- parentElement
+        4- closest (method)
+    );
+
+    14- nodeValue = (The remove() method removes the specified element from the DOM.)
+
+    15- remove method
+
+    16- control flow (
+        1- if else
+        2 -ternary
+        3- switch
+        4- for loop
+        5- while loop
+    )
+
+    // NOTE in fact we don't need to know how these work , just need read the documents
+    17- new AudioContext (
+        1- createOscillator() (method)
+        2- frequency (property)
+        3- type (property)
+        4- connect() (method)
+        5- start() (method)
+        6- createGain() (method);
+        7- frequency.value (property)
+    )
+
+    18- checked (property)
+    19- every (property) 
+    20- setTimeout (function)
+    21- removeChild() (method)
+
+
+Asynchronous Code :
+
+    1- callback
+
+    2- promise
+        1- new Promise
+        2- promise.then() (method)
+        3- promise.catch() (method)
+        4- Promise.all() (method)
+        5- Promise.any() (method)
+        6- Promise.race() (method)
+        7- Promise.allSettled() (method)
+        8- Promise.finally() (method)
