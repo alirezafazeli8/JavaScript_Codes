@@ -87,7 +87,7 @@ function movementFunc(variable, sort = false) {
       i + 1
     } ${withDeposit}</div>
         <div class="movements__date">3 days ago</div>
-        <div class="movements__value">${move}$</div>
+        <div class="movements__value">${move.toFixed(2)}$</div>
       </div>
     `;
 
@@ -141,7 +141,7 @@ function showCurrentMoney(array) {
   array.cbMoney = array.movements.reduce(function (first, current) {
     return first + current;
   });
-  labelBalance.textContent = `${array.cbMoney} EUR`;
+  labelBalance.textContent = `${array.cbMoney.toFixed(2)} EUR`;
 }
 
 function displaySummary(movementsArray) {
@@ -155,7 +155,7 @@ function displaySummary(movementsArray) {
     }, 0);
 
   // show incomes in page
-  labelSumIn.textContent = `${incomes} EUR`;
+  labelSumIn.textContent = `${incomes.toFixed(2)} EUR`;
 
   // outSummary money variable
   const outSummary = movementsArray.movements
@@ -167,7 +167,7 @@ function displaySummary(movementsArray) {
     }, 0);
 
   // show sum out page
-  labelSumOut.textContent = `${Math.abs(outSummary)} EUR`;
+  labelSumOut.textContent = `${Math.abs(outSummary.toFixed(2))} EUR`;
 
   // interest money variable
   const interestSummary = movementsArray.movements
@@ -177,7 +177,7 @@ function displaySummary(movementsArray) {
     .reduce((first, last) => first + last);
 
   // show sumInterest page
-  labelSumInterest.textContent = `${interestSummary} EUR`;
+  labelSumInterest.textContent = `${interestSummary.toFixed(2)} EUR`;
 }
 
 let correctAcc;
