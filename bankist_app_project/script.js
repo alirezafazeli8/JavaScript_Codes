@@ -295,3 +295,27 @@ btnSort.addEventListener("click", function (e) {
   movementFunc(correctAcc.movements, !sortMov);
   sortMov = !sortMov;
 });
+
+// const bankDepositSum = function () {
+//   return accounts
+//     .flatMap(function (v) {
+//       return v.movements;
+//     })
+//     .reduce(function (l, f) {
+//       return l + f;
+//     });
+// };
+
+// console.log(bankDepositSum());
+
+// const bankDeposit100 = function () {
+//   return accounts
+//     .flatMap(function (value) {
+//       return value.movements;
+//     })
+//     .filter(function (fv) {
+//       return fv > 100;
+//     }).length;
+// };
+
+// console.log(bankDeposit100());

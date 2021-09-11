@@ -313,7 +313,7 @@ Topic : Working With Arrays (array tools)
     5- join (method).
     6- Math.abs (method).
     7- forEach (method).
-    8- insertAdjucentHtml (method).
+    8- insertAdjacentHtml (method).
     9- innerHtml (method).
 
     ______data transforming_____
@@ -339,5 +339,39 @@ Topic : Working With Arrays (array tools)
     24- new Array()
     25- .fill() (method)
     26- Array.from() 
-    27- querySelectorAll callback
+    27- prefix ++ operator
+    
+
+
+_________________________Numbers, Dates, Intl and Timer_____________________
+
+1- convert string with + operator  (conversion)
+
+    Parsing
+        1- Number.parsInt() (global function)
+        2- Number.ParsFloat() (global function)
+
+2- Number.isNan();
+3- infinity value
+4- Number.isFinite();
+5- Number.isInteger();
+6- Math.sqrt();
+7- Math.max();
+8- Math.min(); 
+9- Math.PI();
+10- Math.random();
+
+    rounding integers
+
+        1- Math.trunc();
+        2- Math.round();
+        3- Math.ceil();
+        4- Math.decimal();
+        5- Math.floor();
+    rounding decimal
+
+        1- Math.toFixed();
+
+11- reminder Operator // when we want happened something in nth time
+
 
