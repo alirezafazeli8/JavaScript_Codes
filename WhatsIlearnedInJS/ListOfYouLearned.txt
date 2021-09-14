@@ -366,12 +366,94 @@ _________________________Numbers, Dates, Intl and Timer_____________________
         1- Math.trunc();
         2- Math.round();
         3- Math.ceil();
-        4- Math.decimal();
-        5- Math.floor();
+        4- Math.floor();
     rounding decimal
 
-        1- Math.toFixed();
+        1- (4.6).toFixed();
 
 11- reminder Operator // when we want happened something in nth time
 
+12- define bigInt with n (
+    const bigInt = 42342342242423423234234324234n;
+    NOTE we cant mix number and bigInt together.
+    NOTE we cant use number method to BigInt
+    BigInt(); (function)
+)
 
+13- Dates
+    14- new Date();
+    15- make date object (
+        1- define variable
+        2- make with string
+            new Date("Aug 02 2020 18:05:41");
+        3- make date with numbers
+            new Date(2023, 10, 19, 15, 23, 5);
+    )
+    16- new Date(0);
+    17- new Date().getFullYear();
+    18- Date().getMonth();
+    19- Date().getDate(); NOTE day of the month 
+    20- Date().getDay(); NOTE day of the week
+    21- Date().getHours();
+    22- Date().getMinutes();
+    23- Date().getSeconds();
+    24- Date().toISOString();
+    25- Date().getTime() NOTE this give us the huge number and with number we can know what time is it (new Date(4234242432434324))
+    26- Date.now();
+    27- calculate dates (
+        formula : miliaSeconds / (1000 * 60 * 60 * 24);
+    ) (solution)
+
+    28- calc day passed (solution) (
+        const convertDateMilia = function (dayOne, dayTwo) {
+            return Math.round(Math.abs(dayTwo - dayOne) / (1000 * 60 * 60 * 24));
+        };
+    )
+
+    29- Internationalizing Dates (Intl) (
+        new Intl;
+    )
+
+    30- new Intl.DateTimeFormat();
+    31- new Intl.DateTimeFormat("en-US).format(date);
+    34- DateTimeFormat option object (
+        key: 
+            1- hour
+            2- minute 
+            3- day 
+            4- month 
+            5- year 
+            6- weekday
+            7- second
+        _________________
+        value:
+            1- numeric
+            2- long 
+            3- 2-digit
+            4- short
+    )
+
+    35- navigator.language
+
+    36- new Intl.NumberFormat("en-US").format(1214551210)
+
+    37- NumberFormat option (
+        key 
+            1- Style
+            2- unit 
+            3- style: "percent"
+            4- currency
+            5- useGrouping
+    ).
+
+    38- setTimeout() (function)
+
+    39- setTimeout callback function arguments
+    
+    40- clearTimeout()
+
+    41- stop the setTimeout with specific condition
+
+    42- setInterval()
+    
+    43- clearInterval(); 
