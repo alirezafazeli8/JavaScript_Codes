@@ -4,12 +4,24 @@
 /////////////////////////////////////////////////
 // BANKIST APP
 
-// Data
 const account1 = {
   owner: "Jonas Schmedtmann",
-  movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
+  movements: [200, 455.23, -306.5, 25000, -642.21, -133.9, 79.97, 1300],
   interestRate: 1.2, // %
   pin: 1111,
+
+  movementsDates: [
+    "2019-11-18T21:31:17.178Z",
+    "2019-12-23T07:42:02.383Z",
+    "2020-01-28T09:15:04.904Z",
+    "2020-04-01T10:17:24.185Z",
+    "2020-05-08T14:11:59.604Z",
+    "2020-05-27T17:01:17.194Z",
+    "2020-07-11T23:36:17.929Z",
+    "2021-09-11T10:51:36.790Z",
+  ],
+  currency: "EUR",
+  locale: "pt-PT", // de-DE
 };
 
 const account2 = {
@@ -17,23 +29,22 @@ const account2 = {
   movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
   interestRate: 1.5,
   pin: 2222,
+
+  movementsDates: [
+    "2019-11-01T13:15:33.035Z",
+    "2019-11-30T09:48:16.867Z",
+    "2019-12-25T06:04:23.907Z",
+    "2020-01-25T14:18:46.235Z",
+    "2020-02-05T16:33:06.386Z",
+    "2020-04-10T14:43:26.374Z",
+    "2020-06-25T18:49:59.371Z",
+    "2020-07-26T12:01:20.894Z",
+  ],
+  currency: "USD",
+  locale: "en-US",
 };
 
-const account3 = {
-  owner: "Steven Thomas Williams",
-  movements: [200, -200, 340, -300, -20, 50, 400, -460],
-  interestRate: 0.7,
-  pin: 3333,
-};
-
-const account4 = {
-  owner: "Sarah Smith",
-  movements: [430, 1000, 700, 50, 90],
-  interestRate: 1,
-  pin: 4444,
-};
-
-const accounts = [account1, account2, account3, account4];
+const accounts = [account1, account2];
 
 // Elements
 const labelWelcome = document.querySelector(".welcome");
@@ -73,21 +84,61 @@ const currencies = new Map([
 
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
+// display the day is passed
+const disPlayDayPassed = function (date) {
+  // convert iso string to real date object
+  const nowDate = new Date(date);
+  const dateOption = {
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric",
+  };
+
+  const showDate = new Intl.DateTimeFormat(
+    correctAcc.locale,
+    dateOption
+  ).format(nowDate);
+
+  // convert day to miliaSeconds
+  const convertDateMilia = function (dayOne, dayTwo) {
+    return Math.round(Math.abs(dayTwo - dayOne) / (1000 * 60 * 60 * 24));
+  };
+
+  // store function to varibale
+  const correctDate = convertDateMilia(new Date(), nowDate);
+
+  // show day condition
+  if (correctDate === 0) {
+    return "Today";
+  } else if (correctDate === 1) {
+    return "Yesterday";
+  } else {
+    return showDate;
+  }
+};
+
 // function movements for show deposit and withdraw
 function movementFunc(variable, sort = false) {
   const sortCondition = sort
-    ? variable.slice().sort((a, b) => a - b)
-    : variable;
+    ? variable.movements.slice().sort((a, b) => a - b)
+    : variable.movements;
 
   sortCondition.forEach(function (move, i) {
+    // format number function
+    const formatNumber = showMoneyFormat(correctAcc, move);
+
+    const displayDatesMov = disPlayDayPassed(correctAcc.movementsDates[i]);
     const withDeposit = move <= -0 ? "withdrawal" : "deposit";
     const html = `
       <div class="movements__row">
         <div class="movements__type movements__type--${withDeposit}">${
       i + 1
     } ${withDeposit}</div>
-        <div class="movements__date">3 days ago</div>
-        <div class="movements__value">${move.toFixed(2)}$</div>
+        <div class="movements__date">${displayDatesMov}</div>
+        <div class="movements__value">${formatNumber}</div>
       </div>
     `;
 
@@ -96,21 +147,6 @@ function movementFunc(variable, sort = false) {
 }
 
 /////////////////////////////////////////////////
-
-// NOTE write computing username for once
-// function makeUserName(userArr) {
-//   userArr.forEach(function (acc) {
-//     acc.username = acc.owner
-//       .toLowerCase()
-//       .split(" ")
-//       .map((word) => word[0])
-//       .join("");
-//   });
-// }
-
-// makeUserName(accounts);
-
-// console.log(accounts);
 
 // NOTE thats my main code about computing username
 function createUserName(arr) {
@@ -127,7 +163,7 @@ createUserName(accounts);
 
 const updateUi = function (ac) {
   //display movements
-  movementFunc(ac.movements);
+  movementFunc(ac);
 
   //display balance
   showCurrentMoney(ac);
@@ -136,12 +172,24 @@ const updateUi = function (ac) {
   displaySummary(ac);
 };
 
+function showMoneyFormat(user, number) {
+  const numberOption = {
+    style: "currency",
+    currency: user.currency,
+  };
+  const formatNumber = new Intl.NumberFormat(user.locale, numberOption).format(
+    number
+  );
+  return formatNumber;
+}
+
 // NOTE thats show current balance money
 function showCurrentMoney(array) {
   array.cbMoney = array.movements.reduce(function (first, current) {
     return first + current;
   });
-  labelBalance.textContent = `${array.cbMoney.toFixed(2)} EUR`;
+
+  labelBalance.textContent = showMoneyFormat(array, array.cbMoney);
 }
 
 function displaySummary(movementsArray) {
@@ -155,7 +203,7 @@ function displaySummary(movementsArray) {
     }, 0);
 
   // show incomes in page
-  labelSumIn.textContent = `${incomes.toFixed(2)} EUR`;
+  labelSumIn.textContent = showMoneyFormat(correctAcc, incomes);
 
   // outSummary money variable
   const outSummary = movementsArray.movements
@@ -167,7 +215,7 @@ function displaySummary(movementsArray) {
     }, 0);
 
   // show sum out page
-  labelSumOut.textContent = `${Math.abs(outSummary.toFixed(2))} EUR`;
+  labelSumOut.textContent = showMoneyFormat(correctAcc, Math.abs(outSummary));
 
   // interest money variable
   const interestSummary = movementsArray.movements
@@ -177,19 +225,22 @@ function displaySummary(movementsArray) {
     .reduce((first, last) => first + last);
 
   // show sumInterest page
-  labelSumInterest.textContent = `${interestSummary.toFixed(2)} EUR`;
+  labelSumInterest.textContent = showMoneyFormat(correctAcc, interestSummary);
 }
 
-let correctAcc;
+// let correctAcc;
+let correctAcc = account1;
+containerApp.style.opacity = "100";
+updateUi(correctAcc);
 
 btnLogin.addEventListener("click", function (e) {
   // reset default event in bu
   e.preventDefault();
 
   // correct Account
-  correctAcc = accounts.find(function (value) {
-    return value.userName == inputLoginUsername.value;
-  });
+  // correctAcc = accounts.find(function (value) {
+  //   return value.userName == inputLoginUsername.value;
+  // });
 
   if (correctAcc.pin == inputLoginPin.value) {
     // display containerApp
@@ -197,6 +248,39 @@ btnLogin.addEventListener("click", function (e) {
 
     // display message
     labelWelcome.textContent = `Welcome ${correctAcc.owner.split(" ")[0]}`;
+
+    // show date in to current date
+    const nowDate = new Date();
+    // const dateYear = nowDate.getFullYear();
+    // const dateMonth = nowDate.getMonth();
+    // const dateDay = nowDate.getDate();
+    // const dateHours = nowDate.getHours();
+    // const dateMinutes = nowDate.getMinutes();
+    // const dateSeconds = nowDate.getSeconds();
+
+    // const showDateString = ` ${`${dateDay}`.padStart(
+    //   2,
+    //   "0"
+    // )}/${`${dateMonth}`.padStart(2, "0")}/${`${dateYear}`.padStart(
+    //   2,
+    //   "0"
+    // )} ,  ${dateHours}:${dateMinutes}:${dateSeconds}`;
+
+    const dateOption = {
+      year: "numeric",
+      month: "numeric",
+      day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+    };
+
+    const showDate = new Intl.DateTimeFormat(
+      correctAcc.locale,
+      dateOption
+    ).format(nowDate);
+
+    labelDate.textContent = showDate;
 
     // update ui function
     updateUi(correctAcc);
@@ -233,6 +317,10 @@ btnTransfer.addEventListener("click", function (e) {
     correctAcc.movements.push(-amountUserInput);
     // push money transfer to target user
     transferUserNameInput.movements.push(amountUserInput);
+    // push dates to currentUser
+    correctAcc.movementsDates.push(new Date().toISOString());
+    // push dates to transfer user
+    transferUserNameInput.movementsDates.push(new Date().toISOString());
     // clear input
     inputTransferTo.value = inputTransferAmount.value = "";
     // remove input focus
@@ -281,8 +369,13 @@ btnLoan.addEventListener("click", function (e) {
   if (checkLoan) {
     // push new loan money to movement
     correctAcc.movements.push(Number(inputLoanAmount.value));
-    // update ui function
-    updateUi(correctAcc);
+    // push dates to currentUser
+    correctAcc.movementsDates.push(new Date().toISOString());
+
+    setTimeout(function () {
+      // update ui function
+      updateUi(correctAcc);
+    }, 3000);
   }
   // clear input value
   inputLoanAmount.value = "";
