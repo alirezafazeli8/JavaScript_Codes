@@ -128,8 +128,38 @@
 // );
 // console.log(formatNumber);
 
-setTimeout(function () {
-  console.log("Pizza Is Here🍕");
-}, 2000);
+// const myTimeout = setTimeout(
+//   function (arg1, arg2) {
+//     console.log(arg1, arg2);
+//   },
+//   500,
+//   "hello",
+//   "guys"
+// );
 
-console.log("Here 🈁");
+// clearTimeout(myTimeout);
+
+// // console.log("Here 🈁");
+
+// // setTimeout(() => console.log("im after 3 seconds"), 2001);
+
+// const myInterval = setInterval(function () {
+//   console.log(new Date().getSeconds());
+// }, 1000);
+
+// clearInterval(myInterval)
+// function clockConsole(symbol = ":") {
+//   setInterval(function () {
+//     console.log(`
+//      ${new Date().getHours()}${symbol}${new Date().getMinutes()}${symbol}${new Date().getSeconds()}
+//    `);
+//   }, 1000);
+// }
+
+function countDown(time) {
+  setInterval(function () {
+    console.log(`
+     ${new Date().getHours()}${symbol}${new Date().getMinutes()}${symbol}${new Date().getSeconds()}
+   `);
+  }, 1000);
+}
