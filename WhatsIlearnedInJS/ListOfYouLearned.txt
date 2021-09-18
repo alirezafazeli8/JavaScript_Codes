@@ -452,8 +452,6 @@ _________________________Numbers, Dates, Intl and Timer_____________________
     
     40- clearTimeout()
 
-    41- stop the setTimeout with specific condition
-
-    42- setInterval()
+    41- setInterval()
     
-    43- clearInterval(); 
+    42- clearInterval(); 
