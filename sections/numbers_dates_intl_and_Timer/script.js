@@ -156,10 +156,54 @@
 //   }, 1000);
 // }
 
-function countDown(time) {
-  setInterval(function () {
-    console.log(`
-     ${new Date().getHours()}${symbol}${new Date().getMinutes()}${symbol}${new Date().getSeconds()}
-   `);
-  }, 1000);
-}
+// const htmlCount = document.getElementById("show-countDown");
+
+// function countDown(minuteFunc, secondsFunc, htmlCount, symbol = ":") {
+//   // variable condition
+//   let start = true;
+//   let minute = minuteFunc;
+//   let seconds = secondsFunc / 100;
+//   // setInterval for start time
+//   setInterval(function () {
+//     htmlCount.textContent = `${Math.trunc(minute)}${symbol}${Math.trunc(
+//       (seconds -= 1)
+//     )}`;
+//   }, 1000);
+// }
+
+// countDown(1, 6000, htmlCount);
+
+// // setTimeOut after a which time
+// setTimeout(function () {
+//   // convert start to false to stop condition
+//   start = false;
+//   if (!start) {
+//     // html to nothing
+//     htmlCount.textContent = " ";
+//   }
+// }, time++);
+
+// function startTimer(duration, display) {
+//   var timer = duration,
+//     minutes,
+//     seconds;
+//   setInterval(function () {
+//     minutes = parseInt(timer / 60, 10);
+//     seconds = parseInt(timer % 60, 10);
+
+//     minutes = minutes < 10 ? "0" + minutes : minutes;
+//     seconds = seconds < 10 ? "0" + seconds : seconds;
+
+//     display.textContent = minutes + ":" + seconds;
+
+//     if (--timer < 0) {
+//       timer = duration;
+//     }
+//   }, 1000);
+// }
+
+// window.onload = function () {
+//   var fiveMinutes = 60 * 1,
+//     display = document.getElementById("show-countDown");
+//   startTimer(fiveMinutes, display);
+// };

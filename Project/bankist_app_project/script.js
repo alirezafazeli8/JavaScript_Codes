@@ -228,23 +228,57 @@ function displaySummary(movementsArray) {
   labelSumInterest.textContent = showMoneyFormat(correctAcc, interestSummary);
 }
 
-// let correctAcc;
-let correctAcc = account1;
-containerApp.style.opacity = "100";
-updateUi(correctAcc);
+let correctAcc;
+// let correctAcc = account1;
+// containerApp.style.opacity = "100";
+// updateUi(correctAcc);
+
+function startTimer(duration, display) {
+  let start = true;
+  let timer = duration,
+    minutes,
+    seconds;
+  setInterval(function () {
+    if (start) {
+      minutes = parseInt(timer / 60, 10);
+      seconds = parseInt(timer % 60, 10);
+
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+
+      display.textContent = minutes + ":" + seconds;
+
+      if (--timer < 0) {
+        timer = duration;
+      }
+    }
+  }, 1000);
+
+  setTimeout(function () {
+    start = false;
+    if (!start) {
+      display.textContent = "00:00";
+      containerApp.style.opacity = "0";
+      updateUi(correctAcc);
+    }
+  }, duration * 1000);
+}
 
 btnLogin.addEventListener("click", function (e) {
   // reset default event in bu
   e.preventDefault();
 
   // correct Account
-  // correctAcc = accounts.find(function (value) {
-  //   return value.userName == inputLoginUsername.value;
-  // });
+  correctAcc = accounts.find(function (value) {
+    return value.userName == inputLoginUsername.value;
+  });
 
   if (correctAcc.pin == inputLoginPin.value) {
     // display containerApp
     containerApp.style.opacity = "100";
+
+    let minutes = 60 * 5;
+    startTimer(minutes, labelTimer);
 
     // display message
     labelWelcome.textContent = `Welcome ${correctAcc.owner.split(" ")[0]}`;

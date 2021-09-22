@@ -367,8 +367,8 @@ _________________________Numbers, Dates, Intl and Timer_____________________
         2- Math.round();
         3- Math.ceil();
         4- Math.floor();
-    rounding decimal
 
+    rounding decimal
         1- (4.6).toFixed();
 
 11- reminder Operator // when we want happened something in nth time
@@ -455,3 +455,60 @@ _________________________Numbers, Dates, Intl and Timer_____________________
     41- setInterval()
     
     42- clearInterval(); 
+
+
+______________Advance DOM and Events_______________
+
+    1- node element (just information)
+    2- node object (just information)
+
+        ___selecting elements___
+            3- document.documentElement
+            4- document.head
+            5- document.body
+            6- .getElementsByTagName() 
+            7- node list .
+            8- HTMLCollection .
+            9- .getElementByClassName()
+
+            .parentElement();
+    
+        ___Creating and Inserting elements___
+            10- .createElement("div");
+            11- .innerHtml (property)
+            12- .prepend();
+            13- .append();
+            14- .cloneNode();
+
+        ___ Delete elements___
+            15- .remove();
+            16- .removeChild();
+
+        ___ Styles ___
+            - getComputedStyle();
+
+            - document.documentElement.style.setProperty("--color-red", "red");
+
+            - .alt (property).
+
+            - .src (property).
+
+            - .className (property).
+
+            - .getAttribute();
+
+            - .setAttribute("name", "alireza");
+
+            - difference between .src (property) and .getAttribute() (method)
+
+            - data (attribute)
+
+            - .dataset (property)
+
+            - .classList.add();
+
+            - .classList.remove();
+
+            - .classList.toggle();
+            
+            - .classList.contains();
