@@ -359,7 +359,7 @@ _________________________Numbers, Dates, Intl and Timer_____________________
 6- Math.sqrt();
 7- Math.max();
 8- Math.min(); 
-9- Math.PI();
+9- Math.PI; (property)
 10- Math.random();
 
     rounding integers
@@ -513,3 +513,18 @@ ______________Advance DOM and Events_______________
             - .classList.toggle();
             
             - .classList.contains();
+
+    - smooth scrolling
+    
+    - .getBoundingClientRect();
+    - .window.pageXOffset
+    - .window.pageYOffset
+    - .documentElement.clientHeight
+    - .documentElement.clientWidth
+    - .window.scrollTo();
+    - scrollTo object option.
+    - scrollTo (behavior ) property.
+    - .scrollIntoView({behavior: "smooth"});
+    - .onmouseenter (property)
+    - run event for once
+    - onclick="" (html attribute)
