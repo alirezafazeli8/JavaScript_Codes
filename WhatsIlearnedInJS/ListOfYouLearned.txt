@@ -528,3 +528,6 @@ ______________Advance DOM and Events_______________
     - .onmouseenter (property)
     - run event for once
     - onclick="" (html attribute)
+    - bubbling phase event (information)
+    - capture phase event (information)
+    - target phase event (information)
