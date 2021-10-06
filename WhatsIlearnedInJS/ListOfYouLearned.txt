@@ -540,5 +540,12 @@ ______________Advance DOM and Events_______________
     (property)
 
     - run event for once
+<<<<<<< HEAD
     
     - onclick="" (html attribute)
+=======
+    - onclick="" (html attribute)
+    - bubbling phase event (information)
+    - capture phase event (information)
+    - target phase event (information)
+>>>>>>> c533142a54bb254740edb702e3d913e2e3b6fa9d
