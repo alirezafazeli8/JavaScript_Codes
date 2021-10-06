@@ -518,13 +518,27 @@ ______________Advance DOM and Events_______________
     
     - .getBoundingClientRect();
     - .window.pageXOffset
+
+
     - .window.pageYOffset
-    - .documentElement.clientHeight
-    - .documentElement.clientWidth
+
+    - .documentElement.
+    clientHeight
+
+    - .documentElement.
+    clientWidth
+
     - .window.scrollTo();
+
     - scrollTo object option.
+
     - scrollTo (behavior ) property.
+
     - .scrollIntoView({behavior: "smooth"});
-    - .onmouseenter (property)
+
+    - .onmouseenter 
+    (property)
+
     - run event for once
+    
     - onclick="" (html attribute)
