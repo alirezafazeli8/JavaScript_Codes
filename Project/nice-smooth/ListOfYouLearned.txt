@@ -551,7 +551,7 @@ ______________Advance DOM and Events_______________
             - capture (property)
             - once (property)
 
-            .addEventListener(()=>{}, {
+            .addEventListener("click", ()=>{}, {
                 capture: true,
                 once: false,
             })
