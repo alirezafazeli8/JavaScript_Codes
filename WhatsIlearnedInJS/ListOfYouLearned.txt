@@ -562,3 +562,36 @@ ______________Advance DOM and Events_______________
     - event.currentTarget (property).
 
     - event.StopPropagation(); (method)
+
+- Event Delegation 
+
+- DOM Traversing
+
+    - get child with querySelectorAll
+
+    - .childNodes (property)
+
+    - .children (property)
+
+    - .firstElementChild (property)
+
+    - .lastElementChild (property)
+
+    - .parentNode (property)
+
+    - .parentElement (property)
+
+    - .closest() (method)
+
+    - .previousElementSibling
+    
+    - .nextElementSibling
+
+    - .previousSibling 
+    
+    - .nextSibling
+
+- Tabbed Component
+
+- Menu Fade Animation
+
