@@ -18,7 +18,7 @@ const tabbedButtons = document.querySelectorAll('.operations__tab');
 const tabbedContent = document.querySelectorAll('.operations__content');
 const nav = document.querySelector('.nav');
 const nLink = document.querySelectorAll('.nav__link');
-
+const sectionOne = document.getElementById('section--1');
 // pop up code
 const openModal = function (e) {
   e.preventDefault();
@@ -83,6 +83,7 @@ navLinks.addEventListener('click', function (e) {
   // matching strategy
   if (e.target.classList.contains('nav__link')) {
     const navId = e.target.getAttribute('href');
+    if (navId == '#') return '';
     const navEl = document.querySelector(navId);
     navEl.scrollIntoView({ behavior: 'smooth' });
   }
@@ -140,10 +141,94 @@ nav.addEventListener('mouseout', function (e) {
   menuFadeFunc(e, '1');
 });
 
+// -------- sticky navigation
+// const sectionOnTopBounding = sectionOne.getBoundingClientRect().top;
+// window.addEventListener('scroll', function () {
+//   if (window.scrollY > sectionOnTopBounding) {
+//     nav.classList.add('sticky');
+//   } else {
+//     nav.classList.remove('sticky');
+//   }
+// });
+const sections = document.querySelectorAll('.section');
+
+const obsCallBack = function (entries, observer) {
+  entries.forEach(function (item) {
+    console.log(item);
+    if (!item.isIntersecting) {
+      nav.classList.remove('sticky');
+    } else {
+      nav.classList.add('sticky');
+    }
+
+    // if (!item.intersectionRation) {
+    // }
+  });
+};
+
+const options = {
+  root: null,
+  threshold: 0,
+  // rootMargin: '-90px',
+};
+
+const observer = new IntersectionObserver(obsCallBack, options);
+
+sections.forEach(item => {
+  observer.observe(item);
+});
+
+// revealing elements on scroll
+const reveCallBack = function (entries, obverse) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.remove('section--hidden');
+  obverse.unobserve(entry.target);
+};
+
+const reveOption = {
+  root: null,
+  threshold: 0.1,
+  rootMargin: '90px',
+};
+
+const reveScroll = new IntersectionObserver(reveCallBack, reveOption);
+
+sections.forEach(section => {
+  reveScroll.observe(section);
+  section.classList.add('section--hidden');
+});
+
+// lazy image loading
+const imagesLazy = document.querySelectorAll('img[data-src]');
+
+const imgIOCallback = function (entries, observe) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+
+  entry.target.src = entry.target.dataset.src;
+  entry.target.classList.remove('lazy-img');
+};
+
+const imgIoOption = {
+  root: null,
+  threshold: 0,
+};
+
+const imgIO = new IntersectionObserver(imgIOCallback, imgIoOption);
+
+imagesLazy.forEach(img => {
+  imgIO.observe(img);
+});
+
 /////////////////////////////
 ////////////practice////////
 ///////////////////////////
 
+// observer.observe(sectionOne);
 // console.log((document.getElementsByTagName('p')[0].style.color = 'red'));
 
 // console.log(document.querySelector('.header__title').parentElement);
@@ -192,3 +277,4 @@ nav.addEventListener('mouseout', function (e) {
 // console.log(document.querySelector('.features__feature').nextElementSibling);
 
 // console.log(navLinks.nextSibling);
+// console.log(window.navigator.onLine);
