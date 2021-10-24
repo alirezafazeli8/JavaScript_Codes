@@ -595,3 +595,21 @@ ______________Advance DOM and Events_______________
 
 - Menu Fade Animation
 
+- sticky navigation
+
+- interSectionObserver
+    new interSectionObserver();
+
+    {
+        root
+        threshold
+        rootMargin
+    }
+
+- revealing elements on scroll
+
+- observe.unobserve(); // callback function parameters
+
+- lazy loading images
+
+- load event
