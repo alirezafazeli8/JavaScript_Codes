@@ -374,13 +374,15 @@ h4 {
 
 /* SLIDER */
 .slider {
+  display: flex;
+  flex-direction: row !important;
   max-width: 100rem;
   height: 50rem;
   margin: 0 auto;
   position: relative;
 
   /* IN THE END */
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .slide {

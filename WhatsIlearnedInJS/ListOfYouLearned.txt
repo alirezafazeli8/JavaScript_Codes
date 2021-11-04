@@ -613,3 +613,19 @@ ______________Advance DOM and Events_______________
 - lazy loading images
 
 - load event
+
+- slider Component
+
+- lifecycle DOM events
+
+    - DOMContentLoaded event
+
+    - load event
+
+    - beforeunload event
+
+- leave site method with js
+
+
+
+- OOP In JS 
