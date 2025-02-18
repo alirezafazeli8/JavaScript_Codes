@@ -58,3 +58,31 @@
 
 // console.log(name);
 // console.log(newName);
+
+let numOne = "100";
+let numTwo = "200.2";
+
+let sumOne = 100;
+let sumTwo = 100.22;
+
+// parse int
+// console.log(parseInt(numOne));
+// console.log(parseInt(numTwo));
+
+// unary operator
+// console.log(+numOne);
+// console.log(+numTwo);
+
+// Number method
+// console.log(Number(numOne));
+// console.log(Number(numTwo));
+
+// .toString() method
+// console.log(sumOne.toString());
+// console.log(sumTwo.toString());
+
+// String() method
+// console.log(String(sumOne));
+// console.log(String(sumTwo));
+
+// console.log(parseFloat(sumOne));
