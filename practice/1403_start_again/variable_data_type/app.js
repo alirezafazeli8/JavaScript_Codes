@@ -59,11 +59,11 @@
 // console.log(name);
 // console.log(newName);
 
-let numOne = "100";
-let numTwo = "200.2";
+// let numOne = "100";
+// let numTwo = "200.2";
 
-let sumOne = 100;
-let sumTwo = 100.22;
+// let sumOne = 100;
+// let sumTwo = 100.22;
 
 // parse int
 // console.log(parseInt(numOne));
@@ -86,3 +86,44 @@ let sumTwo = 100.22;
 // console.log(String(sumTwo));
 
 // console.log(parseFloat(sumOne));
+
+// console.log(2 + 2);
+// console.log(2 - 2);
+// console.log(2 / 2);
+// console.log(2 * 2);
+// console.log(3 ** 2);
+// console.log(3 % 2);
+// console.log(3  2);
+
+// const userId = 1234;
+// let userName = "Alireza";
+
+// let msg = "Hello mr " + userName + ". your id id : " + userId;
+
+// console.log(msg);
+
+// let x = 1;
+// x++;
+// x++;
+
+// x--;
+// x--;
+// x--;
+// x--;
+
+// console.log(x);
+
+// let x = 1;
+// x += 2;
+// x -= 1;
+// x /= 2;
+// x += 8;
+// x %= 4;
+// x **= 2;
+
+// console.log(x);
+
+// let x = "2";
+// let y = "3";
+
+// console.log(x === y);
