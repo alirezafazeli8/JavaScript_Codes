@@ -134,3 +134,46 @@
 // let x = 5 * "5";
 
 // console.log(x);
+
+// let sentence = "             Hello World World From Iran.         ";
+
+// console.log(sentence.length);
+// sentence = sentence.toUpperCase();
+// sentence = sentence.toUpperCase();
+
+// console.log(sentence.charAt(4));
+// console.log(sentence[4]);
+
+// console.log(sentence.indexOf("World"));
+
+// let name = new Number(4);
+
+// console.log(name.valueOf());
+
+// console.log(sentence.substring(-2));
+// console.log(sentence[(0, 5)]);
+
+// console.log(sentence.slice(-5));
+
+// sentence = sentence.trim();
+
+// sentence = sentence.replace("Hello", "Hi");
+
+// // console.log(sentence.includes("World"));
+
+// console.log(sentence.split(""));
+// console.log(sentence.split(" "));
+
+// sentence = sentence.concat("new alireza");
+// console.log(sentence.endsWith("alirea"));
+// console.log(sentence);
+
+// console.log(sentence.charCodeAt(0));
+
+// const myString = "developer";
+// const myNewString = myString.replace(
+// 	myString.charAt(myString[0]),
+// 	myString.charAt(myString[0]).toUpperCase()
+// );
+
+// console.log(myNewString);
