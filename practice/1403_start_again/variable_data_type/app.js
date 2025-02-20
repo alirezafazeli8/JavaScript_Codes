@@ -127,3 +127,10 @@
 // let y = "3";
 
 // console.log(x === y);
+
+// console.log(Number(null));
+
+// let x = 5 + "5";
+// let x = 5 * "5";
+
+// console.log(x);
