@@ -177,3 +177,11 @@
 // );
 
 // console.log(myNewString);
+
+let num = 555555.543;
+
+// console.log(Number(num.toFixed(5)));
+// console.log(num.toExponential(5));
+
+// console.log(num.toPrecision(3));
+console.log(num.toLocaleString("bn-BD"));
