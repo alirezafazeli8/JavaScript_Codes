@@ -198,17 +198,45 @@
 // console.log(Math.ceil(5.1));
 
 // Number Challenge
-let x = Math.floor(Math.random() * 100 + 1);
-let y = Math.floor(Math.random() * 50 + 1);
+// let x = Math.floor(Math.random() * 100 + 1);
+// let y = Math.floor(Math.random() * 50 + 1);
 
-let sumOutPut = x + y;
-let differenceOutPut = x - y;
-let productOutPut = x * y;
-let quotientOutPut = x / y;
-let remindOutput = x % y;
+// let sumOutPut = x + y;
+// let differenceOutPut = x - y;
+// let productOutPut = x * y;
+// let quotientOutPut = x / y;
+// let remindOutput = x % y;
 
-console.log(`${x} + ${y} = ${sumOutPut}`);
-console.log(`${x} - ${y} = ${differenceOutPut}`);
-console.log(`${x} * ${y} = ${productOutPut}`);
-console.log(`${x} / ${y} = ${quotientOutPut}`);
-console.log(`${x} % ${y} = ${remindOutput}`);
+// console.log(`${x} + ${y} = ${sumOutPut}`);
+// console.log(`${x} - ${y} = ${differenceOutPut}`);
+// console.log(`${x} * ${y} = ${productOutPut}`);
+// console.log(`${x} / ${y} = ${quotientOutPut}`);
+// console.log(`${x} % ${y} = ${remindOutput}`);
+
+// date and time
+// let time = new Date(2004, 9, 12);
+// let y = new Date(time.getTime());
+// let x = new Date(Date(time.getTime()).now());
+
+// console.log(y);
+// console.log(x);
+
+let nowDate = new Date();
+
+// console.log(nowDate.getMonth());
+// console.log(nowDate.getFullYear());
+// console.log(nowDate.getDate());
+// console.log(nowDate.getDay());
+
+let dateTimeAPI = Intl.DateTimeFormat("fa", {
+	year: "2-digit",
+	month: "numeric",
+	day: "2-digit",
+}).format(new Date());
+
+let localeString = new Date().toLocaleDateString("fa", {
+	month: "short",
+});
+
+console.log(dateTimeAPI);
+console.log(localeString);
