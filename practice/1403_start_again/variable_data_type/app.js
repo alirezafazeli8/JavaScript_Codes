@@ -195,4 +195,20 @@
 // console.log(Math.abs(-5));
 // console.log(Math.round(5.9));
 // console.log(Math.floor(5.9));
-console.log(Math.ceil(5.1));
+// console.log(Math.ceil(5.1));
+
+// Number Challenge
+let x = Math.floor(Math.random() * 100 + 1);
+let y = Math.floor(Math.random() * 50 + 1);
+
+let sumOutPut = x + y;
+let differenceOutPut = x - y;
+let productOutPut = x * y;
+let quotientOutPut = x / y;
+let remindOutput = x % y;
+
+console.log(`${x} + ${y} = ${sumOutPut}`);
+console.log(`${x} - ${y} = ${differenceOutPut}`);
+console.log(`${x} * ${y} = ${productOutPut}`);
+console.log(`${x} / ${y} = ${quotientOutPut}`);
+console.log(`${x} % ${y} = ${remindOutput}`);
