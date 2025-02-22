@@ -178,10 +178,21 @@
 
 // console.log(myNewString);
 
-let num = 555555.543;
+// let num = 555555.543;
 
 // console.log(Number(num.toFixed(5)));
 // console.log(num.toExponential(5));
 
 // console.log(num.toPrecision(3));
-console.log(num.toLocaleString("bn-BD"));
+// console.log(num.toLocaleString("bn-BD"));
+
+// let x = [3, 1, 7, 20, 34, 4, 2];
+
+// console.log(Math.min(...x));
+
+// console.log(...x);
+// console.log(Math.sqrt(88));
+// console.log(Math.abs(-5));
+// console.log(Math.round(5.9));
+// console.log(Math.floor(5.9));
+console.log(Math.ceil(5.1));
