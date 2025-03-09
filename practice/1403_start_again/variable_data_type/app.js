@@ -221,22 +221,46 @@
 // console.log(y);
 // console.log(x);
 
-let nowDate = new Date();
+// let nowDate = new Date();
 
 // console.log(nowDate.getMonth());
 // console.log(nowDate.getFullYear());
 // console.log(nowDate.getDate());
 // console.log(nowDate.getDay());
 
-let dateTimeAPI = Intl.DateTimeFormat("fa", {
-	year: "2-digit",
-	month: "numeric",
-	day: "2-digit",
-}).format(new Date());
+// let dateTimeAPI = Intl.DateTimeFormat("fa", {
+// 	month: "numeric",
+// 	day: "2-digit",
+// 	year: "2-digit",
+// }).format(new Date());
 
-let localeString = new Date().toLocaleDateString("fa", {
-	month: "short",
-});
+// let localeString = new Date().toLocaleDateString("fa", {
+// 	month: "short",
+// });
 
-console.log(dateTimeAPI);
-console.log(localeString);
+// console.log(dateTimeAPI);
+// console.log(localeString);
+// const myName = "alireza";
+
+// console.log(myName.charAt(5));
+
+// const dateTimeAPI = Intl.DateTimeFormat("fa").format(new Date());
+
+// console.log(dateTimeAPI);
+
+let userNames = ["alireza", "sara", "sasan", "amir", "mohammad"];
+
+userNames.push("Javad");
+userNames.pop();
+userNames.unshift("Javad");
+userNames.shift();
+
+userNames.reverse();
+
+// console.log(userNames);
+// console.log(userNames.includes("Javad"));
+// console.log(userNames.includes("amir"));
+
+// console.log(userNames[userNames.indexOf("sasan")]);
+
+console.log(userNames.slice(2, 4));
