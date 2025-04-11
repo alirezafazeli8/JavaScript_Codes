@@ -248,14 +248,14 @@
 
 // console.log(dateTimeAPI);
 
-let userNames = ["alireza", "sara", "sasan", "amir", "mohammad"];
+// let userNames = ["alireza", "sara", "sasan", "amir", "mohammad"];
 
-userNames.push("Javad");
-userNames.pop();
-userNames.unshift("Javad");
-userNames.shift();
+// userNames.push("Javad");
+// userNames.pop();
+// userNames.unshift("Javad");
+// userNames.shift();
 
-userNames.reverse();
+// userNames.reverse();
 
 // console.log(userNames);
 // console.log(userNames.includes("Javad"));
@@ -263,4 +263,85 @@ userNames.reverse();
 
 // console.log(userNames[userNames.indexOf("sasan")]);
 
-console.log(userNames.slice(2, 4));
+// console.log(userNames.slice(2, 4));
+
+// console.log(["New", ...userNames]);
+
+// let firstNames = ["alireza", "sara", "sasan", "amir", "mohammad"];
+// let lastNames = ["fazeli", "amiri", "rezaei", "saniei", "dehghan"];
+
+// firstNames.push(lastNames);
+
+// console.log(firstNames);
+
+// const info = ("alireza", "fazeli");
+
+// console.log(...info);
+
+// console.log([..."alireza"]);
+
+// const arr1 = [1, 2, 3, 4, 5];
+
+// arr1.push(6);
+// arr1.unshift(0);
+// arr1.reverse();
+
+// console.log(arr1);
+
+// let arr2 = [1, 2, 3, 4, 5];
+// let arr3 = [5, 6, 7, 8, 9, 10];
+
+// let arr4 = arr2.concat(arr3.slice(1));
+
+// console.log(arr4);
+
+// const userInfo = {
+// 	name: "alireza",
+// 	last_name: "fazeli",
+// 	favorite: {
+// 		books: ["hello", "hi"],
+// 		movie: ["ss", "pm"],
+// 	},
+// 	isAdmin: true,
+// };
+
+// console.log(userInfo.favorite.books[0]);
+
+// console.log(userInfo["favorite"]["movie"]);
+
+// userInfo.isAdmin = false;
+// userInfo.name = "newAdmin";
+
+// delete userInfo.favorite;
+
+// userInfo.greet = function () {
+// 	console.log(`Hello From ${userInfo.name}`);
+// };
+
+// userInfo.greet();
+
+// console.log(userInfo);
+
+const obj1 = {
+	a: 1,
+	b: 2,
+};
+
+const obj2 = {
+	c: 3,
+	d: 4,
+};
+
+const objFull = { ...obj1, ...obj2 };
+
+console.log(objFull);
+
+console.log(obj2[Object.keys(obj2)[0]]);
+
+console.log(Object.keys(obj2).length);
+
+console.log(Object.values(obj1));
+
+console.log(Object.entries(obj2));
+
+console.log(Object.hasOwn(obj1, "a"));
