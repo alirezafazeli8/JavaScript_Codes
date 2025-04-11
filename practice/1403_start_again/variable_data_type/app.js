@@ -346,32 +346,88 @@
 
 // console.log(Object.hasOwn(obj1, "a"));
 
-let firstName = "alireza";
-let lastName = "fazeli";
-let age = 20;
+// let firstName = "alireza";
+// let lastName = "fazeli";
+// let age = 20;
 
-const info = {
-	firstName: firstName,
-	lastName,
-	age,
-};
+// const info = {
+// 	firstName: firstName,
+// 	lastName,
+// 	age,
+// };
 
-console.log(info);
+// console.log(info);
 
-const basket = {
-	fruite: "apple",
-	game: "gta",
-	name: "alireza",
-};
+// const basket = {
+// 	fruite: "apple",
+// 	game: "gta",
+// 	name: "alireza",
+// };
 
-let { fruite: apple, game: ent, name: id } = basket;
+// let { fruite: apple, game: ent, name: id } = basket;
 
-// console.log(fruite);
+// // console.log(fruite);
 
-// if (name == "alireza") {
-// 	console.log(true);
-// }
+// // if (name == "alireza") {
+// // 	console.log(true);
+// // }
 
-console.log(apple);
-console.log(ent);
-console.log(id);
+// console.log(apple);
+// console.log(ent);
+// console.log(id);
+
+// const obj2 = {
+// 	c: 3,
+// 	d: 4,
+// };
+
+// // convert obj to json
+// let objToJson = JSON.stringify(obj2);
+
+// console.log(objToJson);
+
+// let jsonToObj = JSON.parse(objToJson);
+
+// console.log(jsonToObj);
+
+// object challenge
+const library = [
+	{
+		title: "Deep Work",
+		author: "cal newport",
+		status: {
+			own: true,
+			reading: false,
+			read: false,
+		},
+	},
+	{
+		title: "Node.js",
+		author: "alireza",
+		status: {
+			own: true,
+			reading: false,
+			read: false,
+		},
+	},
+	{
+		title: "YDKJS",
+		author: "Uncle Sam",
+		status: {
+			own: true,
+			reading: false,
+			read: false,
+		},
+	},
+];
+
+library[0].status.read = true;
+library[0].title = "First Book";
+library[1].status.read = true;
+library[2].status.read = true;
+
+console.log(library);
+
+const libToJSON = JSON.stringify(library);
+
+console.log(libToJSON);
