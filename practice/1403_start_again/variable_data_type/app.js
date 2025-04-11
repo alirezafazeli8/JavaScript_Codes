@@ -322,26 +322,56 @@
 
 // console.log(userInfo);
 
-const obj1 = {
-	a: 1,
-	b: 2,
+// const obj1 = {
+// 	a: 1,
+// 	b: 2,
+// };
+
+// const obj2 = {
+// 	c: 3,
+// 	d: 4,
+// };
+
+// const objFull = { ...obj1, ...obj2 };
+
+// console.log(objFull);
+
+// console.log(obj2[Object.keys(obj2)[0]]);
+
+// console.log(Object.keys(obj2).length);
+
+// console.log(Object.values(obj1));
+
+// console.log(Object.entries(obj2));
+
+// console.log(Object.hasOwn(obj1, "a"));
+
+let firstName = "alireza";
+let lastName = "fazeli";
+let age = 20;
+
+const info = {
+	firstName: firstName,
+	lastName,
+	age,
 };
 
-const obj2 = {
-	c: 3,
-	d: 4,
+console.log(info);
+
+const basket = {
+	fruite: "apple",
+	game: "gta",
+	name: "alireza",
 };
 
-const objFull = { ...obj1, ...obj2 };
+let { fruite: apple, game: ent, name: id } = basket;
 
-console.log(objFull);
+// console.log(fruite);
 
-console.log(obj2[Object.keys(obj2)[0]]);
+// if (name == "alireza") {
+// 	console.log(true);
+// }
 
-console.log(Object.keys(obj2).length);
-
-console.log(Object.values(obj1));
-
-console.log(Object.entries(obj2));
-
-console.log(Object.hasOwn(obj1, "a"));
+console.log(apple);
+console.log(ent);
+console.log(id);
